@@ -1,5 +1,5 @@
 import React from "react";
-import {VictoryBar, VictoryChart} from 'victory';
+import {VictoryAxis, VictoryBar, VictoryChart} from 'victory';
 import {DATA} from "../../data";
 
 
@@ -23,6 +23,7 @@ export default class DayCases extends React.Component {
                 <h3 className={'chart-title'}>Casos por día</h3>
                 <VictoryChart height={300}
                               domainPadding={{ x: 50, y: [0, 5] }}
+                              padding={{top: 10, bottom: 40, right: 10, left: 35}}
                               scale={{ x: "time" }}>
                     <VictoryBar
                         style={{ data: { fill: "#ff932a" } }}
@@ -34,8 +35,12 @@ export default class DayCases extends React.Component {
                             onLoad: {duration: 1000}
                         }}
                     />
+                    <VictoryAxis dependentAxis />
+                    <VictoryAxis tickCount={3} tickFormat={v => month[new Date(v).getMonth()]}/>
                 </VictoryChart>
             </div>
         )
     }
 }
+
+const month = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];

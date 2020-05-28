@@ -23,7 +23,7 @@ function App() {
                     <Charts/>
                 </div>
                 <div>
-                    {/*<TestSection/>*/}
+                    <TestSection/>
                 </div>
             </div>
             <Footer/>

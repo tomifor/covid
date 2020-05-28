@@ -1,5 +1,55 @@
 .test-container {
-  h1 {
+  margin-top: 30px;
+  margin-bottom: 50px;
 
+  .card-container {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-family: 'Oxygen', sans-serif;
+    margin: 0;
+  }
+
+  p.value {
+    font-size: 48px;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-family: 'Oxygen', sans-serif;
+    color: #454545;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .test-container {
+    .title {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    .title.cured {
+      font-size: 18px;
+    }
+
+    .value {
+
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .test-container {
+    .title {
+      font-size: 24px;
+    }
+
+    .value {
+      font-size: 24px;
+    }
   }
 }

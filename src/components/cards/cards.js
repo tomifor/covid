@@ -26,11 +26,12 @@ export default class Cards extends React.Component {
         return (
             <div className={'cards-container'}>
                 <Container>
+                    <h1>Casos</h1>
                     <Row>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
                                 <Card.Header>
-                                    <h3 className={'title'}>Totales</h3>
+                                    <h3 className={'title'}>Confirmados</h3>
                                 </Card.Header>
                                 <Card.Body>
                                     <Card.Title>

@@ -7,18 +7,22 @@ export default class TestSection extends React.Component {
 
     constructor(props) {
         super(props);
+        const population = 300000;
         const last = DATA[0];
-        const active = last.cases.total - last.cases.cured - last.cases.dead;
+        const yesterday = DATA[1];
         this.state = {
-            total: last.dismiss,
+            total: last.dismiss + last.cases.total,
             study: last.inStudy,
+            today: (last.dismiss + last.cases.total) - (yesterday.dismiss + yesterday.cases.total),
+            rate: (100000 * (last.dismiss + last.cases.total) / population).toFixed(0),
         }
     }
+
     render() {
         return (
             <div className={'test-container'}>
-                <h1>Test</h1>
                 <Container>
+                    <h1>Test</h1>
                     <Row>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
@@ -27,7 +31,7 @@ export default class TestSection extends React.Component {
                                 </Card.Header>
                                 <Card.Body>
                                     <Card.Title>
-                                        {/*<p className={'value'}>{this.state.total}</p>*/}
+                                        <p className={'value'}>{this.state.total}</p>
                                     </Card.Title>
                                 </Card.Body>
                             </Card>
@@ -38,23 +42,23 @@ export default class TestSection extends React.Component {
                                     <h3 className={'title'}>Hoy</h3>
                                 </Card.Header>
                                 <Card.Body>
-                                    {/*<Card.Title><p className={'value'}>{this.state.active}</p></Card.Title>*/}
+                                    <Card.Title><p className={'value'}>{this.state.today}</p></Card.Title>
                                 </Card.Body>
                             </Card>
                         </Col>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
-                                <Card.Header><h3 className={'title'}>En estudio</h3></Card.Header>
+                                <Card.Header><h3 className={'title study'}>Pendientes</h3></Card.Header>
                                 <Card.Body>
-                                    {/*<Card.Title><p className={'value'}>{this.state.study}</p></Card.Title>*/}
+                                    <Card.Title><p className={'value'}>{this.state.study}</p></Card.Title>
                                 </Card.Body>
                             </Card>
                         </Col>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
-                                <Card.Header><h3 className={'title'}>Cada 100K hab.</h3></Card.Header>
+                                <Card.Header><h3 className={'title'}>C/100K hab</h3></Card.Header>
                                 <Card.Body>
-                                    {/*<Card.Title><p className={'value'}>{this.state.dismiss}</p></Card.Title>*/}
+                                    <Card.Title><p className={'value'}>{this.state.rate}</p></Card.Title>
                                 </Card.Body>
                             </Card>
                         </Col>

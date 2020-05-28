@@ -17,7 +17,8 @@ export default class TotalCasesChart extends React.Component {
         return (
             <div className={'chart-container'}>
                 <h3 className={'chart-title'}>Casos totales</h3>
-                <VictoryChart height={300}>
+                <VictoryChart height={300}
+                              padding={{top: 10, bottom: 40, right: 10, left: 35}}>
                     <VictoryLine
                         name={'total-cases'}
                         interpolation="natural"
@@ -26,17 +27,17 @@ export default class TotalCasesChart extends React.Component {
                             onLoad: {duration: 1000}
                         }}
                         style={{
-                            data: {stroke: "#a23dd5", strokeWidth: 3, strokeLinecap: "round" },
+                            data: {stroke: "#a23dd5", strokeWidth: 3, strokeLinecap: "round"},
                             parent: {border: "1px solid #ccc"}
                         }}
                         data={this.state.data}
                         height={300}
                         minDomain={{y: 0}}
                         scale={{x: 'time', y: 'linear'}}
-                        padding={{ top: 10, bottom: 80, right: 0, left: 20 }}
                     />
-                    <VictoryAxis dependentAxis />
-                    <VictoryAxis tickCount={8} tickFormat={(x) => (new Date(x).getDate()) + '/' + (new Date(x).getMonth() + 1)}/>
+                    <VictoryAxis dependentAxis/>
+                    <VictoryAxis tickCount={8}
+                                 tickFormat={(x) => (new Date(x).getDate()) + '/' + (new Date(x).getMonth() + 1)}/>
                 </VictoryChart>
             </div>
         )
