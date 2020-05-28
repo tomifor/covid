@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/covid.git/static/css/main.1933181f.chunk.css",
+    "main.js": "/covid.git/static/js/main.a6e4b4a2.chunk.js",
+    "main.js.map": "/covid.git/static/js/main.a6e4b4a2.chunk.js.map",
+    "runtime-main.js": "/covid.git/static/js/runtime-main.7ab0f99f.js",
+    "runtime-main.js.map": "/covid.git/static/js/runtime-main.7ab0f99f.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/covid.git/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.dd86ed0a.chunk.js": "/covid.git/static/js/2.dd86ed0a.chunk.js",
+    "static/js/2.dd86ed0a.chunk.js.map": "/covid.git/static/js/2.dd86ed0a.chunk.js.map",
+    "index.html": "/covid.git/index.html",
+    "precache-manifest.31f7edf97e26debb16afd920d8b1755b.js": "/covid.git/precache-manifest.31f7edf97e26debb16afd920d8b1755b.js",
+    "service-worker.js": "/covid.git/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/covid.git/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.1933181f.chunk.css.map": "/covid.git/static/css/main.1933181f.chunk.css.map",
+    "static/js/2.dd86ed0a.chunk.js.LICENSE.txt": "/covid.git/static/js/2.dd86ed0a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7ab0f99f.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.dd86ed0a.chunk.js",
+    "static/css/main.1933181f.chunk.css",
+    "static/js/main.a6e4b4a2.chunk.js"
+  ]
+}
