@@ -71,7 +71,7 @@ export default class Cards extends React.Component {
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
                                 <Card.Header>
-                                    <h3 className={'title cured'}>Alta definitiva</h3>
+                                    <h3 className={'title cured'}>Recuperados</h3>
                                 </Card.Header>
                                 <Card.Body>
                                     <Card.Title><p className={'value'}>{this.state.cured}</p></Card.Title>

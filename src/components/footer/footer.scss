@@ -5,8 +5,15 @@
   min-height: 100px;
   text-align: center;
   padding: 20px 0;
+  .hashtag {
+    margin-bottom: 10px;
+    a {
+      color: white;
+      font-size: 1.1rem;
+    }
+  }
   .social {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .icon {
     color: #fff;

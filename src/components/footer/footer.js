@@ -6,6 +6,10 @@ export default class Footer extends React.Component {
     render() {
         return (
             <div className={'footer-container'}>
+                <div className={'hashtag'}>
+                    <a href={'https://twitter.com/hashtag/QuedateEnCasa'} rel={'noopener noreferrer'}
+                       target={'_blank'}>#QuedateEnCasa</a>
+                </div>
                 <div className={'social'}>
                     <a className={'icon'} href={'https://github.com/tomifor/covid'} rel={'noopener noreferrer'}
                        target={'_blank'}>
