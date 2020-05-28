@@ -1,7 +1,8 @@
 {
-  "name": "covid19",
-  "version": "0.1.0",
-  "private": false,
+  "homepage": "http://tomifor.github.io/covid",
+  "name": "covid",
+  "version": "0.1.1",
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -39,6 +40,5 @@
   },
   "devDependencies": {
     "gh-pages": "^2.2.0"
-  },
-  "homepage": "http://tomifor.github.io/covid"
+  }
 }

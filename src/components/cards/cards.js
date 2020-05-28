@@ -51,9 +51,9 @@ export default class Cards extends React.Component {
                         </Col>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
-                                <Card.Header><h3 className={'title'}>En estudio</h3></Card.Header>
+                                <Card.Header><h3 className={'title'}>Nuevos hoy</h3></Card.Header>
                                 <Card.Body>
-                                    <Card.Title><p className={'value'}>{this.state.study}</p></Card.Title>
+                                    <Card.Title><p className={'value'}>{this.state.newCases}</p></Card.Title>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -97,7 +97,7 @@ export default class Cards extends React.Component {
                         </Col>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
-                                <Card.Header><h3 className={'title'}>Mortalidad</h3></Card.Header>
+                                <Card.Header><h3 className={'title'}>Letalidad</h3></Card.Header>
                                 <Card.Body>
                                     <Card.Title><p className={'value'}>{this.state.deadRate}<span>%</span></p>
                                     </Card.Title>

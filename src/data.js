@@ -20,7 +20,7 @@ export const DATA = [
         cases: {
             total: 81,
             newCases: 7,
-            cured:35,
+            cured: 35,
             goodStatus: 21,
             insideHospitalized: 7,
             outsideHospitalized: 12,
@@ -128,6 +128,144 @@ export const DATA = [
 
     },
     {
+        date: '2020-05-19T22:52:56',
+        cases: {
+            total: 60,
+            newCases: 0,
+            cured: 29,
+            goodStatus: 18,
+            insideHospitalized: 2,
+            outsideHospitalized: 5,
+            dead: 6
+        },
+        inStudy: 79,
+        invalidated: 4,
+        dismiss: 775
+
+    },
+    {
+        date: '2020-05-18T22:52:56',
+        cases: {
+            total: 60,
+            newCases: 2,
+            cured: 29,
+            goodStatus: 18,
+            insideHospitalized: 2,
+            outsideHospitalized: 5,
+            dead: 6
+        },
+        inStudy: 73,
+        invalidated: 4,
+        dismiss: 749
+
+    },
+    {
+        date: '2020-05-17T22:52:56',
+        cases: {
+            total: 58,
+            newCases: 1,
+            cured: 29,
+            goodStatus: 15,
+            insideHospitalized: 3,
+            outsideHospitalized: 5,
+            dead: 6
+        },
+        inStudy: 74,
+        invalidated: 4,
+        dismiss: 721
+
+    },
+    {
+        date: '2020-05-16T22:52:56',
+        cases: {
+            total: 57,
+            newCases: 3,
+            cured: 29,
+            goodStatus: 15,
+            insideHospitalized: 3,
+            outsideHospitalized: 4,
+            dead: 6
+        },
+        inStudy: 66,
+        invalidated: 4,
+        dismiss: 714
+    },
+    {
+        date: '2020-05-15T22:52:56',
+        cases: {
+            total: 54,
+            newCases: 0,
+            cured: 29,
+            goodStatus: 12,
+            insideHospitalized: 2,
+            outsideHospitalized: 5,
+            dead: 6
+        },
+        inStudy: 77,
+        invalidated: 4,
+        dismiss: 687
+    },
+    {
+        date: '2020-05-14T22:52:56',
+        cases: {
+            total: 54,
+            newCases: 1,
+            cured: 29,
+            goodStatus: 12,
+            insideHospitalized: 2,
+            outsideHospitalized: 5,
+            dead: 6
+        },
+        inStudy: 69,
+        invalidated: 4,
+        dismiss: 665
+    },
+    {
+        date: '2020-05-13T22:52:56',
+        cases: {
+            total: 53,
+            newCases: 2,
+            cured: 29,
+            goodStatus: 11,
+            insideHospitalized: 2,
+            outsideHospitalized: 5,
+            dead: 6
+        },
+        inStudy: 74,
+        invalidated: 4,
+        dismiss: 632
+    },
+    {
+        date: '2020-05-12T22:52:56',
+        cases: {
+            total: 51,
+            newCases: 2,
+            cured: 28,
+            goodStatus: 11,
+            insideHospitalized: 1,
+            outsideHospitalized: 5,
+            dead: 6
+        },
+        inStudy: 57,
+        invalidated: 5,
+        dismiss: 617
+    },
+    {
+        date: '2020-05-11T22:52:56',
+        cases: {
+            total: 49,
+            newCases: 0,
+            cured: 28,
+            goodStatus: 10,
+            insideHospitalized: 1,
+            outsideHospitalized: 4,
+            dead: 6
+        },
+        inStudy: 59,
+        invalidated: 5,
+        dismiss: 598
+    },
+    {
         date: '2020-05-10T22:52:56',
         cases: {
             total: 49,
@@ -160,6 +298,70 @@ export const DATA = [
 
     },
     {
+        date: '2020-05-08T22:52:56',
+        cases: {
+            total: 46,
+            newCases: 1,
+            cured: 23,
+            goodStatus: 12,
+            insideHospitalized: 1,
+            outsideHospitalized: 4,
+            dead: 6
+        },
+        inStudy: 64,
+        invalidated: 5,
+        dismiss: 558
+
+    },
+    {
+        date: '2020-05-07T22:52:56',
+        cases: {
+            total: 45,
+            newCases: 0,
+            cured: 23,
+            goodStatus: 12,
+            insideHospitalized: 1,
+            outsideHospitalized: 4,
+            dead: 6
+        },
+        inStudy: 55,
+        invalidated: 5,
+        dismiss: 549
+
+    },
+    {
+        date: '2020-05-06T22:52:56',
+        cases: {
+            total: 45,
+            newCases: 4,
+            cured: 23,
+            goodStatus: 10,
+            insideHospitalized: 1,
+            outsideHospitalized: 6,
+            dead: 5
+        },
+        inStudy: 47,
+        invalidated: 5,
+        dismiss: 529
+
+    },
+    {
+        date: '2020-05-05T22:52:56',
+        cases: {
+            total: 41,
+            newCases: 0,
+            cured: 20,
+            goodStatus: 11,
+            insideHospitalized: 0,
+            outsideHospitalized: 5,
+            dead: 5
+        },
+        inStudy: 63,
+        invalidated: 5,
+        dismiss: 500
+
+    },
+    {
         date: '2020-05-04T22:52:56',
         cases: {
             total: 41,
@@ -173,6 +375,38 @@ export const DATA = [
         inStudy: 59,
         invalidated: 5,
         dismiss: 488
+
+    },
+    {
+        date: '2020-05-03T22:52:56',
+        cases: {
+            total: 41,
+            newCases: 0,
+            cured: 20,
+            goodStatus: 11,
+            insideHospitalized: 0,
+            outsideHospitalized: 5,
+            dead: 5
+        },
+        inStudy: 59,
+        invalidated: 5,
+        dismiss: 460
+
+    },
+    {
+        date: '2020-05-02T22:52:56',
+        cases: {
+            total: 41,
+            newCases: 0,
+            cured: 18,
+            goodStatus: 13,
+            insideHospitalized: 0,
+            outsideHospitalized: 5,
+            dead: 5
+        },
+        inStudy: 62,
+        invalidated: 5,
+        dismiss: 449
 
     },
     {
@@ -192,6 +426,70 @@ export const DATA = [
 
     },
     {
+        date: '2020-04-30T22:52:56',
+        cases: {
+            total: 41,
+            newCases: 2,
+            cured: 18,
+            goodStatus: 13,
+            insideHospitalized: 0,
+            outsideHospitalized: 6,
+            dead: 4
+        },
+        inStudy: 82,
+        invalidated: 5,
+        dismiss: 405
+
+    },
+    {
+        date: '2020-04-29T22:52:56',
+        cases: {
+            total: 39,
+            newCases: 0,
+            cured: 17,
+            goodStatus: 12,
+            insideHospitalized: 0,
+            outsideHospitalized: 6,
+            dead: 4
+        },
+        inStudy: 84,
+        invalidated: 5,
+        dismiss: 369
+
+    },
+    {
+        date: '2020-04-28T22:52:56',
+        cases: {
+            total: 39,
+            newCases: 1,
+            cured: 12,
+            goodStatus: 15,
+            insideHospitalized: 1,
+            outsideHospitalized: 7,
+            dead: 4
+        },
+        inStudy: 77,
+        invalidated: 5,
+        dismiss: 352
+
+    },
+    {
+        date: '2020-04-27T22:52:56',
+        cases: {
+            total: 38,
+            newCases: 1,
+            cured: 11,
+            goodStatus: 16,
+            insideHospitalized: 1,
+            outsideHospitalized: 6,
+            dead: 4
+        },
+        inStudy: 61,
+        invalidated: 5,
+        dismiss: 336
+
+    },
+    {
         date: '2020-04-26T22:52:56',
         cases: {
             total: 37,
@@ -206,6 +504,83 @@ export const DATA = [
         invalidated: 5,
         dismiss: 323
 
+    },
+    {
+        date: '2020-04-25T22:52:56',
+        cases: {
+            total: 37,
+            newCases: 2,
+            cured: 11,
+            goodStatus: 15,
+            insideHospitalized: 2,
+            outsideHospitalized: 6,
+            dead: 3
+        },
+        inStudy: 45,
+        invalidated: 5,
+        dismiss: 317
+
+    },
+    {
+        date: '2020-04-24T22:52:56',
+        cases: {
+            total: 35,
+            newCases: 1,
+            cured: 11,
+            goodStatus: 15,
+            insideHospitalized: 2,
+            outsideHospitalized: 4,
+            dead: 3
+        },
+        inStudy: 69,
+        invalidated: 5,
+        dismiss: 276
+
+    },
+    {
+        date: '2020-04-23T22:52:56',
+        cases: {
+            total: 34,
+            newCases: 2,
+            cured: 11,
+            goodStatus: 14,
+            insideHospitalized: 2,
+            outsideHospitalized: 4,
+            dead: 3
+        },
+        inStudy: 68,
+        invalidated: 5,
+        dismiss: 266
+    },
+    {
+        date: '2020-04-22T22:52:56',
+        cases: {
+            total: 32,
+            newCases: 1,
+            cured: 8,
+            goodStatus: 13,
+            insideHospitalized: 4,
+            outsideHospitalized: 4,
+            dead: 3
+        },
+        inStudy: 63,
+        invalidated: 5,
+        dismiss: 249
+    },
+    {
+        date: '2020-04-21T22:52:56',
+        cases: {
+            total: 31,
+            newCases: 0,
+            cured: 7,
+            goodStatus: 13,
+            insideHospitalized: 4,
+            outsideHospitalized: 4,
+            dead: 3
+        },
+        inStudy: 56,
+        invalidated: 5,
+        dismiss: 206
     },
     {
         date: '2020-04-20T22:52:56',
@@ -224,6 +599,70 @@ export const DATA = [
 
     },
     {
+        date: '2020-04-19T22:52:56',
+        cases: {
+            total: 30,
+            newCases: 2,
+            cured: 4,
+            goodStatus: 11,
+            insideHospitalized: 4,
+            outsideHospitalized: 8,
+            dead: 3
+        },
+        inStudy: 61,
+        invalidated: 5,
+        dismiss: 180
+
+    },
+    {
+        date: '2020-04-18T22:52:56',
+        cases: {
+            total: 28,
+            newCases: 0,
+            cured: 4,
+            goodStatus: 10,
+            insideHospitalized: 4,
+            outsideHospitalized: 7,
+            dead: 3
+        },
+        inStudy: 50,
+        invalidated: 5,
+        dismiss: 176
+
+    },
+    {
+        date: '2020-04-17T22:52:56',
+        cases: {
+            total: 28,
+            newCases: 1,
+            cured: 3,
+            goodStatus: 11,
+            insideHospitalized: 5,
+            outsideHospitalized: 7,
+            dead: 2
+        },
+        inStudy: 53,
+        invalidated: 5,
+        dismiss: 163
+
+    },
+    {
+        date: '2020-04-16T22:52:56',
+        cases: {
+            total: 27,
+            newCases: 2,
+            cured: 3,
+            goodStatus: 11,
+            insideHospitalized: 5,
+            outsideHospitalized: 7,
+            dead: 2
+        },
+        inStudy: 45,
+        invalidated: 5,
+        dismiss: 152
+
+    },
+    {
         date: '2020-04-15T22:52:56',
         cases: {
             total: 25,
@@ -237,6 +676,22 @@ export const DATA = [
         inStudy: 31,
         invalidated: 5,
         dismiss: 142
+
+    },
+    {
+        date: '2020-04-11T22:52:56',
+        cases: {
+            total: 22,
+            newCases: 1,
+            cured: 1,
+            goodStatus: 20,
+            insideHospitalized: 0,
+            outsideHospitalized: 0,
+            dead: 1
+        },
+        inStudy: 33,
+        invalidated: 5,
+        dismiss: 98
 
     },
     {
@@ -301,6 +756,22 @@ export const DATA = [
         inStudy: 26,
         invalidated: 2,
         dismiss: 31
+
+    },
+    {
+        date: '2020-04-01T22:52:56',
+        cases: {
+            total: 12,
+            newCases: 0,
+            cured: 0,
+            goodStatus: 12,
+            insideHospitalized: 0,
+            outsideHospitalized: 0,
+            dead: 0
+        },
+        inStudy: 21,
+        invalidated: 2,
+        dismiss: 27
 
     },
     {
