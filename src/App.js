@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Nav from "./components/nav/nav";
+import Cards from "./components/cards/cards";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {DATA} from "./data";
+import Charts from "./components/charts/charts";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="app-container">
+            <Nav/>
+            <div className={'body'}>
+                <div className={'last-update'}>
+                    <h3>Última actualización: {new Date(DATA[0].date).toLocaleString()}</h3>
+                </div>
+                <div>
+                    <Cards/>
+                </div>
+                <div>
+                    <Charts/>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;

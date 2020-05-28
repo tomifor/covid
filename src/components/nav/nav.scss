@@ -1,0 +1,42 @@
+h1, h2 {
+  margin: 0;
+}
+
+.nav-container {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+  height: 70px;
+  box-shadow: 0 2px 3px -2px rgba(0,0,0,.9);
+  margin-bottom: 10px;
+  .nav {
+    display: flex;
+    padding: 0 10px;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    height: 70px;
+    .logo-container {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      .title {
+        color: white;
+        font-family: 'Oxygen', sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        margin-right: 15px;
+      }
+      .subtitle {
+        color: white;
+        font-weight: 500;
+        font-size: 26px;
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+}
