@@ -5,6 +5,8 @@ import Cards from "./components/cards/cards";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {DATA} from "./data";
 import Charts from "./components/charts/charts";
+import TestSection from "./components/test-section/TestSection";
+import Footer from "./components/footer/footer";
 
 function App() {
     return (
@@ -20,7 +22,11 @@ function App() {
                 <div>
                     <Charts/>
                 </div>
+                <div>
+                    {/*<TestSection/>*/}
+                </div>
             </div>
+            <Footer/>
         </div>
     );
 }
