@@ -25,6 +25,11 @@ function App() {
                 <div>
                     <TestSection/>
                 </div>
+                <div className={'source'}>
+                    <p><strong>Fuente:</strong><a
+                        href={'https://www.msm.gov.ar/prensa/informe-covid-san-miguel/'}> Municipalidad de San
+                        Miguel</a></p>
+                </div>
             </div>
             <Footer/>
         </div>

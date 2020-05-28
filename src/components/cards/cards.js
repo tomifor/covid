@@ -42,19 +42,19 @@ export default class Cards extends React.Component {
                         </Col>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
-                                <Card.Header>
-                                    <h3 className={'title'}>Activos</h3>
-                                </Card.Header>
+                                <Card.Header><h3 className={'title'}>Nuevos hoy</h3></Card.Header>
                                 <Card.Body>
-                                    <Card.Title><p className={'value'}>{this.state.active}</p></Card.Title>
+                                    <Card.Title><p className={'value'}>{this.state.newCases}</p></Card.Title>
                                 </Card.Body>
                             </Card>
                         </Col>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
-                                <Card.Header><h3 className={'title'}>Nuevos hoy</h3></Card.Header>
+                                <Card.Header>
+                                    <h3 className={'title'}>Activos</h3>
+                                </Card.Header>
                                 <Card.Body>
-                                    <Card.Title><p className={'value'}>{this.state.newCases}</p></Card.Title>
+                                    <Card.Title><p className={'value'}>{this.state.active}</p></Card.Title>
                                 </Card.Body>
                             </Card>
                         </Col>
