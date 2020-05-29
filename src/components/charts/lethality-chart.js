@@ -1,22 +1,48 @@
 import React from "react";
-import {VictoryBar, VictoryChart, VictoryLabel, VictoryAxis} from "victory";
-
+import {VictoryBar, VictoryChart, VictoryLabel, VictoryAxis, LineSegment} from "victory";
+import {DATA} from "../../data/data";
+import {Lethality} from "../../data/extra-data";
 
 export default class LethalityChart extends React.Component {
 
     constructor(props) {
         super(props);
+
+        const last = DATA[0];
         this.state = {
             data: [
-                {x: 1, y: 10},
+                {x: 0, y: 10},
             ],
-            sanmiguel: 7.1,
-            argentina: 3.5,
-            caba: 4.3,
-            provincia: 5.2,
+            lethality: [
+                {name: 'San Miguel', value: ((last.cases.dead / last.cases.total) * 100)},
+                {name: 'Argentina', value: Lethality.argentina},
+                {name: 'CABA', value: Lethality.caba},
+                {name: 'Buenos Aires', value: Lethality.buenosaires}
+            ]
         };
     }
 
+    componentDidMount() {
+        console.log(this.state.lethality.map(item => item.value).sort());
+    }
+
+    getTickFormat(value) {
+        const place = this.state.lethality.find(item => item.value === value).name;
+        return value.toFixed(2) + '%\n' + place;
+    }
+
+    tickLabelHeight(value) {
+        const sorted = this.state.lethality.sort((a, b) => {
+            return a.value - b.value;
+        });
+        const index = sorted.findIndex(item => item.value === value.datum);
+        return index % 2 === 0 ? 0 : 40;
+    }
+
+    tickLabelColor(value) {
+        // console.log(value);
+        return {fill: '#dc0000'};
+    }
 
     render() {
         return (
@@ -31,10 +57,10 @@ export default class LethalityChart extends React.Component {
                     </defs>
                 </svg>
                 <VictoryChart height={300}
-                              padding={{top: 10, bottom: 160, right: 40, left: 40}}>
+                              padding={{top: 10, bottom: 170, right: 40, left: 40}}>
                     <VictoryBar
                         horizontal
-                        domain={{x: [1, 5], y: [0, 10]}}
+                        domain={{x: [0, 5], y: [0, 10]}}
                         height={300}
                         style={{data: {fill: "url(#barGradient)", width: 25}}}
                         alignment="start"
@@ -42,14 +68,28 @@ export default class LethalityChart extends React.Component {
                         maxDomain={{x: 5, y: 10}}
                         minDomain={{x: 0}}
                         labels={({datum}) => `${datum.y}%`}
-                        labelComponent={<VictoryLabel dy={-10}/>}
+                        labelComponent={<VictoryLabel dy={-12} dx={8}/>}
                     />
-                    <VictoryAxis dependentAxis/>
+                    <VictoryAxis dependentAxis
+                                 style={{
+                                     axis: {stroke: "transparent"},
+                                     ticks: {stroke: "grey", size: 10},
+                                 }}
+                                 tickCount={4}
+                                 tickLabelComponent={<VictoryLabel style={{fill: '#11486B'}}
+                                                                   dy={(dy) => this.tickLabelHeight(dy)}/>}
+                                 tickComponent={<LineSegment type={"tick"} style={{stroke: "grey"}}/>}
+                                 tickValues={this.state.lethality.map(item => item.value).sort()}
+                                 tickFormat={(t) => this.getTickFormat(t)}
+                    />
                     <VictoryAxis
+                        tickValues={[0]}
+                        tickFormat={(t) => t + '%'}
+                        offsetX={45}
+                        tickLabelComponent={<VictoryLabel dy={-12}/>}
                         style={{
                             axis: {stroke: "transparent"},
                             ticks: {stroke: "transparent"},
-                            tickLabels: {fill: "transparent"}
                         }}
                     />
                 </VictoryChart>

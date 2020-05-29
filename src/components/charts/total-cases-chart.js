@@ -1,6 +1,6 @@
 import React from "react";
 import {VictoryLine, VictoryChart, VictoryAxis} from 'victory';
-import {DATA} from "../../data";
+import {DATA} from "../../data/data";
 
 export default class TotalCasesChart extends React.Component {
     constructor(props) {

@@ -1,7 +1,7 @@
 import React from "react";
 import './TestSection.scss';
 import {Card, Col, Container, Row} from "react-bootstrap";
-import {DATA} from "../../data";
+import {DATA} from "../../data/data";
 
 export default class TestSection extends React.Component {
 

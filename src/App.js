@@ -3,7 +3,7 @@ import './App.scss';
 import Nav from "./components/nav/nav";
 import Cards from "./components/cards/cards";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {DATA} from "./data";
+import {DATA} from "./data/data";
 import Charts from "./components/charts/charts";
 import TestSection from "./components/test-section/TestSection";
 import Footer from "./components/footer/footer";

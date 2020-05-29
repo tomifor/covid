@@ -1,6 +1,6 @@
 import React from "react";
 import {VictoryPie, VictoryChart, VictoryLegend, VictoryAxis} from "victory";
-import {DATA} from "../../data";
+import {DATA} from "../../data/data";
 
 export default class ConfirmedChart extends React.Component {
 

@@ -18,14 +18,14 @@ export default class Charts extends React.Component {
                         <DayCases/>
                     </Col>
                 </Row>
-                {/*<Row>*/}
-                {/*    <Col lg={6} md={6} sm={12} xs={12}>*/}
-                {/*        <ConfirmedChart/>*/}
-                {/*    </Col>*/}
-                {/*    <Col lg={6} md={6} sm={12} xs={12}>*/}
-                {/*        <LethalityChart/>*/}
-                {/*    </Col>*/}
-                {/*</Row>*/}
+                <Row>
+                    <Col lg={6} md={6} sm={12} xs={12}>
+                        <ConfirmedChart/>
+                    </Col>
+                    <Col lg={6} md={6} sm={12} xs={12}>
+                        <LethalityChart/>
+                    </Col>
+                </Row>
             </Container>
         )
     }

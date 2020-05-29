@@ -1,6 +1,6 @@
 import React from "react";
 import {VictoryAxis, VictoryBar, VictoryChart} from 'victory';
-import {DATA} from "../../data";
+import {DATA} from "../../data/data";
 
 
 export default class DayCases extends React.Component {
