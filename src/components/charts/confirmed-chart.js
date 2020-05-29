@@ -12,7 +12,7 @@ export default class ConfirmedChart extends React.Component {
             colors: ["#3DB085", "#30A0DB", "#FBCF4A", "#844F9B", "#E95B54"],
             data: [
                 {x: "Alta definitiva", y: last.cases.cured},
-                {x: "En sus casas", y: last.cases.goodStatus},
+                {x: "Sin necesidad \n de internación", y: last.cases.goodStatus},
                 {x: "Internadas en \n el municipio", y: last.cases.insideHospitalized},
                 {x: "Internadas fuera \n del municipio", y: last.cases.outsideHospitalized},
                 {x: "Fallecidas", y: last.cases.dead},

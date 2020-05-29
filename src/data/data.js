@@ -870,6 +870,22 @@ export const DATA = [
 
     },
     {
+        date: '2020-03-23T22:52:56',
+        cases: {
+            total: 1,
+            newCases: 0,
+            cured: 0,
+            goodStatus: 1,
+            insideHospitalized: 0,
+            outsideHospitalized: 0,
+            dead: 0
+        },
+        inStudy: 0,
+        invalidated: 0,
+        dismiss: 0
+
+    },
+    {
         date: '2020-03-22T22:52:56',
         cases: {
             total: 1,

@@ -22,10 +22,6 @@ export default class LethalityChart extends React.Component {
         };
     }
 
-    componentDidMount() {
-        console.log(this.state.lethality.map(item => item.value).sort());
-    }
-
     getTickFormat(value) {
         const place = this.state.lethality.find(item => item.value === value).name;
         return value.toFixed(2) + '%\n' + place;
@@ -37,11 +33,6 @@ export default class LethalityChart extends React.Component {
         });
         const index = sorted.findIndex(item => item.value === value.datum);
         return index % 2 === 0 ? 0 : 40;
-    }
-
-    tickLabelColor(value) {
-        // console.log(value);
-        return {fill: '#dc0000'};
     }
 
     render() {
@@ -78,7 +69,6 @@ export default class LethalityChart extends React.Component {
                                  tickCount={4}
                                  tickLabelComponent={<VictoryLabel style={{fill: '#11486B'}}
                                                                    dy={(dy) => this.tickLabelHeight(dy)}/>}
-                                 tickComponent={<LineSegment type={"tick"} style={{stroke: "grey"}}/>}
                                  tickValues={this.state.lethality.map(item => item.value).sort()}
                                  tickFormat={(t) => this.getTickFormat(t)}
                     />
