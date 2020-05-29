@@ -4,6 +4,7 @@ import {Col, Container, Row} from "react-bootstrap";
 import './charts.scss';
 import DayCases from "./day-cases";
 import ConfirmedChart from "./confirmed-chart";
+import LethalityChart from "./lethality-chart";
 
 export default class Charts extends React.Component {
     render() {
@@ -14,15 +15,15 @@ export default class Charts extends React.Component {
                         <TotalCasesChart/>
                     </Col>
                     <Col lg={6} md={6} sm={12} xs={12}>
-                        <DayCases />
+                        <DayCases/>
                     </Col>
                 </Row>
                 {/*<Row>*/}
                 {/*    <Col lg={6} md={6} sm={12} xs={12}>*/}
-                {/*        <ConfirmedChart />*/}
+                {/*        <ConfirmedChart/>*/}
                 {/*    </Col>*/}
                 {/*    <Col lg={6} md={6} sm={12} xs={12}>*/}
-                {/*        <DayCases />*/}
+                {/*        <LethalityChart/>*/}
                 {/*    </Col>*/}
                 {/*</Row>*/}
             </Container>
