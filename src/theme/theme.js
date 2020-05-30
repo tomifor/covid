@@ -2,6 +2,7 @@ export const lightTheme = {
     body: '#E2E2E2',
     title: '#ffffff',
     background: '#fff',
+    border: '1px solid rgba(0,0,0,.125)',
     text: '#363537',
     toggleBorder: '#FFF',
     gradient: 'linear-gradient(#39598A, #79D7ED)',
@@ -16,7 +17,12 @@ export const lightTheme = {
     },
     card: {
         header: 'rgba(0,0,0,.03);',
-        body: '#fff'
+        body: '#fff',
+        border: '1px solid rgba(0,0,0,.125)'
+    },
+    inputSwitch: {
+        color: '#fff',
+        background: '#000',
     }
 }
 
@@ -24,6 +30,7 @@ export const darkTheme = {
     body: '#363537',
     title: '#FAFAFA',
     background: '#000',
+    border: '1px solid #222223',
     text: '#FAFAFA',
     toggleBorder: '#6B8096',
     gradient: 'linear-gradient(#091236, #1E215D)',
@@ -38,7 +45,12 @@ export const darkTheme = {
     },
     card: {
         header: '#222223',
-        body: '#000'
+        body: '#000',
+        border: '1px solid #222223'
+    },
+    inputSwitch: {
+        color: '#222223',
+        background: '#000',
     }
 }
 

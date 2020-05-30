@@ -1,6 +1,8 @@
 import React from "react";
 import './dark-mode-switch.scss';
-import {useTheme} from "../../../theme/ThemeContext";
+import styled from "@emotion/styled";
+import sun from '../../../assets/dom.svg'
+import moon from '../../../assets/luna.svg'
 
 
 export default class DarkModeSwitch extends React.Component {
@@ -12,21 +14,32 @@ export default class DarkModeSwitch extends React.Component {
 
     toggleSwitch() {
         this.setState({darkMode: !this.state.darkMode});
-        if(this.props.onChange){
+        if (this.props.onChange) {
             this.props.onChange(!this.state.darkMode);
         }
     }
 
     render() {
         return (
-            <div id={'switch'}>
-                <label htmlFor="switch-input" className="switchBtn">
-                    <input id="switch-input" type="checkbox"  defaultChecked={!this.state.darkMode}
-                           value={!this.state.darkMode}
-                           onClick={() => this.toggleSwitch()}/>
-                    <div className="slide round">On</div>
-                </label>
-            </div>
+            <StyleWrapper>
+                <div id={'switch'}>
+                    <label htmlFor="switch-input" className="switchBtn">
+                        <input id="switch-input" type="checkbox" defaultChecked={!this.state.darkMode}
+                               value={!this.state.darkMode}
+                               onClick={() => this.toggleSwitch()}/>
+                        <div className="slide round"><img className={'dark-mode-icon'} src={this.state.darkMode ? sun : moon} alt={'dark-mode'}/></div>
+                    </label>
+                </div>
+            </StyleWrapper>
         )
     }
 }
+
+const StyleWrapper = styled("div")`
+  .slide:before {
+    background-color: ${props => props.theme.inputSwitch.color};
+  }
+  .slide {
+   background-color: ${props => props.theme.inputSwitch.background};
+  }
+`;

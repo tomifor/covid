@@ -10,6 +10,9 @@ import styled from "@emotion/styled";
 
 const App = () => {
     const themeState = useTheme();
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        console.log('Esta en darkmode');
+    }
     return (
         <StyleWrapper>
             <div className="app-container">
@@ -42,7 +45,7 @@ const StyleWrapper = styled("div")`
         background-color: ${props => props.theme.card.body};
        }
        .card {
-       
+        border: ${props => props.theme.card.border};
        }
        h3.title {
         color: ${props => props.theme.text};
@@ -51,4 +54,10 @@ const StyleWrapper = styled("div")`
         color: ${props => props.theme.text};
        }
    }
+   p.source {
+      color: ${props => props.theme.text};
+      a {
+        color: ${props => props.theme.text};
+      }
+    }
 `;

@@ -22,11 +22,15 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
     padding: 8px;
     color: #fff;
+  }
+
+  .dark-mode-icon {
+    height: 17px;
+    margin-bottom: 9px;
   }
 
   .slide:before {
@@ -36,7 +40,6 @@
     width: 26px;
     left: 38px;
     bottom: 4px;
-    background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
   }

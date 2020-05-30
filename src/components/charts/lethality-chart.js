@@ -1,5 +1,5 @@
 import React from "react";
-import {VictoryBar, VictoryChart, VictoryLabel, VictoryAxis, LineSegment} from "victory";
+import {VictoryBar, VictoryChart, VictoryLabel, VictoryAxis} from "victory";
 import {DATA} from "../../data/data";
 import {Lethality} from "../../data/extra-data";
 

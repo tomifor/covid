@@ -2,7 +2,6 @@ import React from 'react';
 import './nav.scss';
 import DarkModeSwitch from "../dark-mode/switch/dark-mode-switch";
 import styled from "@emotion/styled";
-import SmTab from "../tabs/sm-tab";
 
 export default class Nav extends React.Component {
 
