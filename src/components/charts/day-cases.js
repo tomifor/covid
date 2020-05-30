@@ -7,14 +7,9 @@ export default class DayCases extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {data: null}
-    }
-
-
-    componentDidMount() {
-        const values = DATA.map(item => ({x: new Date(Date.parse(item.date)), y: item.cases.newCases})).reverse();
-        console.log(values);
-        this.setState({data: values});
+        const values = DATA.map(item => ({x: new Date(Date.parse(item.date)).getTime(), y: item.cases.newCases})).reverse();
+        const maxValue = Math.max.apply(Math, values.map((o) => { return o.y; }));
+        this.state = {data: values, max: maxValue + 2}
     }
 
     render() {
@@ -23,19 +18,21 @@ export default class DayCases extends React.Component {
                 <h3 className={'chart-title'}>Casos por día</h3>
                 <VictoryChart height={300}
                               domainPadding={{ x: 50, y: [0, 5] }}
-                              padding={{top: 10, bottom: 40, right: 10, left: 35}}
+                              domain={{y: [0, this.state.max]}}
+                              padding={{top: 20, bottom: 40, right: 10, left: 35}}
                               scale={{ x: "time" }}>
                     <VictoryBar
                         style={{ data: { fill: "#ff932a" } }}
                         data={this.state.data}
                         scale={{x: 'time', y: 'linear'}}
                         minDomain={{y: 0}}
+                        labels={({ datum }) => datum.y > 4 ? datum.y : ''}
                         animate={{
                             duration: 2000,
                             onLoad: {duration: 1000}
                         }}
                     />
-                    <VictoryAxis dependentAxis />
+                    <VictoryAxis dependentAxis tickCount={6} />
                     <VictoryAxis tickCount={3} tickFormat={v => month[new Date(v).getMonth()]}/>
                 </VictoryChart>
             </div>

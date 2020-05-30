@@ -27,7 +27,7 @@ export default class TestSection extends React.Component {
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
                                 <Card.Header>
-                                    <h3 className={'title'}>Totales</h3>
+                                    <h2 className={'title'}>Totales</h2>
                                 </Card.Header>
                                 <Card.Body>
                                     <Card.Title>
@@ -39,7 +39,7 @@ export default class TestSection extends React.Component {
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
                                 <Card.Header>
-                                    <h3 className={'title'}>Hoy</h3>
+                                    <h2 className={'title'}>Hoy</h2>
                                 </Card.Header>
                                 <Card.Body>
                                     <Card.Title><p className={'value'}>{this.state.today}</p></Card.Title>
@@ -48,7 +48,7 @@ export default class TestSection extends React.Component {
                         </Col>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
-                                <Card.Header><h3 className={'title study'}>Pendientes</h3></Card.Header>
+                                <Card.Header><h2 className={'title study'}>Pendientes</h2></Card.Header>
                                 <Card.Body>
                                     <Card.Title><p className={'value'}>{this.state.study}</p></Card.Title>
                                 </Card.Body>
@@ -56,7 +56,7 @@ export default class TestSection extends React.Component {
                         </Col>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
-                                <Card.Header><h3 className={'title'}>C/100K hab</h3></Card.Header>
+                                <Card.Header><h2 className={'title'}>C/100K hab</h2></Card.Header>
                                 <Card.Body>
                                     <Card.Title><p className={'value'}>{this.state.rate}</p></Card.Title>
                                 </Card.Body>

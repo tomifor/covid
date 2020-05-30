@@ -1,9 +1,11 @@
 .footer-container {
+  background-color: #767676;
   color: white;
   margin-top: 10px;
   min-height: 100px;
   text-align: center;
   padding: 20px 0;
+  font-family: 'Oxygen', 'Helvetica', sans-serif;
   .hashtag {
     margin-bottom: 10px;
     a {
@@ -22,9 +24,7 @@
       margin-right: 15px;
     }
   }
-
   .made-by {
-    font-family: 'Helvetica', sans-serif;
     a {
       color: white;
       text-decoration: none;

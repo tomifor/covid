@@ -17,13 +17,13 @@ h1, h2 {
     max-width: 1200px;
     margin: auto;
     height: 70px;
+    font-family: 'Oxygen', 'Helvetica', sans-serif;
     .logo-container {
       display: flex;
       flex-direction: row;
       align-items: baseline;
       .title {
         text-decoration: none;
-        font-family: 'Oxygen', sans-serif;
         font-weight: 700;
         margin-right: 15px;
         margin-bottom: 0;
