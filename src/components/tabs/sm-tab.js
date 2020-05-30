@@ -1,8 +1,8 @@
 import React from "react";
 import {DATA} from "../../data/data";
-import Cards from "../cards/cards";
 import Charts from "../charts/charts";
 import TestSection from "../test-section/TestSection";
+import CardsCases from "../cards/cards-cases";
 
 export default class SmTab extends React.Component {
 
@@ -13,7 +13,7 @@ export default class SmTab extends React.Component {
                     <h3>Última actualización: {new Date(DATA[0].date).toLocaleString()}</h3>
                 </div>
                 <div>
-                    <Cards/>
+                    <CardsCases/>
                 </div>
                 <div>
                     <Charts/>

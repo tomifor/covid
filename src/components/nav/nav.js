@@ -3,7 +3,7 @@ import './nav.scss';
 import DarkModeSwitch from "../dark-mode/switch/dark-mode-switch";
 import styled from "@emotion/styled";
 
-export default class Nav extends React.Component {
+export default class NavHeader extends React.Component {
 
 
     render() {
@@ -17,8 +17,8 @@ export default class Nav extends React.Component {
                                                           target={'_blank'}
                                                           rel="noopener noreferrer">San Miguel</a></h2>
                         </div>
-                        <DarkModeSwitch
-                            onChange={(value) => this.props.onChangeMode ? this.props.onChangeMode(value) : null}/>
+                        {/*<DarkModeSwitch*/}
+                        {/*    onChange={(value) => this.props.onChangeMode ? this.props.onChangeMode(value) : null}/>*/}
                     </div>
                 </div>
             </StyleWrapper>

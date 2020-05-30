@@ -13,14 +13,37 @@
     }
   }
 
+  .nav.nav-pills {
+    justify-content: center;
+    .nav-link.active {
+      background-color: #454545;
+    }
+  }
+
+  a.nav-link {
+    color: #11998e;
+  }
+
   .source {
     text-align: center;
+  }
+
+  #argentina-tab {
+    min-height: 90vh;
+    .soon {
+      text-align: center;
+      font-weight: 300;
+      font-size: 36px;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
   }
 }
 
 
 @media only screen and (max-width: 768px) {
   .last-update {
+    margin-top: 20px;
     h3 {
       font-size: 14px;
     }
@@ -29,6 +52,7 @@
 
 @media only screen and (min-width: 769px) {
   .last-update {
+    margin-top: 20px;
     h3 {
       font-size: 18px;
     }
