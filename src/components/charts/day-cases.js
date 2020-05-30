@@ -7,14 +7,8 @@ export default class DayCases extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {data: null}
-    }
-
-
-    componentDidMount() {
-        const values = DATA.map(item => ({x: new Date(Date.parse(item.date)), y: item.cases.newCases})).reverse();
-        console.log(values);
-        this.setState({data: values});
+        const values = DATA.map(item => ({x: new Date(Date.parse(item.date)).getTime(), y: item.cases.newCases})).reverse();
+        this.state = {data: values}
     }
 
     render() {
