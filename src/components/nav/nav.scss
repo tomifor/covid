@@ -3,8 +3,8 @@ h1, h2 {
 }
 
 .nav-container {
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+  //background: rgb(2,0,36);
+  //background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
   height: 70px;
   box-shadow: 0 2px 3px -2px rgba(0,0,0,.9);
   margin-bottom: 10px;
@@ -13,6 +13,7 @@ h1, h2 {
     padding: 0 10px;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     max-width: 1200px;
     margin: auto;
     height: 70px;
@@ -21,22 +22,43 @@ h1, h2 {
       flex-direction: row;
       align-items: baseline;
       .title {
-        color: white;
+        //color: white;
         font-family: 'Oxygen', sans-serif;
         font-weight: 700;
-        font-size: 36px;
         margin-right: 15px;
+        margin-bottom: 0;
       }
       .subtitle {
-        color: white;
         font-weight: 500;
-        font-size: 26px;
         a {
-          color: white;
           text-decoration: none;
         }
       }
     }
 
+  }
+}
+// MOBILE
+@media only screen and (max-width: 768px) {
+  .nav-container {
+    .title {
+      font-size: 32px;
+    }
+    .subtitle {
+      font-size: 20px;
+    }
+  }
+
+}
+
+// DESKTOP
+@media only screen and (min-width: 769px) {
+  .nav-container {
+    .title {
+      font-size: 36px;
+    }
+    .subtitle {
+      font-size: 26px;
+    }
   }
 }

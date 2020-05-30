@@ -22,7 +22,7 @@ export default class TestSection extends React.Component {
         return (
             <div className={'test-container'}>
                 <Container>
-                    <h1>Test</h1>
+                    <h1 className={'section-title'}>Test</h1>
                     <Row>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">

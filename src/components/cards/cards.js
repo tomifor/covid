@@ -26,7 +26,7 @@ export default class Cards extends React.Component {
         return (
             <div className={'cards-container'}>
                 <Container>
-                    <h1>Casos</h1>
+                    <h1 className={'section-title'}>Casos</h1>
                     <Row>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
