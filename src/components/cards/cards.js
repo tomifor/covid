@@ -31,7 +31,7 @@ export default class Cards extends React.Component {
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
                                 <Card.Header>
-                                    <h3 className={'title'}>Confirmados</h3>
+                                    <h2 className={'title'}>Confirmados</h2>
                                 </Card.Header>
                                 <Card.Body>
                                     <Card.Title>
@@ -42,7 +42,7 @@ export default class Cards extends React.Component {
                         </Col>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
-                                <Card.Header><h3 className={'title'}>Nuevos hoy</h3></Card.Header>
+                                <Card.Header><h2 className={'title'}>Nuevos hoy</h2></Card.Header>
                                 <Card.Body>
                                     <Card.Title><p className={'value'}>{this.state.newCases}</p></Card.Title>
                                 </Card.Body>
@@ -51,7 +51,7 @@ export default class Cards extends React.Component {
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
                                 <Card.Header>
-                                    <h3 className={'title'}>Activos</h3>
+                                    <h2 className={'title'}>Activos</h2>
                                 </Card.Header>
                                 <Card.Body>
                                     <Card.Title><p className={'value'}>{this.state.active}</p></Card.Title>
@@ -60,7 +60,7 @@ export default class Cards extends React.Component {
                         </Col>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
-                                <Card.Header><h3 className={'title'}>Descartados</h3></Card.Header>
+                                <Card.Header><h2 className={'title'}>Descartados</h2></Card.Header>
                                 <Card.Body>
                                     <Card.Title><p className={'value'}>{this.state.dismiss}</p></Card.Title>
                                 </Card.Body>
@@ -71,7 +71,7 @@ export default class Cards extends React.Component {
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
                                 <Card.Header>
-                                    <h3 className={'title cured'}>Recuperados</h3>
+                                    <h2 className={'title cured'}>Recuperados</h2>
                                 </Card.Header>
                                 <Card.Body>
                                     <Card.Title><p className={'value'}>{this.state.cured}</p></Card.Title>
@@ -81,7 +81,7 @@ export default class Cards extends React.Component {
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
                                 <Card.Header>
-                                    <h3 className={'title'}>Internados</h3>
+                                    <h2 className={'title'}>Internados</h2>
                                 </Card.Header>
                                 <Card.Body>
                                     <Card.Title><p className={'value'}>{this.state.insideHospitalized}</p></Card.Title>
@@ -90,7 +90,7 @@ export default class Cards extends React.Component {
                         </Col>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
-                                <Card.Header><h3 className={'title'}>Fallecidos</h3></Card.Header>
+                                <Card.Header><h2 className={'title'}>Fallecidos</h2></Card.Header>
                                 <Card.Body>
                                     <Card.Title><p className={'value'}>{this.state.dead}</p></Card.Title>
                                 </Card.Body>
@@ -98,7 +98,7 @@ export default class Cards extends React.Component {
                         </Col>
                         <Col md={3} xs={6}>
                             <Card className="text-center card-container">
-                                <Card.Header><h3 className={'title'}>Letalidad</h3></Card.Header>
+                                <Card.Header><h2 className={'title'}>Letalidad</h2></Card.Header>
                                 <Card.Body>
                                     <Card.Title><p className={'value'}>{this.state.deadRate}<span>%</span></p>
                                     </Card.Title>
