@@ -36,7 +36,7 @@ export default class Footer extends React.Component {
                 </div>
                 <p className={'made-by'}>Made by <a href={'https://twitter.com/tomifor'} rel={'noopener noreferrer'}
                                                     target={'_blank'}>@tomifor</a> - 2020</p>
-                <p className={'version'}>v 0.3.0</p>
+                <p className={'version'}>v 0.3.1</p>
             </div>
         )
     }
