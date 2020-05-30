@@ -6,7 +6,9 @@ export default class TotalCasesChart extends React.Component {
     constructor(props) {
         super(props);
         const values = DATA.map(item => ({x: new Date(Date.parse(item.date)), y: item.cases.total})).reverse();
-        const maxValue = Math.max.apply(Math, values.map((o) => { return o.y; }));
+        const maxValue = Math.max.apply(Math, values.map((o) => {
+            return o.y;
+        }));
         this.state = {data: values, max: maxValue + 10};
     }
 
