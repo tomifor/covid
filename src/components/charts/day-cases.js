@@ -9,7 +9,6 @@ export default class DayCases extends React.Component {
         super(props);
         const values = DATA.map(item => ({x: new Date(Date.parse(item.date)).getTime(), y: item.cases.newCases})).reverse();
         const maxValue = Math.max.apply(Math, values.map((o) => { return o.y; }));
-        console.log(maxValue);
         this.state = {data: values, max: maxValue + 2}
     }
 

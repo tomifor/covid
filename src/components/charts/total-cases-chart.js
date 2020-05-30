@@ -5,20 +5,19 @@ import {DATA} from "../../data/data";
 export default class TotalCasesChart extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {data: null};
+        const values = DATA.map(item => ({x: new Date(Date.parse(item.date)), y: item.cases.total})).reverse();
+        const maxValue = Math.max.apply(Math, values.map((o) => { return o.y; }));
+        this.state = {data: values, max: maxValue + 10};
     }
 
-    componentDidMount() {
-        const values = DATA.map(item => ({x: new Date(Date.parse(item.date)), y: item.cases.total})).reverse();
-        this.setState({data: values});
-    }
 
     render() {
         return (
             <div className={'chart-container'}>
                 <h3 className={'chart-title'}>Casos totales</h3>
                 <VictoryChart height={300}
-                              padding={{top: 10, bottom: 40, right: 10, left: 35}}>
+                              domain={{y: [0, this.state.max]}}
+                              padding={{top: 20, bottom: 40, right: 10, left: 35}}>
                     <VictoryLine
                         name={'total-cases'}
                         interpolation="natural"
