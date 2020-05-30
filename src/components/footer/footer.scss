@@ -5,12 +5,12 @@
   min-height: 100px;
   text-align: center;
   padding: 20px 0;
+  font-family: 'Oxygen', 'Helvetica', sans-serif;
   .hashtag {
     margin-bottom: 10px;
     a {
       color: white;
       font-size: 16pt;
-      font-family: 'Oxygen', 'Helvetica', sans-serif;
     }
   }
   .social {
@@ -24,16 +24,10 @@
       margin-right: 15px;
     }
   }
-
   .made-by {
-    font-family: 'Oxygen', 'Helvetica', sans-serif;
     a {
       color: white;
       text-decoration: none;
     }
-  }
-
-  .version {
-    font-family: 'Oxygen', 'Helvetica', sans-serif;
   }
 }

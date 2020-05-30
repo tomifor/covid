@@ -1,13 +1,12 @@
 .test-container {
   margin-top: 30px;
   margin-bottom: 50px;
-
+  font-family: 'Oxygen', 'Helvetica', sans-serif;
   .card-container {
     margin-bottom: 20px;
   }
 
   .title {
-    font-family: 'Oxygen', sans-serif;
     margin: 0;
   }
 
@@ -15,7 +14,6 @@
     font-size: 48px;
     margin-bottom: 0;
     font-weight: 700;
-    font-family: 'Oxygen', sans-serif;
     color: #454545;
   }
 
@@ -34,10 +32,6 @@
 
     .title.cured {
       font-size: 18px;
-    }
-
-    .value {
-
     }
   }
 }
