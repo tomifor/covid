@@ -15,6 +15,8 @@ export default class Footer extends React.Component {
                        href={'https://github.com/tomifor/covid'}
                        rel={'noopener noreferrer'}
                        name={'github'}
+                       aria-label={'Github'}
+                       role={'button'}
                        target={'_blank'}>
                         <svg className="icon-github" height="24" viewBox="0 0 16 16"
                              version="1.1" width="32" aria-hidden="true">
@@ -25,6 +27,8 @@ export default class Footer extends React.Component {
                     <a className={'icon'}
                        href={'https://www.linkedin.com/in/tomasforman/'}
                        name={'linkedin'}
+                       role={'button'}
+                       aria-label={'Github'}
                        rel={'noopener noreferrer'}
                        target={'_blank'}>
                         <svg className={'icon-linkedin'} xmlns="http://www.w3.org/2000/svg" width="24" height="24"
