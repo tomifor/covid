@@ -12,7 +12,7 @@ export default class Nav extends React.Component {
                 <div className={'nav-container'}>
                     <div className={'nav'}>
                         <div className={'logo-container'}>
-                            <h1 className={'title'}>Covid-19</h1>
+                            <h1 className={'title'}><a href={'https://tomifor.github.io/covid/'}>Covid-19</a></h1>
                             <h2 className={'subtitle'}><a href={'https://goo.gl/maps/3fTbwqhnmosFQ3VG8'}
                                                           target={'_blank'}
                                                           rel="noopener noreferrer">San Miguel</a></h2>
@@ -29,10 +29,10 @@ export default class Nav extends React.Component {
 const StyleWrapper = styled("div")`
   background: ${props => props.theme.nav.background};
   font-family: "Oxygen", sans-serif;
-  h1 {
+  h1 a {
     color: ${props => props.theme.nav.title};
   }
-  h2, a {
+  h2 a {
     color: ${props => props.theme.nav.subtitle};
   }
 `;

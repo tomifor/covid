@@ -22,11 +22,14 @@ h1, h2 {
       flex-direction: row;
       align-items: baseline;
       .title {
-        //color: white;
+        text-decoration: none;
         font-family: 'Oxygen', sans-serif;
         font-weight: 700;
         margin-right: 15px;
         margin-bottom: 0;
+      }
+      .title a:hover {
+        text-decoration: none;
       }
       .subtitle {
         font-weight: 500;
