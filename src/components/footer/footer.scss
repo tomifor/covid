@@ -10,6 +10,7 @@
     a {
       color: white;
       font-size: 16pt;
+      font-family: 'Oxygen', sans-serif;
     }
   }
   .social {
@@ -25,10 +26,14 @@
   }
 
   .made-by {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Oxygen', sans-serif;
     a {
       color: white;
       text-decoration: none;
     }
+  }
+
+  .version {
+    font-family: 'Oxygen', sans-serif;
   }
 }
