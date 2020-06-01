@@ -44,9 +44,9 @@ export const darkTheme = {
         title: '#FAFAFA',
     },
     card: {
-        header: '#222223',
+        header: '#1D1D1D',
         body: '#000',
-        border: '1px solid #222223'
+        border: '1px solid #1D1D1D'
     },
     inputSwitch: {
         color: '#222223',
