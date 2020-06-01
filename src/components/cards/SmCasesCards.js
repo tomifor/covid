@@ -18,7 +18,7 @@ export default class SmCasesCards extends React.Component {
             study: last.inStudy,
             dismiss: last.dismiss,
             dead: last.cases.dead,
-            deadRate: ((last.cases.dead / last.cases.total) * 100).toFixed(1),
+            deadRate: ((last.cases.dead / last.cases.total) * 100).toFixed(1).replace('.', ','),
         }
     }
 

@@ -29,7 +29,6 @@ export default class ArTab extends React.Component {
 
     getDate(value) {
         const date = value.split('T')[0].split('-');
-        console.log(date);
         return date[2] + '/' + date[1] + '/' + date[0]
     }
 

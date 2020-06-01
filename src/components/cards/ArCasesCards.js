@@ -32,7 +32,7 @@ export default class ArCasesCards extends React.Component {
                 recovered: this.props.current.Recovered,
                 newCases: this.props.current.Confirmed - this.props.previous.Confirmed,
                 deaths: this.props.current.Deaths,
-                deathsRate: ((this.props.current.Deaths / this.props.current.Confirmed)*100).toFixed(1),
+                deathsRate: ((this.props.current.Deaths / this.props.current.Confirmed)*100).toFixed(1).replace('.', ','),
             });
         }
     }

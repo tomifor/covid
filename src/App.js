@@ -13,7 +13,7 @@ import ArTab from "./components/tabs/ArTab";
 const App = () => {
     const themeState = useTheme();
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        console.log('Esta en darkmode');
+        // onsole.log('Esta en darkmode');
     }
     return (
         <StyleWrapper>
