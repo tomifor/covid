@@ -30,6 +30,14 @@
     text-align: center;
   }
 
+  .loader {
+    text-align: center;
+    margin-top: 60px;
+    .loader-text {
+      margin-top: 10px;
+    }
+  }
+
   #argentina-tab {
     min-height: 90vh;
     display: flex;

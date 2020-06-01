@@ -20,7 +20,7 @@ const App = () => {
             <div className="app-container">
                 <NavHeader onChangeMode={() => themeState.toggle()}/>
                 <div className={'body'}>
-                    <Tab.Container defaultActiveKey="city">
+                    <Tab.Container defaultActiveKey="country">
                         <Nav variant="pills" className="flex-row">
                             <Nav.Item>
                                 <Nav.Link eventKey="city">San Miguel</Nav.Link>
@@ -64,7 +64,7 @@ color: ${props => props.theme.text};
 a.nav-link { color: ${props => props.theme.text} !important; }
 }
 .last-update h3 { color: ${props => props.theme.text} }
-.day-cases, .total-cases, .lethality-chart { 
+.day-cases, .total-cases, .lethality-chart, .ar-chart { 
     tspan { fill: ${props => props.theme.text} !important;} 
     line: { stroke: ${props => props.theme.text} !important;}
  }

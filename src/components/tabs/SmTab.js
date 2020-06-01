@@ -22,10 +22,10 @@ export default class SmTab extends React.Component {
                     <SmTestCards/>
                 </div>
                 <div>
-                    <p className={'source'}><strong>Fuente:</strong><a
+                    <p className={'source'}><strong>Fuente: </strong><a
                         rel={'noopener noreferrer'}
                         target={'_blank'}
-                        href={'https://www.msm.gov.ar/prensa/informe-covid-san-miguel/'}> Municipalidad de San
+                        href={'https://www.msm.gov.ar/prensa/informe-covid-san-miguel/'}>Municipalidad de San
                         Miguel</a></p>
                 </div>
             </div>

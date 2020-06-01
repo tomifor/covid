@@ -16,12 +16,14 @@
     margin: 0;
   }
 
+  .card-header {
+    min-height: 53px;
+  }
   .card-body {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
   }
 }
-
 
 @media only screen and (max-width: 768px) {
   .card-container {
@@ -47,6 +49,14 @@
     }
     p.value {
       font-size: 2.5rem;
+    }
+  }
+
+  .card-container.avg-deceased, .card-container.intensive-care {
+    .title {
+      font-size: 17px;
+      font-weight: 500;
+      margin-top: 5px;
     }
   }
 }

@@ -2,6 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 import {getDataByCountry} from "../../services/covid-service";
 import ArCasesCards from "../cards/ArCasesCards";
+import ArChart from "../charts/ArChart";
+import {Spinner} from "react-bootstrap";
 
 const FIRST_DAY = '2020-03-03T00:00:00Z';
 const COUNTRY = 'argentina';
@@ -10,7 +12,7 @@ export default class ArTab extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {current: null, previous: null};
+        this.state = {current: null, previous: null, loading: true};
     }
 
     componentDidMount() {
@@ -22,7 +24,8 @@ export default class ArTab extends React.Component {
                 lastUpdate: lastUpdate,
                 data: res,
                 current: res[res.length - 1],
-                previous: res[res.length - 2]
+                previous: res[res.length - 2],
+                loading: false
             });
         });
     }
@@ -37,11 +40,24 @@ export default class ArTab extends React.Component {
             <StyleWrapper>
                 <div id={'argentina-tab'}>
                     <div>
-                        <div className={'last-update'}>
-                            <h3>Última
-                                actualización: {this.state.current ? this.state.lastUpdate : ''}</h3>
-                        </div>
-                        <ArCasesCards current={this.state.current} previous={this.state.previous}/>
+                        {this.state.loading ?
+                            <div className={'loader'}>
+                                <Spinner animation="border" variant="secondary"/>
+                                <p className={'loader-text'}>Cargando datos</p>
+                            </div>
+                            :
+                            (
+                                <div>
+                                    <div className={'last-update'}>
+                                        <h3>Última
+                                            actualización: {this.state.current ? this.state.lastUpdate : ''}</h3>
+                                    </div>
+                                    <ArCasesCards current={this.state.current} previous={this.state.previous}/>
+                                    <ArChart data={this.state.data}/>
+                                </div>
+                            )
+                        }
+
                     </div>
                     <div>
                         <p className={'source'}><strong>Fuente: </strong><a

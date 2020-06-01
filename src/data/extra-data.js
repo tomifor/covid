@@ -4,3 +4,8 @@ export const Lethality = {
     caba: 2.51,
     buenosaires: 3.90,
 }
+
+export const ArgentinaData = {
+    avgAgeDeceased: 75,
+    intensiveCarePatients: 256
+}

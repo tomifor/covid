@@ -1,8 +1,9 @@
 .chart-container {
-  border: 1px solid rgba(0,0,0,.125);
+  border: 1px solid rgba(0, 0, 0, .125);
   border-radius: .25rem;
   max-height: 400px;
   margin-bottom: 20px;
+
   .chart-title {
     text-align: center;
     margin-top: 10px;
@@ -11,3 +12,6 @@
   }
 }
 
+.chart-container.ar-chart {
+  max-height: 600px;
+}

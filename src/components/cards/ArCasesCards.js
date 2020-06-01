@@ -1,6 +1,7 @@
 import React from "react";
 import {Col, Container, Row} from "react-bootstrap";
 import CardIndicator from "../shared/card/CardIndicator";
+import {ArgentinaData} from "../../data/extra-data";
 
 export default class ArCasesCards extends React.Component {
 
@@ -43,23 +44,29 @@ export default class ArCasesCards extends React.Component {
                 <Container>
                     <h1 className={'section-title'}>Casos</h1>
                     <Row>
-                        <Col md={3} sm={4} xs={6}>
+                        <Col lg={3} md={4} sm={6} xs={6}>
                             <CardIndicator title={'Confirmados'} value={this.state.total}/>
                         </Col>
-                        <Col md={3} sm={4} xs={6}>
+                        <Col lg={3} md={4} sm={6} xs={6}>
                             <CardIndicator title={'Nuevos hoy'} value={this.state.newCases}/>
                         </Col>
-                        <Col md={3} sm={4} xs={6}>
+                        <Col lg={3} md={4} sm={6} xs={6}>
                             <CardIndicator title={'Activos'} value={this.state.active}/>
                         </Col>
-                        <Col md={3} sm={4} xs={6}>
+                        <Col lg={3} md={4} sm={6} xs={6}>
                             <CardIndicator title={'Recuperados'} value={this.state.recovered}/>
                         </Col>
-                        <Col md={{ span: 3, offset: 3 }} sm={4} xs={6}>
+                        <Col lg={3} md={4} sm={6} xs={6}>
                             <CardIndicator title={'Fallecidos'} value={this.state.deaths}/>
                         </Col>
-                        <Col md={3} sm={4} xs={6}>
+                        <Col lg={3} md={4} sm={6} xs={6}>
                             <CardIndicator title={'Letalidad'} value={this.state.deathsRate + '%'}/>
+                        </Col>
+                        <Col lg={3} md={4} sm={6} xs={6}>
+                            <CardIndicator customClass={'avg-deceased'} title={'Edad prom. fallecidos'} value={ArgentinaData.avgAgeDeceased}/>
+                        </Col>
+                        <Col lg={3} md={4} sm={6} xs={6}>
+                            <CardIndicator customClass={'intensive-care'} title={'En terapia intensiva'} value={ArgentinaData.intensiveCarePatients}/>
                         </Col>
                     </Row>
                 </Container>
