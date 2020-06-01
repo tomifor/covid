@@ -10,7 +10,7 @@ export default class SmTab extends React.Component {
         return (
             <div>
                 <div className={'last-update'}>
-                    <h3>Última actualización: {new Date(DATA[0].date).toLocaleString()}</h3>
+                    <h3>Última actualización: {new Date(DATA[0].date).toLocaleDateString()}</h3>
                 </div>
                 <div>
                     <SmCasesCards/>
