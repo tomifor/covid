@@ -20,7 +20,7 @@ const App = () => {
             <div className="app-container">
                 <NavHeader onChangeMode={() => themeState.toggle()}/>
                 <div className={'body'}>
-                    <Tab.Container defaultActiveKey="country">
+                    <Tab.Container defaultActiveKey="city">
                         <Nav variant="pills" className="flex-row">
                             <Nav.Item>
                                 <Nav.Link eventKey="city">San Miguel</Nav.Link>
