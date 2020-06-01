@@ -3,11 +3,11 @@ import './App.scss';
 import NavHeader from "./components/nav/nav";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "./components/footer/footer";
-import SmTab from "./components/tabs/sm-tab";
+import SmTab from "./components/tabs/SmTab";
 import {useTheme} from "./theme/ThemeContext";
 import styled from "@emotion/styled";
 import {Tab, Nav} from "react-bootstrap";
-import ArgentinaTab from "./components/tabs/argentina-tab";
+import ArTab from "./components/tabs/ArTab";
 
 
 const App = () => {
@@ -34,7 +34,7 @@ const App = () => {
                                 <SmTab/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="country">
-                                <ArgentinaTab/>
+                                <ArTab/>
                             </Tab.Pane>
                         </Tab.Content>
                     </Tab.Container>
@@ -56,23 +56,6 @@ color: ${props => props.theme.text};
 .section-title {
 color: ${props => props.theme.text};
 }
-.cards-container, .test-container {
-.card-header {
-background-color: ${props => props.theme.card.header};
-}
-.card-body {
-background-color: ${props => props.theme.card.body};
-}
-.card {
-border: ${props => props.theme.card.border};
-}
-h3.title {
-color: ${props => props.theme.text};
-}
-p.value {
-color: ${props => props.theme.text};
-}
-}
 p.source {
 color: ${props => props.theme.text};
 a {
@@ -80,4 +63,13 @@ color: ${props => props.theme.text};
 }
 a.nav-link { color: ${props => props.theme.text} !important; }
 }
+.last-update h3 { color: ${props => props.theme.text} }
+.day-cases, .total-cases, .lethality-chart { 
+    tspan { fill: ${props => props.theme.text} !important;} 
+    line: { stroke: ${props => props.theme.text} !important;}
+ }
+ #chart-legend-1-title-all, #chart-legend-1-labels-0, #chart-legend-1-labels-1, #chart-legend-1-labels-2, 
+ #chart-legend-1-labels-3, #chart-legend-1-labels-4, #chart-legend-1-labels-5 {
+    tspan { fill: ${props => props.theme.text} !important;} 
+ }
 `;

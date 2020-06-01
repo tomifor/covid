@@ -6,7 +6,9 @@ const BASE_URL = 'https://api.covid19api.com';
 
 
 const getDataByCountry = async (country, startDate, finishDate) => {
-    let response = await fetch(`${BASE_URL}/country/${country}?from=${startDate}&to=${finishDate}`);
+    const URL = `${BASE_URL}/country/${country}?from=${startDate}&to=${finishDate}`;
+    console.log(URL);
+    let response = await fetch(URL);
     return await response.json();
 }
 

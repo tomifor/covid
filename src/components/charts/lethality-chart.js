@@ -37,7 +37,7 @@ export default class LethalityChart extends React.Component {
 
     render() {
         return (
-            <div className={'chart-container'}>
+            <div className={'chart-container lethality-chart'}>
                 <h3 className={'chart-title'}>Letalidad </h3>
                 <svg style={{height: 0}}>
                     <defs>

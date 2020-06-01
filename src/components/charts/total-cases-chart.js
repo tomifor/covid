@@ -15,7 +15,7 @@ export default class TotalCasesChart extends React.Component {
 
     render() {
         return (
-            <div className={'chart-container'}>
+            <div className={'chart-container total-cases'}>
                 <h3 className={'chart-title'}>Casos totales</h3>
                 <VictoryChart height={300}
                               domain={{y: [0, this.state.max]}}
@@ -36,9 +36,18 @@ export default class TotalCasesChart extends React.Component {
                         minDomain={{y: 0}}
                         scale={{x: 'time', y: 'linear'}}
                     />
-                    <VictoryAxis dependentAxis/>
+                    <VictoryAxis dependentAxis style={{
+                        axis: {
+                            stroke: '#636363'
+                        }
+                    }}/>
                     <VictoryAxis tickCount={8}
-                                 tickFormat={(x) => (new Date(x).getDate()) + '/' + (new Date(x).getMonth() + 1)}/>
+                                 tickFormat={(x) => (new Date(x).getDate()) + '/' + (new Date(x).getMonth() + 1)}
+                                 style={{
+                                     axis: {
+                                         stroke: '#636363'
+                                     }
+                                 }}/>
                 </VictoryChart>
             </div>
         )

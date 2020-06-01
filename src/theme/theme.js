@@ -12,7 +12,7 @@ export const lightTheme = {
         background: 'linear-gradient(90deg, #11998e 0%, #38ef7d 100%)'
     },
     footer: {
-        background: '#11998e',
+        background: '#767676',
         title: '#fff'
     },
     card: {

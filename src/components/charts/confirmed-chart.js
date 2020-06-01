@@ -24,7 +24,7 @@ export default class ConfirmedChart extends React.Component {
 
     render() {
         return (
-            <div className={'chart-container'}>
+            <div className={'chart-container confirmed-chart'}>
                 <h3 className={'chart-title'}>Confirmados: {this.state.total} </h3>
                 <VictoryChart
                     height={300}
@@ -42,9 +42,10 @@ export default class ConfirmedChart extends React.Component {
                     <VictoryLegend x={10} y={30}
                                    title={'Personas'}
                                    gutter={20}
+                                   className={'confirmed-legend'}
                                    orientation="vertical"
                                    style={{
-                                       title: {fontWeight: 600, fontSize: '16px'}
+                                       title: {fontWeight: 600, fontSize: '16px'},
                                    }}
                                    colorScale={this.state.colors}
                                    data={this.state.data.map(elem => ({name: elem.x}))}

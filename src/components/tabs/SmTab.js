@@ -1,7 +1,7 @@
 import React from "react";
 import {DATA} from "../../data/data";
 import Charts from "../charts/charts";
-import TestSection from "../test-section/TestSection";
+import SmTestCards from "../cards/SmTestCards";
 import SmCasesCards from "../cards/SmCasesCards";
 
 export default class SmTab extends React.Component {
@@ -19,10 +19,12 @@ export default class SmTab extends React.Component {
                     <Charts/>
                 </div>
                 <div>
-                    <TestSection/>
+                    <SmTestCards/>
                 </div>
                 <div>
                     <p className={'source'}><strong>Fuente:</strong><a
+                        rel={'noopener noreferrer'}
+                        target={'_blank'}
                         href={'https://www.msm.gov.ar/prensa/informe-covid-san-miguel/'}> Municipalidad de San
                         Miguel</a></p>
                 </div>

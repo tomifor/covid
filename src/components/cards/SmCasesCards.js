@@ -41,45 +41,20 @@ export default class SmCasesCards extends React.Component {
                             <CardIndicator title={'Descartados'} value={this.state.dismiss}/>
                         </Col>
                     </Row>
-                    {/*<Row>*/}
-                    {/*    <Col md={3} xs={6}>*/}
-                    {/*        <CardIndicator className="text-center card-container">*/}
-                    {/*            <CardIndicator.Header>*/}
-                    {/*                <h2 className={'title cured'}>Recuperados</h2>*/}
-                    {/*            </CardIndicator.Header>*/}
-                    {/*            <CardIndicator.Body>*/}
-                    {/*                <CardIndicator.Title><p className={'value'}>{this.state.cured}</p></CardIndicator.Title>*/}
-                    {/*            </CardIndicator.Body>*/}
-                    {/*        </CardIndicator>*/}
-                    {/*    </Col>*/}
-                    {/*    <Col md={3} xs={6}>*/}
-                    {/*        <CardIndicator className="text-center card-container">*/}
-                    {/*            <CardIndicator.Header>*/}
-                    {/*                <h2 className={'title'}>Internados</h2>*/}
-                    {/*            </CardIndicator.Header>*/}
-                    {/*            <CardIndicator.Body>*/}
-                    {/*                <CardIndicator.Title><p className={'value'}>{this.state.insideHospitalized}</p></CardIndicator.Title>*/}
-                    {/*            </CardIndicator.Body>*/}
-                    {/*        </CardIndicator>*/}
-                    {/*    </Col>*/}
-                    {/*    <Col md={3} xs={6}>*/}
-                    {/*        <CardIndicator className="text-center card-container">*/}
-                    {/*            <CardIndicator.Header><h2 className={'title'}>Fallecidos</h2></CardIndicator.Header>*/}
-                    {/*            <CardIndicator.Body>*/}
-                    {/*                <CardIndicator.Title><p className={'value'}>{this.state.dead}</p></CardIndicator.Title>*/}
-                    {/*            </CardIndicator.Body>*/}
-                    {/*        </CardIndicator>*/}
-                    {/*    </Col>*/}
-                    {/*    <Col md={3} xs={6}>*/}
-                    {/*        <CardIndicator className="text-center card-container">*/}
-                    {/*            <CardIndicator.Header><h2 className={'title'}>Letalidad</h2></CardIndicator.Header>*/}
-                    {/*            <CardIndicator.Body>*/}
-                    {/*                <CardIndicator.Title><p className={'value'}>{this.state.deadRate}<span>%</span></p>*/}
-                    {/*                </CardIndicator.Title>*/}
-                    {/*            </CardIndicator.Body>*/}
-                    {/*        </CardIndicator>*/}
-                    {/*    </Col>*/}
-                    {/*</Row>*/}
+                    <Row>
+                        <Col md={3} xs={6}>
+                            <CardIndicator title={'Recuperados'} value={this.state.cured}/>
+                        </Col>
+                        <Col md={3} xs={6}>
+                            <CardIndicator title={'Internados'} value={this.state.insideHospitalized}/>
+                        </Col>
+                        <Col md={3} xs={6}>
+                            <CardIndicator title={'Fallecidos'} value={this.state.dead}/>
+                        </Col>
+                        <Col md={3} xs={6}>
+                            <CardIndicator title={'Letalidad'} value={this.state.deadRate + '%'}/>
+                        </Col>
+                    </Row>
                 </Container>
             </div>
         )

@@ -31,6 +31,9 @@
 
   #argentina-tab {
     min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .soon {
       text-align: center;
       font-weight: 300;
