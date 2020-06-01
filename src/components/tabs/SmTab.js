@@ -1,6 +1,6 @@
 import React from "react";
 import {DATA} from "../../data/data";
-import Charts from "../charts/charts";
+import SmCharts from "../charts/SmCharts";
 import SmTestCards from "../cards/SmTestCards";
 import SmCasesCards from "../cards/SmCasesCards";
 
@@ -16,7 +16,7 @@ export default class SmTab extends React.Component {
                     <SmCasesCards/>
                 </div>
                 <div>
-                    <Charts/>
+                    <SmCharts/>
                 </div>
                 <div>
                     <SmTestCards/>

@@ -2,8 +2,9 @@ import React from "react";
 import {VictoryBar, VictoryChart, VictoryLabel, VictoryAxis} from "victory";
 import {DATA} from "../../data/data";
 import {Lethality} from "../../data/extra-data";
+import ChartContainer from "./ChartContainer";
 
-export default class LethalityChart extends React.Component {
+export default class SmLethalityChart extends React.Component {
 
     constructor(props) {
         super(props);
@@ -17,7 +18,7 @@ export default class LethalityChart extends React.Component {
                 {name: 'San Miguel', value: ((last.cases.dead / last.cases.total) * 100)},
                 {name: 'Argentina', value: Lethality.argentina},
                 {name: 'CABA', value: Lethality.caba},
-                {name: 'Buenos Aires', value: Lethality.buenosaires}
+                {name: 'Bs As', value: Lethality.buenosaires}
             ]
         };
     }
@@ -37,8 +38,7 @@ export default class LethalityChart extends React.Component {
 
     render() {
         return (
-            <div className={'chart-container lethality-chart'}>
-                <h3 className={'chart-title'}>Letalidad </h3>
+            <ChartContainer customClass={'lethality-chart'} title={'Letalidad'}>
                 <svg style={{height: 0}}>
                     <defs>
                         <linearGradient id="barGradient">
@@ -83,7 +83,7 @@ export default class LethalityChart extends React.Component {
                         }}
                     />
                 </VictoryChart>
-            </div>
+            </ChartContainer>
         )
     }
 }

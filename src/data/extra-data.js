@@ -2,5 +2,5 @@
 export const Lethality = {
     argentina: 3.26,
     caba: 2.51,
-    buenosaires: 4.28,
+    buenosaires: 3.90,
 }

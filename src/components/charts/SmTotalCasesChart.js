@@ -1,8 +1,9 @@
 import React from "react";
 import {VictoryLine, VictoryChart, VictoryAxis} from 'victory';
 import {DATA} from "../../data/data";
+import ChartContainer from "./ChartContainer";
 
-export default class TotalCasesChart extends React.Component {
+export default class SmTotalCasesChart extends React.Component {
     constructor(props) {
         super(props);
         const values = DATA.map(item => ({x: new Date(Date.parse(item.date)), y: item.cases.total})).reverse();
@@ -15,8 +16,7 @@ export default class TotalCasesChart extends React.Component {
 
     render() {
         return (
-            <div className={'chart-container total-cases'}>
-                <h3 className={'chart-title'}>Casos totales</h3>
+            <ChartContainer customClass={'total-cases'} title={'Casos totales'}>
                 <VictoryChart height={300}
                               domain={{y: [0, this.state.max]}}
                               padding={{top: 20, bottom: 40, right: 10, left: 35}}>
@@ -49,7 +49,7 @@ export default class TotalCasesChart extends React.Component {
                                      }
                                  }}/>
                 </VictoryChart>
-            </div>
+            </ChartContainer>
         )
     }
 }

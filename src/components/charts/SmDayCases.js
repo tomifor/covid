@@ -1,9 +1,10 @@
 import React from "react";
 import {VictoryAxis, VictoryBar, VictoryChart} from 'victory';
 import {DATA} from "../../data/data";
+import ChartContainer from "./ChartContainer";
 
 
-export default class DayCases extends React.Component {
+export default class SmDayCases extends React.Component {
 
     constructor(props) {
         super(props);
@@ -19,8 +20,7 @@ export default class DayCases extends React.Component {
 
     render() {
         return (
-            <div className={'chart-container day-cases'}>
-                <h3 className={'chart-title'}>Casos por día</h3>
+            <ChartContainer customClass={'day-cases'} title={'Casos por día'}>
                 <VictoryChart height={300}
                               domainPadding={{x: 50, y: [0, 5]}}
                               domain={{y: [0, this.state.max]}}
@@ -48,7 +48,7 @@ export default class DayCases extends React.Component {
                         }
                     }}/>
                 </VictoryChart>
-            </div>
+            </ChartContainer>
         )
     }
 }

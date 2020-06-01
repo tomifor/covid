@@ -1,9 +1,10 @@
 import React from "react";
 import {VictoryPie, VictoryChart, VictoryLegend, VictoryAxis} from "victory";
 import {DATA} from "../../data/data";
+import ChartContainer from "./ChartContainer";
 
 
-export default class ConfirmedChart extends React.Component {
+export default class SmConfirmedChart extends React.Component {
 
     constructor(props) {
         super(props);
@@ -24,8 +25,7 @@ export default class ConfirmedChart extends React.Component {
 
     render() {
         return (
-            <div className={'chart-container confirmed-chart'}>
-                <h3 className={'chart-title'}>Confirmados: {this.state.total} </h3>
+            <ChartContainer customClass={'confirmed-chart'} title={'Confirmados: ' + this.state.total}>
                 <VictoryChart
                     height={300}
                     padding={{top: 20, bottom: 30, right: 0, left: 100}}>
@@ -61,7 +61,7 @@ export default class ConfirmedChart extends React.Component {
                         tickLabels: {fill: "transparent"}
                     }}/>
                 </VictoryChart>
-            </div>
+            </ChartContainer>
         )
     }
 
