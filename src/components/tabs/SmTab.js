@@ -6,11 +6,32 @@ import SmCasesCards from "../cards/SmCasesCards";
 
 export default class SmTab extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {lastUpdate: ''};
+    }
+
+
+    componentDidMount() {
+        this.setState({lastUpdate: this.getDateFormatted()});
+    }
+
+    getDateFormatted() {
+        const date = DATA[0].date.split('T')[0].split('-');
+        const year = date[0];
+        const month = date[1]
+        const day = date[2];
+        return day + '/' + month + '/' + year;
+    }
+
     render() {
+        const {lastUpdate} = this.state;
+        const sourceLabel = 'Municipalidad de San Miguel';
+        const sourceUrl = 'https://www.msm.gov.ar/prensa/informe-covid-san-miguel/'
         return (
             <div>
                 <div className={'last-update'}>
-                    <h3>Última actualización: {new Date(DATA[0].date).toLocaleDateString()}</h3>
+                    <h3>Última actualización: {lastUpdate}</h3>
                 </div>
                 <div>
                     <SmCasesCards/>
@@ -25,8 +46,7 @@ export default class SmTab extends React.Component {
                     <p className={'source'}><strong>Fuente: </strong><a
                         rel={'noopener noreferrer'}
                         target={'_blank'}
-                        href={'https://www.msm.gov.ar/prensa/informe-covid-san-miguel/'}>Municipalidad de San
-                        Miguel</a></p>
+                        href={sourceUrl}>{sourceLabel}</a></p>
                 </div>
             </div>
         )

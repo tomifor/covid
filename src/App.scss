@@ -5,6 +5,10 @@
   margin: auto;
   font-family: 'Oxygen', 'Helvetica', sans-serif;
 
+  .mobile-alert {
+    margin: 0 10px 20px 10px;
+  }
+
   .last-update {
     padding-left: 15px;
     h3 {
@@ -69,5 +73,9 @@
     h3 {
       font-size: 18px;
     }
+  }
+
+  .mobile-alert {
+    display: none;
   }
 }

@@ -22,6 +22,9 @@ h1, h2 {
       display: flex;
       flex-direction: row;
       align-items: baseline;
+      height: 70px;
+      margin-right: 20px;
+      padding-top: 10px;
       .title {
         text-decoration: none;
         font-weight: 700;
@@ -38,6 +41,11 @@ h1, h2 {
         }
       }
     }
+    .left-section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
 
   }
 }
@@ -50,6 +58,9 @@ h1, h2 {
     .subtitle {
       font-size: 20px;
     }
+  }
+  .nav-alert {
+    display: none;
   }
 
 }

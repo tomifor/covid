@@ -8,6 +8,7 @@ import {useTheme} from "./theme/ThemeContext";
 import styled from "@emotion/styled";
 import {Tab, Nav} from "react-bootstrap";
 import ArTab from "./components/tabs/ArTab";
+import EmergencyAlert from "./components/shared/alert/EmergencyAlert";
 
 
 const App = () => {
@@ -20,6 +21,9 @@ const App = () => {
             <div className="app-container">
                 <NavHeader onChangeMode={() => themeState.toggle()}/>
                 <div className={'body'}>
+                    <div className={'mobile-alert'}>
+                        <EmergencyAlert/>
+                    </div>
                     <Tab.Container defaultActiveKey="city">
                         <Nav variant="pills" className="flex-row">
                             <Nav.Item>
