@@ -7,5 +7,5 @@ export const Lethality = {
 
 export const ArgentinaData = {
     avgAgeDeceased: 75,
-    intensiveCarePatients: 256
+    intensiveCarePatients: 271
 }

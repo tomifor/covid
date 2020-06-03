@@ -73,7 +73,7 @@ export default class ArTab extends React.Component {
 }
 
 const StyleWrapper = styled("div")`
-  .soon {
+  .loader-text {
     color: ${props => props.theme.text};
   }
 `;
