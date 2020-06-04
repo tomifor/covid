@@ -5,9 +5,9 @@
   background-color: #A43EC9;
   padding: 5px 10px;
   font-family: 'Helvetica', sans-serif;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
   p {
     margin: 0;
   }
@@ -23,6 +23,10 @@
   .phone-number {
     font-weight: 700;
     color: white;
+  }
+  .button {
+    cursor: pointer;
+    text-decoration: underline;
   }
 }
 
