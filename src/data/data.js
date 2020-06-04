@@ -1,6 +1,6 @@
 export const DATA = [
     {
-        date: '2020-06-03T23:22:20',
+        date: '2020-06-03T22:37:20',
         cases: {
             total: 114,
             newCases: 6,
