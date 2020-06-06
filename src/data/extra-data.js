@@ -1,4 +1,4 @@
-// Actualizado 29/05/20
+// Actualizado 05/06/20
 export const Lethality = {
     argentina: 3.05,
     caba: 2.19,
