@@ -15,6 +15,7 @@ export default class ArChart extends React.Component {
             active: null,
             recovered: null,
             newCases: null,
+            max: 15000,
             legend: [
                 {name: 'Casos totales', color: '#a23dd5'},
                 {name: 'Activos', color: '#3da0d5'},
@@ -59,12 +60,6 @@ export default class ArChart extends React.Component {
                 y: item.Recovered
             }));
 
-            // const newCases = this.props.data.map((item, index) => {
-            //     if (index === 0) {
-            //         return {x: new Date(Date.parse(item.Date)), y: item.Confirmed}
-            //     }
-            //     return {x: new Date(Date.parse(item.Date)), y: item.Confirmed - this.props.data[index - 1].Confirmed};
-            // });
 
             this.setState({
                 total: total,
@@ -84,7 +79,7 @@ export default class ArChart extends React.Component {
                     <Col lg={12}>
                         <ChartContainer customClass={'ar-chart'} title={'Argentina'}>
                             <VictoryChart height={220}
-                                          domain={{y: [0, 18000]}}
+                                          domain={{y: [0, this.state.max]}}
                                           scale={{x: 'time', y: 'linear'}}
                                           padding={{top: 10, bottom: 40, right: 5, left: 35}}>
                                 <VictoryLine
