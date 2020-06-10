@@ -1,7 +1,7 @@
 import React from "react";
 import {Col, Container, Row} from "react-bootstrap";
 import ChartContainer from "./ChartContainer";
-import {VictoryAxis, VictoryChart, VictoryLine, VictoryLabel, VictoryLegend, VictoryBar} from "victory";
+import {VictoryAxis, VictoryChart, VictoryLine, VictoryLabel, VictoryLegend} from "victory";
 
 
 export default class ArChart extends React.Component {
