@@ -7,7 +7,7 @@ export default class Footer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            version: 'v 0.4.7',
+            version: 'v 0.4.8',
             tag: '#QuedateEnCasa',
             twitterUrl: 'https://twitter.com/hashtag/QuedateEnCasa',
             githubUrl: 'https://github.com/tomifor/covid',
