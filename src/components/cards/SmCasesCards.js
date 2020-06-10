@@ -13,7 +13,7 @@ export default class SmCasesCards extends React.Component {
             total: last.cases.total,
             newCases: last.cases.newCases,
             active: active,
-            insideHospitalized: last.cases.insideHospitalized,
+            insideHospitalized: last.cases.insideHospitalized + last.cases.outsideHospitalized,
             cured: last.cases.cured,
             study: last.inStudy,
             dismiss: last.dismiss,
