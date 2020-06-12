@@ -1,5 +1,125 @@
 export const DATA = [
     {
+        date: '2020-06-11T23:39:42',
+        cases: {
+            total: 184,
+            newCases: 18,
+            cured: 60,
+            goodStatus: 62,
+            insideHospitalized: 18,
+            outsideHospitalized: 35,
+            dead: 9
+        },
+        inStudy: 220,
+        invalidated: 7,
+        dismiss: 1514
+    },
+    {
+        date: '2020-06-10T22:34:42',
+        cases: {
+            total: 166,
+            newCases: 6,
+            cured: 59,
+            goodStatus: 52,
+            insideHospitalized: 18,
+            outsideHospitalized: 28,
+            dead: 9
+        },
+        inStudy: 196,
+        invalidated: 6,
+        dismiss: 1471
+    },
+    {
+        date: '2020-06-09T23:59:59',
+        cases: {
+            total: 160,
+            newCases: 22,
+            cured: 52,
+            goodStatus: 54,
+            insideHospitalized: 18,
+            outsideHospitalized: 28,
+            dead: 9
+        },
+        inStudy: 162,
+        invalidated: 6,
+        dismiss: 1434
+    },
+    {
+        date: '2020-06-08T23:39:20',
+        cases: {
+            total: 138,
+            newCases: 5,
+            cured: 42,
+            goodStatus: 51,
+            insideHospitalized: 18,
+            outsideHospitalized: 19,
+            dead: 8
+        },
+        inStudy: 201,
+        invalidated: 6,
+        dismiss: 1361
+    },
+    {
+        date: '2020-06-07T22:39:20',
+        cases: {
+            total: 133,
+            newCases: 2,
+            cured: 42,
+            goodStatus: 46,
+            insideHospitalized: 18,
+            outsideHospitalized: 19,
+            dead: 8
+        },
+        inStudy: 199,
+        invalidated: 6,
+        dismiss: 1314
+    },
+    {
+        date: '2020-06-06T22:21:20',
+        cases: {
+            total: 131,
+            newCases: 6,
+            cured: 42,
+            goodStatus: 46,
+            insideHospitalized: 16,
+            outsideHospitalized: 19,
+            dead: 8
+        },
+        inStudy: 190,
+        invalidated: 6,
+        dismiss: 1278
+    },
+    {
+        date: '2020-06-05T22:26:20',
+        cases: {
+            total: 125,
+            newCases: 4,
+            cured: 42,
+            goodStatus: 42,
+            insideHospitalized: 15,
+            outsideHospitalized: 18,
+            dead: 8
+        },
+        inStudy: 196,
+        invalidated: 6,
+        dismiss: 1254
+    },
+    {
+        date: '2020-06-04T20:38:20',
+        cases: {
+            total: 121,
+            newCases: 7,
+            cured: 42,
+            goodStatus: 40,
+            insideHospitalized: 13,
+            outsideHospitalized: 18,
+            dead: 8
+        },
+        inStudy: 163,
+        invalidated: 4,
+        dismiss: 1232
+    },
+    {
         date: '2020-06-03T22:37:20',
         cases: {
             total: 114,

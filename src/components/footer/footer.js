@@ -4,21 +4,35 @@ import styled from "@emotion/styled";
 
 export default class Footer extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            version: 'v 0.4.8',
+            tag: '#QuedateEnCasa',
+            twitterUrl: 'https://twitter.com/hashtag/QuedateEnCasa',
+            githubUrl: 'https://github.com/tomifor/covid',
+            linkedinUrl: 'https://www.linkedin.com/in/tomasforman/',
+            year: '2020',
+            name: '@tomifor'
+        }
+    }
+
     render() {
+        const {version, tag, twitterUrl, githubUrl, linkedinUrl, year, name} = this.state;
         return (
             <StyleWrapper>
                 <div className={'footer-container'}>
                     <div className={'hashtag'}>
-                        <a href={'https://twitter.com/hashtag/QuedateEnCasa'} rel={'noopener noreferrer'}
-                           target={'_blank'}>#QuedateEnCasa</a>
+                        <a href={twitterUrl} rel={'noopener noreferrer'}
+                           target={'_blank'}>{tag}</a>
                     </div>
                     <div className={'social'}>
                         <a className={'icon'}
-                           href={'https://github.com/tomifor/covid'}
+                           href={githubUrl}
                            rel={'noopener noreferrer'}
                            name={'github'}
                            aria-label={'Github'}
-                       role={'button'}target={'_blank'}>
+                           role={'button'} target={'_blank'}>
                             <svg className="icon-github" height="24" viewBox="0 0 16 16"
                                  version="1.1" width="32" aria-hidden="true">
                                 <path
@@ -26,10 +40,10 @@ export default class Footer extends React.Component {
                             </svg>
                         </a>
                         <a className={'icon'}
-                           href={'https://www.linkedin.com/in/tomasforman/'}
+                           href={linkedinUrl}
                            name={'linkedin'}
                            role={'button'}
-                       aria-label={'Github'}rel={'noopener noreferrer'}
+                           aria-label={'Github'} rel={'noopener noreferrer'}
                            target={'_blank'}>
                             <svg className={'icon-linkedin'} xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                  viewBox="0 0 24 24">
@@ -39,8 +53,8 @@ export default class Footer extends React.Component {
                         </a>
                     </div>
                     <p className={'made-by'}>Made by <a href={'https://twitter.com/tomifor'} rel={'noopener noreferrer'}
-                                                        target={'_blank'}>@tomifor</a> - 2020</p>
-                    <p className={'version'}>v 0.4.5</p>
+                                                        target={'_blank'}>{name}</a> - {year}</p>
+                    <p className={'version'}>{version}</p>
                 </div>
             </StyleWrapper>
         )

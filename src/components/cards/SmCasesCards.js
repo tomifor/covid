@@ -10,14 +10,14 @@ export default class SmCasesCards extends React.Component {
         const last = DATA[0];
         const active = last.cases.total - last.cases.cured - last.cases.dead;
         this.state = {
-            total: last.cases.total,
-            newCases: last.cases.newCases,
-            active: active,
-            insideHospitalized: last.cases.insideHospitalized,
-            cured: last.cases.cured,
-            study: last.inStudy,
-            dismiss: last.dismiss,
-            dead: last.cases.dead,
+            total: last.cases.total.toString(),
+            newCases: last.cases.newCases.toString(),
+            active: active.toString(),
+            insideHospitalized: (last.cases.insideHospitalized + last.cases.outsideHospitalized).toString(),
+            cured: last.cases.cured.toString(),
+            study: last.inStudy.toString(),
+            dismiss: last.dismiss.toString(),
+            dead: last.cases.dead.toString(),
             deadRate: ((last.cases.dead / last.cases.total) * 100).toFixed(1).replace('.', ','),
         }
     }
