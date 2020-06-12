@@ -22,15 +22,18 @@ export default class SmDayCases extends React.Component {
         return (
             <ChartContainer customClass={'day-cases'} title={'Casos por día'}>
                 <VictoryChart height={300}
-                              domainPadding={{x: 50, y: [0, 5]}}
+                              domainPadding={{x: 5, y: [0, 5]}}
                               domain={{y: [0, this.state.max]}}
                               padding={{top: 20, bottom: 40, right: 10, left: 35}}
+                              alignment="start"
                               scale={{x: "time"}}>
                     <VictoryBar
                         style={{data: {fill: "#ff932a"}}}
                         data={this.state.data}
                         scale={{x: 'time', y: 'linear'}}
                         minDomain={{y: 0}}
+                        alignment="start"
+                        barWidth={4}
                         labels={({datum}) => datum.y > 4 ? datum.y : ''}
                         animate={{
                             duration: 2000,
