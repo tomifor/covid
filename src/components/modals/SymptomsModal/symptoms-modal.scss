@@ -1,0 +1,59 @@
+@import "../../../_palette.scss";
+
+.symptoms-modal-container {
+  .modal-header {
+    color: white;
+    background-color: #A43EC9;
+    font-family: 'Oxygen', 'Helvetica', sans-serif;
+    .h4 {font-weight: 700;}
+    button.close {
+      color: white;
+    }
+  }
+  .modal-body {
+    font-family: 'Oxygen', 'Helvetica', sans-serif;
+    h2.subtitle {
+      font-size: 20px;
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    p { margin-bottom: 0}
+    .symptom {
+      text-align: center;
+      img.symptom-icon {
+        width: 50px;
+      }
+    }
+    .main-symptoms > div {
+      display: flex;
+      justify-content: space-around;
+    }
+    section {
+      margin-bottom: 15px;
+    }
+    .other-symptoms {
+      p {
+        margin-bottom: 8px;
+      }
+    }
+
+    .source {
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 5px;
+      a {
+        text-decoration: underline;
+      }
+    }
+    .designed-by {
+      text-align: center;
+      font-size: 10px;
+      margin-bottom: 0;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}

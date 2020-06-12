@@ -23,6 +23,10 @@ export const lightTheme = {
     inputSwitch: {
         color: '#fff',
         background: '#000',
+    },
+    modal: {
+        background: '#ffffff',
+        color: '#454545',
     }
 }
 
@@ -44,13 +48,18 @@ export const darkTheme = {
         title: '#FAFAFA',
     },
     card: {
-        header: '#1D1D1D',
+        header: '#454545',
         body: '#000',
-        border: '1px solid #1D1D1D'
+        border: '1px solid #454545'
     },
     inputSwitch: {
         color: '#222223',
         background: '#000',
+    },
+    modal: {
+        color: '#ffffff',
+        background: '#1D1D1D',
+        border: '#454545'
     }
 }
 
