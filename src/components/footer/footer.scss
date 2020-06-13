@@ -10,17 +10,28 @@
     a {
       color: white;
       font-size: 16pt;
+
     }
   }
   .social {
-    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    height: 48px;
+    margin-bottom: 10px;
+    a.icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 48px;
+      width: 48px;
+      margin: 0 5px;
+    }
   }
   .icon {
     color: #fff;
     fill: white;
     .icon-github {
       fill: white;
-      margin-right: 15px;
     }
   }
   .made-by {
