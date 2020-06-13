@@ -19,7 +19,7 @@ class EmergencyAlert extends React.Component {
             <div id={'emergency-alert'} className={'alert-container'}>
                 <div className={'message'}>
                     <p>Ante la presencia</p>
-                    <p>de <span className={'button'} onClick={() => this.showSymptoms()}>síntomas</span></p>
+                    <p>de <span className={'button btn-symptoms'} onClick={() => this.showSymptoms()}>síntomas</span></p>
                 </div>
                 <div className={'phone-number'}>
                     <p>Llamá al 148</p>
