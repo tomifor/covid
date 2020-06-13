@@ -25,7 +25,7 @@ export default class SmTotalCasesChart extends React.Component {
             death: deathCases,
             max: maxValue + 10,
             legend: [
-                {name: 'Casos totales', color: '#a23dd5'},
+                {name: 'Totales', color: '#a23dd5'},
                 {name: 'Activos', color: '#3da0d5'},
                 {name: 'Recuperados', color: '#3dd568'},
                 {name: 'Fallecidos', color: '#e21212'},
@@ -39,7 +39,7 @@ export default class SmTotalCasesChart extends React.Component {
             <ChartContainer customClass={'total-cases'} title={'Casos'}>
                 <VictoryChart height={300}
                               domain={{y: [0, this.state.max]}}
-                              padding={{top: 20, bottom: 40, right: 10, left: 35}}>
+                              padding={{top: 20, bottom: 40, right: 20, left: 35}}>
                     <VictoryLine
                         name={'total-cases'}
                         interpolation="natural"
