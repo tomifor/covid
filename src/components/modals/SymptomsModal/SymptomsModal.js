@@ -29,7 +29,7 @@ class SymptomsModal extends React.Component {
                         <h2 className={'subtitle'}>Síntomas habituales</h2>
                         <div>
                             {this.state.symptoms.map(elem => (
-                                <div className={'symptom box'}>
+                                <div key={elem.label} className={'symptom box'}>
                                     <img className={'symptom-icon'} src={elem.icon} alt={elem.label}/>
                                     <p>{elem.label}</p>
                                 </div>
