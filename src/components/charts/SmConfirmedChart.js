@@ -11,7 +11,6 @@ export default class SmConfirmedChart extends React.Component {
         const last = DATA[0];
         this.state = {
             total: last.cases.total,
-            colors: ["#3DB085", "#30A0DB", "#FBCF4A", "#844F9B", "#E95B54"],
             data: [
                 {x: "Recuperados", y: last.cases.cured, color: "#3DB085"},
                 {x: "Sin necesidad \n de internación", y: last.cases.goodStatus, color: "#30A0DB"},
