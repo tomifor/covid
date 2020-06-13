@@ -1,5 +1,5 @@
 import React from "react";
-import {VictoryLine, VictoryChart, VictoryAxis} from 'victory';
+import {VictoryLine, VictoryChart, VictoryAxis, VictoryLegend} from 'victory';
 import {DATA} from "../../data/data";
 import ChartContainer from "./ChartContainer";
 
@@ -23,7 +23,13 @@ export default class SmTotalCasesChart extends React.Component {
             active: activeCases,
             healthy: healthyCases,
             death: deathCases,
-            max: maxValue + 10
+            max: maxValue + 10,
+            legend: [
+                {name: 'Casos totales', color: '#a23dd5'},
+                {name: 'Activos', color: '#3da0d5'},
+                {name: 'Recuperados', color: '#3dd568'},
+                {name: 'Fallecidos', color: '#e21212'},
+            ]
         };
     }
 
@@ -98,7 +104,7 @@ export default class SmTotalCasesChart extends React.Component {
                         minDomain={{y: 0}}
                         scale={{x: 'time', y: 'linear'}}
                     />
-                    <VictoryAxis dependentAxis style={{
+                    <VictoryAxis dependentAxis tickCount={7} style={{
                         axis: {
                             stroke: '#636363'
                         }
@@ -110,6 +116,17 @@ export default class SmTotalCasesChart extends React.Component {
                                          stroke: '#636363'
                                      }
                                  }}/>
+                    <VictoryLegend x={45} y={20}
+                                   gutter={10}
+                                   symbolSpacer={5}
+                                   className={'confirmed-legend'}
+                                   orientation="horizontal"
+                                   style={{
+                                       labels: {fontWeight: 400, fontSize: 10},
+                                   }}
+                                   colorScale={this.state.legend.map(elem => elem.color)}
+                                   data={this.state.legend.map(elem => ({name: elem.name}))}
+                    />
                 </VictoryChart>
             </ChartContainer>
         )
