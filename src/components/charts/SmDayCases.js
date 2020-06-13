@@ -34,7 +34,7 @@ export default class SmDayCases extends React.Component {
                         minDomain={{y: 0}}
                         alignment="start"
                         barWidth={4}
-                        labels={({datum}) => datum.y > 4 ? datum.y : ''}
+                        labels={({datum}) => datum.y > 6 ? datum.y : ''}
                         animate={{
                             duration: 2000,
                             onLoad: {duration: 1000}

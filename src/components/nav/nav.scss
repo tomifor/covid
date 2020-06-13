@@ -24,7 +24,6 @@ h1, h2 {
       align-items: baseline;
       height: 70px;
       margin-right: 20px;
-      padding-top: 10px;
       .title {
         text-decoration: none;
         font-weight: 700;
@@ -52,6 +51,9 @@ h1, h2 {
 // MOBILE
 @media only screen and (max-width: 768px) {
   .nav-container {
+    .logo-container {
+      padding-top: 15px;
+    }
     .title {
       font-size: 32px;
     }
@@ -68,6 +70,9 @@ h1, h2 {
 // DESKTOP
 @media only screen and (min-width: 769px) {
   .nav-container {
+    .logo-container {
+      padding-top: 10px;
+    }
     .title {
       font-size: 36px;
     }
