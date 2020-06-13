@@ -12,7 +12,7 @@ export default class SmLethalityChart extends React.Component {
         const last = DATA[0];
         this.state = {
             data: [
-                {x: 0, y: 7},
+                {x: 0, y: 5},
             ],
             lethality: [
                 {name: 'San Miguel', value: ((last.cases.dead / last.cases.total) * 100)},
@@ -51,7 +51,7 @@ export default class SmLethalityChart extends React.Component {
                               padding={{top: 10, bottom: 170, right: 40, left: 40}}>
                     <VictoryBar
                         horizontal
-                        domain={{x: [0, 5], y: [0, 7]}}
+                        domain={{x: [0, 5], y: [0, 5]}}
                         height={300}
                         style={{data: {fill: "url(#barGradient)", width: 25}}}
                         alignment="start"
