@@ -58,6 +58,32 @@
       margin-bottom: 30px;
     }
   }
+  .btn-information {
+    background-color: #A43EC9;
+    border-radius: 100%;
+    border: none;
+    color: white;
+    font-family: serif;
+    padding: 6px 20px;
+    font-weight: 600;
+    font-size: 24px;
+    -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+    outline: none;
+    &:active {
+      outline: none;
+      background-color: darken(#A43EC9, 0.3);
+    }
+    &:focus {
+      outline: none;
+      background-color: darken(#A43EC9, 0.3);
+    }
+    &:hover {
+      outline: none;
+      background-color: darken(#A43EC9, 0.3);
+    }
+  }
 }
 
 
@@ -67,6 +93,11 @@
     h3 {
       font-size: 14px;
     }
+  }
+  .btn-information {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
   }
 }
 
@@ -80,5 +111,9 @@
 
   .mobile-alert {
     display: none;
+  }
+
+  .btn-information {
+   display: none;
   }
 }

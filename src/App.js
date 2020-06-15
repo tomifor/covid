@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.scss';
 import NavHeader from "./components/nav/nav";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,13 +9,17 @@ import styled from "@emotion/styled";
 import {Tab, Nav} from "react-bootstrap";
 import ArTab from "./components/tabs/ArTab";
 import EmergencyAlert from "./components/shared/alert/EmergencyAlert";
+import InfoModal from "./components/modals/InfoModal/InfoModal";
 
 
 const App = () => {
+    const [showInfoModal, setShowInfoModal] = useState(false);
     const themeState = useTheme();
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // onsole.log('Esta en darkmode');
-    }
+
+    // if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    //     themeState.toggle();
+    // }
+
     return (
         <StyleWrapper>
             <div className="app-container">
@@ -42,6 +46,8 @@ const App = () => {
                             </Tab.Pane>
                         </Tab.Content>
                     </Tab.Container>
+                    {/*<button className={'btn-information'} onClick={() => setShowInfoModal(true)}>i</button>*/}
+                    {/*<InfoModal show={showInfoModal}/>*/}
                 </div>
                 <Footer/>
             </div>
