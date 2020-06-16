@@ -36,6 +36,10 @@ const ThemeProvider = ({ children }) => {
         setThemeState({ ...themeState, dark });
     };
 
+    const detect = () => {
+
+    }
+
     const computedTheme = themeState.dark ? theme("dark") : theme("light");
 
     return (

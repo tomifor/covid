@@ -1,5 +1,5 @@
 import React from "react";
-import {VictoryPie, VictoryChart, VictoryLegend, VictoryAxis, VictoryBar} from "victory";
+import {VictoryChart, VictoryAxis, VictoryBar} from "victory";
 import {DATA} from "../../data/data";
 import ChartContainer from "./ChartContainer";
 

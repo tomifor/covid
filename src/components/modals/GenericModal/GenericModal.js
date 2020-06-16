@@ -13,12 +13,17 @@ class GenericModal extends React.Component {
 
     render() {
         return (
-            <Modal show={this.props.show} centered onHide={this.onClose} dialogClassName={this.props.customClass}>
+            <Modal show={this.props.show}
+                   backdrop={this.props.backdrop}
+                   centered
+                   onHide={this.onClose}
+                   dialogClassName={this.props.customClass}>
                 <StyleWrapper>
-                    <Modal.Header closeButton>
-                        <Modal.Title>{this.props.title}</Modal.Title>
-                    </Modal.Header>
-
+                    {this.props.showHeader ?
+                        <Modal.Header closeButton>
+                            <Modal.Title>{this.props.title}</Modal.Title>
+                        </Modal.Header> : null
+                    }
                     <Modal.Body>
                         {this.props.children}
                     </Modal.Body>
@@ -40,8 +45,10 @@ class GenericModal extends React.Component {
 
 GenericModal.defaultProps = {
     show: false,
+    showHeader: true,
     closeButton: true,
     modalFooter: true,
+    backdrop: true,
     actionButton: false,
     actionButtonLabel: 'Aceptar'
 }

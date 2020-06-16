@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.scss';
 import NavHeader from "./components/nav/nav";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,12 +13,18 @@ import InfoModal from "./components/modals/InfoModal/InfoModal";
 
 
 const App = () => {
-    const [showInfoModal, setShowInfoModal] = useState(false);
+    const [showInfoModal, setShowInfoModal] = useState(true);
     const themeState = useTheme();
 
-    // if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    //     themeState.toggle();
-    // }
+
+    // useEffect(() => {
+    //     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    //         themeState.toggle();
+    //     }
+    // });
+
+
+
 
     return (
         <StyleWrapper>
@@ -47,7 +53,7 @@ const App = () => {
                         </Tab.Content>
                     </Tab.Container>
                     {/*<button className={'btn-information'} onClick={() => setShowInfoModal(true)}>i</button>*/}
-                    {/*<InfoModal show={showInfoModal}/>*/}
+                    {/*<InfoModal show={showInfoModal} onClose={() => setShowInfoModal(false)}/>*/}
                 </div>
                 <Footer/>
             </div>
