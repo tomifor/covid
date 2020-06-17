@@ -1,6 +1,7 @@
 import React from "react";
 import './emergency-alert.scss';
 import SymptomsModal from "../../modals/SymptomsModal/SymptomsModal";
+import GenericModal from "../../modals/GenericModal/GenericModal";
 
 class EmergencyAlert extends React.Component {
 
@@ -24,8 +25,11 @@ class EmergencyAlert extends React.Component {
                 <div className={'phone-number'}>
                     <p>Llamá al 148</p>
                 </div>
-                <SymptomsModal show={showModal}
-                              onClose={() => this.setState({showModal: false})}/>
+                <GenericModal show={showModal} title={'Síntomas COVID-19'}
+                              customClass={'symptoms-modal-container'}
+                              onClose={() => this.setState({showModal: false})}>
+                    <SymptomsModal/>
+                </GenericModal>
             </div>
         )
     }

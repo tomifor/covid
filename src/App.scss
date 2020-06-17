@@ -119,3 +119,19 @@
     right: 20px;
   }
 }
+
+.symptoms-modal-container {
+  .modal-header {
+    color: white;
+    background-color: #A43EC9;
+    font-family: 'Oxygen', 'Helvetica', sans-serif;
+
+    .h4 {
+      font-weight: 700;
+    }
+
+    button.close {
+      color: white;
+    }
+  }
+}
