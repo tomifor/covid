@@ -13,7 +13,7 @@ import InfoModal from "./components/modals/InfoModal/InfoModal";
 
 
 const App = () => {
-    const [showInfoModal, setShowInfoModal] = useState(true);
+    const [showInfoModal, setShowInfoModal] = useState(false);
     const themeState = useTheme();
 
 
