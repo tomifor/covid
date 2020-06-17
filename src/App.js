@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './App.scss';
-import NavHeader from "./components/nav/nav";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "./components/footer/footer";
 import SmTab from "./components/tabs/SmTab";
@@ -10,6 +9,7 @@ import {Tab, Nav} from "react-bootstrap";
 import ArTab from "./components/tabs/ArTab";
 import EmergencyAlert from "./components/shared/alert/EmergencyAlert";
 import InfoModal from "./components/modals/InfoModal/InfoModal";
+import {NavHeader} from "./components/nav/nav";
 
 
 const App = () => {

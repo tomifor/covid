@@ -11,6 +11,17 @@ export default class DarkModeSwitch extends React.Component {
         super(props);
         this.state = {darkMode: props.selected ? props.selected : false}
     }
+    componentDidMount() {
+        if(this.props.selected) {
+            console.log('entraaaa ')
+            this.setState({darkMode: this.props.selected});
+        }
+    }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if(this.props.selected !== prevProps.selected) {
+            this.setState({darkMode: this.props.selected ? this.props.selected : false});
+        }
+    }
 
     toggleSwitch() {
         this.setState({darkMode: !this.state.darkMode});

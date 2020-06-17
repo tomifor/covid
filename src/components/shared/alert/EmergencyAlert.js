@@ -1,7 +1,5 @@
 import React from "react";
 import './emergency-alert.scss';
-import SymptomsModal from "../../modals/SymptomsModal/SymptomsModal";
-import GenericModal from "../../modals/GenericModal/GenericModal";
 import InfoModal from "../../modals/InfoModal/InfoModal";
 
 class EmergencyAlert extends React.Component {
