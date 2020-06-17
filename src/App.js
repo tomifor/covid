@@ -52,8 +52,8 @@ const App = () => {
                             </Tab.Pane>
                         </Tab.Content>
                     </Tab.Container>
-                    {/*<button className={'btn-information'} onClick={() => setShowInfoModal(true)}>i</button>*/}
-                    {/*<InfoModal show={showInfoModal} onClose={() => setShowInfoModal(false)}/>*/}
+                    <button className={'btn-information'} onClick={() => setShowInfoModal(true)}>i</button>
+                    <InfoModal show={showInfoModal} onClose={() => setShowInfoModal(false)}/>
                 </div>
                 <Footer/>
             </div>

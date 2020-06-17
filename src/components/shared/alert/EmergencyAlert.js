@@ -2,6 +2,7 @@ import React from "react";
 import './emergency-alert.scss';
 import SymptomsModal from "../../modals/SymptomsModal/SymptomsModal";
 import GenericModal from "../../modals/GenericModal/GenericModal";
+import InfoModal from "../../modals/InfoModal/InfoModal";
 
 class EmergencyAlert extends React.Component {
 
@@ -20,16 +21,20 @@ class EmergencyAlert extends React.Component {
             <div id={'emergency-alert'} className={'alert-container'}>
                 <div className={'message'}>
                     <p>Ante la presencia</p>
-                    <p>de <span className={'button btn-symptoms'} onClick={() => this.showSymptoms()}>síntomas</span></p>
+                    <p>de <span className={'button btn-symptoms'} onClick={() => this.showSymptoms()}>síntomas</span>
+                    </p>
                 </div>
                 <div className={'phone-number'}>
                     <p>Llamá al 148</p>
                 </div>
-                <GenericModal show={showModal} title={'Síntomas COVID-19'}
-                              customClass={'symptoms-modal-container'}
-                              onClose={() => this.setState({showModal: false})}>
-                    <SymptomsModal/>
-                </GenericModal>
+                <InfoModal show={showModal} defaultActiveKey={'symptoms'}
+                           onClose={() => this.setState({showModal: false})}/>
+
+                {/*<GenericModal show={showModal} title={'Síntomas COVID-19'}*/}
+                {/*              customClass={'symptoms-modal-container'}*/}
+                {/*              onClose={() => this.setState({showModal: false})}>*/}
+                {/*    <SymptomsModal/>*/}
+                {/*</GenericModal>*/}
             </div>
         )
     }

@@ -1,0 +1,38 @@
+.info-modal-container {
+  .nav-tabs {
+    border-color: #A43EC9;
+  }
+  .nav-link.active {
+    color: white !important;
+    background-color: #A43EC9 !important;
+    border-color: #A43EC9 !important;
+  }
+  .tab-content {
+    padding-top: 15px;
+  }
+
+  .nav-link:hover {
+    border: none;
+  }
+
+  .source {
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 5px;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .designed-by {
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 0;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

@@ -16,6 +16,7 @@ class GenericModal extends React.Component {
             <Modal show={this.props.show}
                    backdrop={this.props.backdrop}
                    centered
+                   size={this.props.size}
                    onHide={this.onClose}
                    dialogClassName={this.props.customClass}>
                 <StyleWrapper>
@@ -50,7 +51,8 @@ GenericModal.defaultProps = {
     modalFooter: true,
     backdrop: true,
     actionButton: false,
-    actionButtonLabel: 'Aceptar'
+    actionButtonLabel: 'Aceptar',
+    size: 'lg'
 }
 
 export default GenericModal;

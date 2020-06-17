@@ -42,13 +42,6 @@ class SymptomsModal extends React.Component {
                         ))}
                     </Row>
                 </section>
-                <p className={'source'}>Fuente:&nbsp;
-                    <a target={'_blank'} rel={'noopener noreferrer'}
-                       href={'https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019/advice-for-public/q-a-coronaviruses'}>OMS</a>
-                </p>
-                <p className={'designed-by'}>Íconos diseñados por <a target={'_blank'} rel={'noopener noreferrer'}
-                                                                     href={'https://www.flaticon.es/autores/monkik'}>Monkik</a>
-                </p>
             </div>
         )
     }

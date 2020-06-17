@@ -1,0 +1,19 @@
+.advices {
+  font-family: 'Oxygen', 'Helvetica', sans-serif;
+  .advice {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+  .logo img {
+    width: 60px;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+  .information {
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}
