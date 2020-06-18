@@ -3,7 +3,8 @@ import styled from "@emotion/styled";
 import {getDataByCountry} from "../../services/covid-service";
 import ArCasesCards from "../cards/ArCasesCards";
 import ArChart from "../charts/ArChart";
-import {Spinner} from "react-bootstrap";
+import {Container, Row, Spinner} from "react-bootstrap";
+import TabHeader from "./TabHeader/TabHeader";
 
 const FIRST_DAY = '2020-03-03T00:00:00Z';
 const COUNTRY = 'argentina';
@@ -48,10 +49,7 @@ export default class ArTab extends React.Component {
                             :
                             (
                                 <div>
-                                    <div className={'last-update'}>
-                                        <h3>Última
-                                            actualización: {this.state.current ? this.state.lastUpdate : ''}</h3>
-                                    </div>
+                                    <TabHeader lastUpdate={this.state.lastUpdate}/>
                                     <ArCasesCards current={this.state.current} previous={this.state.previous}/>
                                     <ArChart data={this.state.data}/>
                                 </div>

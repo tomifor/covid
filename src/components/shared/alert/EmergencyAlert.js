@@ -28,11 +28,6 @@ class EmergencyAlert extends React.Component {
                 <InfoModal show={showModal} defaultActiveKey={'symptoms'}
                            onClose={() => this.setState({showModal: false})}/>
 
-                {/*<GenericModal show={showModal} title={'Síntomas COVID-19'}*/}
-                {/*              customClass={'symptoms-modal-container'}*/}
-                {/*              onClose={() => this.setState({showModal: false})}>*/}
-                {/*    <SymptomsModal/>*/}
-                {/*</GenericModal>*/}
             </div>
         )
     }

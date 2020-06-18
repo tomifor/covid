@@ -8,16 +8,6 @@
   .mobile-alert {
     margin: 0 10px 20px 10px;
   }
-
-  .last-update {
-    padding-left: 15px;
-    h3 {
-      font-weight: 600;
-      margin-bottom: 10px;
-      color: #454545;
-    }
-  }
-
   .nav.nav-pills {
     justify-content: center;
     .nav-link.active {
@@ -88,12 +78,6 @@
 
 
 @media only screen and (max-width: 768px) {
-  .last-update {
-    margin-top: 20px;
-    h3 {
-      font-size: 14px;
-    }
-  }
   .btn-information {
     position: fixed;
     bottom: 20px;
@@ -102,13 +86,6 @@
 }
 
 @media only screen and (min-width: 769px) {
-  .last-update {
-    margin-top: 20px;
-    h3 {
-      font-size: 18px;
-    }
-  }
-
   .mobile-alert {
     display: none;
   }

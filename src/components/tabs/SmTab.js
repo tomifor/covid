@@ -3,6 +3,7 @@ import {DATA} from "../../data/data";
 import SmCharts from "../charts/SmCharts";
 import SmTestCards from "../cards/SmTestCards";
 import SmCasesCards from "../cards/SmCasesCards";
+import TabHeader from "./TabHeader/TabHeader";
 
 export default class SmTab extends React.Component {
 
@@ -31,7 +32,7 @@ export default class SmTab extends React.Component {
         return (
             <div>
                 <div className={'last-update'}>
-                    <h3>Última actualización: {lastUpdate}</h3>
+                    <TabHeader lastUpdate={lastUpdate}/>
                 </div>
                 <div>
                     <SmCasesCards/>
