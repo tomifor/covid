@@ -65,6 +65,11 @@ const StyleWrapper = styled("div")`
   }
   .modal-header {
     border-color: ${props => props.theme.modal.border};
+    background-color: ${props => props.theme.modal.background};
+    color: ${props => props.theme.modal.color};
+  }
+  button span { 
+    color: ${props => props.theme.modal.color};
   }
   .source, .designed-by {
     a {

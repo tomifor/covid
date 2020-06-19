@@ -3,6 +3,7 @@ import {DATA} from "../../data/data";
 import SmCharts from "../charts/SmCharts";
 import SmTestCards from "../cards/SmTestCards";
 import SmCasesCards from "../cards/SmCasesCards";
+import {Alert, Container} from "react-bootstrap";
 
 export default class SmTab extends React.Component {
 
@@ -31,7 +32,14 @@ export default class SmTab extends React.Component {
         return (
             <div>
                 <div className={'last-update'}>
-                    <h3>Última actualización: {lastUpdate}</h3>
+                    <Container>
+                        <h3>Última actualización: {lastUpdate}</h3>
+                        <Alert variant={'warning'}>
+                            Por problemas técnicos a nivel nacional con el sistema de información no se pudo publicar el
+                            informe completo de San Miguel. Solo se actualizaron los datos de casos confirmados y nuevos
+                            hoy.
+                        </Alert>
+                    </Container>
                 </div>
                 <div>
                     <SmCasesCards/>
