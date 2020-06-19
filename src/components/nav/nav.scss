@@ -35,8 +35,10 @@ h1, h2 {
       }
       .subtitle {
         font-weight: 500;
-        a {
-          text-decoration: none;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
         }
       }
     }
@@ -79,5 +81,8 @@ h1, h2 {
     .subtitle {
       font-size: 26px;
     }
+  }
+  iframe {
+    width: 600px;
   }
 }

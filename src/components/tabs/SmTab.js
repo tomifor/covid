@@ -3,6 +3,7 @@ import {DATA} from "../../data/data";
 import SmCharts from "../charts/SmCharts";
 import SmTestCards from "../cards/SmTestCards";
 import SmCasesCards from "../cards/SmCasesCards";
+import {Alert, Container} from "react-bootstrap";
 import TabHeader from "./TabHeader/TabHeader";
 
 export default class SmTab extends React.Component {
