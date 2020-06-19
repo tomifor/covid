@@ -3,8 +3,14 @@ import {Col, Container, Row} from "react-bootstrap";
 import filter from "../../../assets/filtrar.svg";
 import './tab-header.scss';
 import styled from "@emotion/styled";
+import FilterModal from "../../modals/FilterModal/FilterModal";
 
 class TabHeader extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {showFilterModal: false};
+    }
 
     render() {
         const {lastUpdate} = this.props;
@@ -19,7 +25,7 @@ class TabHeader extends React.Component {
                                         <h3>Última actualización: {lastUpdate ? lastUpdate : '-'}</h3>
                                     </div>
                                     {this.props.filterActive ?
-                                        <div className={'filter-button'}>
+                                        <div className={'filter-button'} onClick={() => this.setState({showFilterModal: true})}>
                                             <img src={filter} alt={'filter'}/>
                                         </div>
                                         : null
@@ -28,6 +34,8 @@ class TabHeader extends React.Component {
                             </Col>
                         </Row>
                     </Container>
+
+                    <FilterModal show={this.state.showFilterModal} onClose={() => this.setState({showFilterModal: false})}/>
                 </div>
             </StyleWrapper>
         )
