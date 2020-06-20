@@ -1,7 +1,7 @@
 {
   "homepage": "http://tomifor.github.io/covid",
   "name": "covid",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.28",

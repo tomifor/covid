@@ -73,6 +73,7 @@ export default class ArChart extends React.Component {
     }
 
     render() {
+        const {total, death, recovered, active} = this.state;
         return (
             <Container>
                 <Row>
@@ -81,7 +82,7 @@ export default class ArChart extends React.Component {
                             <VictoryChart height={220}
                                           domain={{y: [0, this.state.max]}}
                                           scale={{x: 'time', y: 'linear'}}
-                                          padding={{top: 10, bottom: 40, right: 5, left: 35}}>
+                                          padding={{top: 20, bottom: 20, right: 20, left: 35}}>
                                 <VictoryLine
                                     name={'total-cases'}
                                     interpolation="natural"
@@ -94,8 +95,9 @@ export default class ArChart extends React.Component {
                                         data: {stroke: "#a23dd5", strokeWidth: 2, strokeLinecap: "round"},
                                         parent: {border: "1px solid #ccc"}
                                     }}
-                                    data={this.state.total}
+                                    data={total}
                                     minDomain={{y: 0}}
+                                    labels={({datum}) => total && total[total.length - 1].y === datum.y ? datum.y : ''}
                                 />
                                 <VictoryLine
                                     name={'active-cases'}
@@ -109,8 +111,9 @@ export default class ArChart extends React.Component {
                                         data: {stroke: "#3da0d5", strokeWidth: 2, strokeLinecap: "round"},
                                         parent: {border: "1px solid #ccc"}
                                     }}
-                                    data={this.state.active}
+                                    data={active}
                                     minDomain={{y: 0}}
+                                    labels={({datum}) => active && active[active.length - 1].y === datum.y ? datum.y : ''}
                                 />
                                 <VictoryLine
                                     name={'recovered-cases'}
@@ -124,8 +127,9 @@ export default class ArChart extends React.Component {
                                         data: {stroke: "#3dd568", strokeWidth: 2, strokeLinecap: "round"},
                                         parent: {border: "1px solid #ccc"}
                                     }}
-                                    data={this.state.recovered}
+                                    data={recovered}
                                     minDomain={{y: 0}}
+                                    labels={({datum}) => recovered && recovered[recovered.length - 1].y === datum.y ? datum.y : ''}
                                 />
                                 <VictoryLine
                                     name={'death-cases'}
@@ -139,8 +143,10 @@ export default class ArChart extends React.Component {
                                         data: {stroke: "#e21212", strokeWidth: 2, strokeLinecap: "round"},
                                         parent: {border: "1px solid #ccc"}
                                     }}
-                                    data={this.state.death}
+                                    data={death}
                                     minDomain={{y: 0}}
+                                    labels={({datum}) => death && death[death.length - 1].y === datum.y ? datum.y : ''}
+
                                 />
                                 <VictoryAxis dependentAxis
                                              tickCount={6}
@@ -153,13 +159,13 @@ export default class ArChart extends React.Component {
                                 />
                                 <VictoryAxis tickCount={10}
                                              tickFormat={(x) => (new Date(x).getDate()) + '/' + (new Date(x).getMonth() + 1)}
-                                             tickLabelComponent={<VictoryLabel style={{fontSize: '10px'}} y={185}/>}
+                                             tickLabelComponent={<VictoryLabel style={{fontSize: '10px'}} y={205}/>}
                                              style={{
                                                  axis: {
                                                      stroke: '#636363'
                                                  }
                                              }}/>
-                                <VictoryLegend x={35} y={205}
+                                <VictoryLegend x={40} y={20}
                                                gutter={10}
                                                symbolSpacer={5}
                                                className={'confirmed-legend'}
