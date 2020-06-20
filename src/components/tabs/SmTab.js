@@ -34,11 +34,11 @@ export default class SmTab extends React.Component {
                 <div className={'last-update'}>
                     <Container>
                         <h3>Última actualización: {lastUpdate}</h3>
-                        <Alert variant={'warning'}>
-                            Por problemas técnicos a nivel nacional con el sistema de información no se pudo publicar el
-                            informe completo de San Miguel. Solo se actualizaron los datos de casos confirmados y nuevos
-                            hoy.
-                        </Alert>
+                        {/*<Alert variant={'warning'}>*/}
+                        {/*    Por problemas técnicos a nivel nacional con el sistema de información no se pudo publicar el*/}
+                        {/*    informe completo de San Miguel. Solo se actualizaron los datos de casos confirmados y nuevos*/}
+                        {/*    hoy.*/}
+                        {/*</Alert>*/}
                     </Container>
                 </div>
                 <div>
