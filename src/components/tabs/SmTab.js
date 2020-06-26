@@ -3,7 +3,8 @@ import {DATA} from "../../data/data";
 import SmCharts from "../charts/SmCharts";
 import SmTestCards from "../cards/SmTestCards";
 import SmCasesCards from "../cards/SmCasesCards";
-import {Alert, Container} from "react-bootstrap";
+import {Alert, Col, Container, Row} from "react-bootstrap";
+import SmTestDayChart from "../charts/SmTestDayChart";
 
 export default class SmTab extends React.Component {
 
@@ -49,6 +50,15 @@ export default class SmTab extends React.Component {
                 </div>
                 <div>
                     <SmTestCards/>
+                </div>
+                <div>
+                    <Container>
+                        <Row>
+                            <Col md={12}>
+                                <SmTestDayChart/>
+                            </Col>
+                        </Row>
+                    </Container>
                 </div>
                 <div>
                     <p className={'source'}><strong>Fuente: </strong><a

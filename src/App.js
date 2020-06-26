@@ -80,7 +80,7 @@ color: ${props => props.theme.text};
 a.nav-link { color: ${props => props.theme.text} !important; }
 }
 .last-update h3 { color: ${props => props.theme.text} }
-.day-cases, .total-cases, .lethality-chart, .ar-chart, .confirmed-chart { 
+.day-cases, .total-cases, .lethality-chart, .ar-chart, .confirmed-chart, .sm-test-chart { 
     tspan { fill: ${props => props.theme.text} !important;} 
     line: { stroke: ${props => props.theme.text} !important;}
  }
