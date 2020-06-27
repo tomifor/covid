@@ -20,13 +20,36 @@ export default class ArTab extends React.Component {
         today.setHours(0, 0, 0, 0);
         getDataByCountry(COUNTRY, FIRST_DAY, today.toISOString()).then(res => {
             const lastUpdate = this.getDate(res[res.length - 1].Date);
+            const data = this.fixApiResponse(res);
             this.setState({
                 lastUpdate: lastUpdate,
-                data: res,
-                current: res[res.length - 1],
-                previous: res[res.length - 2],
+                data: data,
+                current: data[data.length - 1],
+                previous: data[data.length - 2],
                 loading: false
             });
+        });
+    }
+
+    fixApiResponse(data) {
+         return data.map(elem => {
+            if(elem.Date === '2020-06-24T00:00:00Z') {
+               return {
+                   Active: 34919,
+                   City: "",
+                   CityCode: "",
+                   Confirmed: 49851,
+                   Country: "Argentina",
+                   CountryCode: "AR",
+                   Date: "2020-06-24T00:00:00Z",
+                   Deaths: 1116,
+                   Lat: "-38.42",
+                   Lon: "-63.62",
+                   Province: "",
+                   Recovered: 13816
+               }
+            }
+            return elem;
         });
     }
 

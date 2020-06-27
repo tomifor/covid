@@ -113,7 +113,7 @@ const StyleWrapper = styled("div")`
     
   }
   .chart-header > h3 {
-        color: ${props => props.theme.title};
+        color: ${props => props.theme.text};
     }
 `;
 
