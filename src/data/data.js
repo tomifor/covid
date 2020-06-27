@@ -140,7 +140,7 @@ export const DATA = [
         },
         inStudy: 307,
         invalidated: 8,
-        dismiss: 1826
+        dismiss: 1903
     },
     {
         date: '2020-06-17T23:23:42',
