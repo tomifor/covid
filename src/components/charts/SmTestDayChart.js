@@ -23,7 +23,6 @@ class SmTestDayChart extends React.Component {
                 return {x: day.date, y: this.getTestAmount(index)}
             }
         });
-        console.log(test);
         this.setState({data: test, filtered: test.slice(0, this.state.daysAmount).reverse(), loading: false});
     }
 
@@ -50,17 +49,17 @@ class SmTestDayChart extends React.Component {
                 <div className={'chart-container sm-test-chart'}>
                     <div className={'chart-header'}>
                         <h3>Testeos por día</h3>
-                        {/*<Form.Group controlId="days">*/}
-                        {/*    <Form.Control as="select" defaultValue={30} onChange={this.filterData}>*/}
-                        {/*        <option value={60}>Últimos 60 días</option>*/}
-                        {/*        <option value={30}>Últimos 30 días</option>*/}
-                        {/*        <option value={15}>Últimos 15 días</option>*/}
-                        {/*    </Form.Control>*/}
-                        {/*</Form.Group>*/}
+                        <Form.Group controlId="days">
+                            <Form.Control as="select" defaultValue={30} onChange={(event) => this.filterData(event.target.value)}>
+                                <option value={60}>Últimos 60 días</option>
+                                <option value={30}>Últimos 30 días</option>
+                                <option value={15}>Últimos 15 días</option>
+                            </Form.Control>
+                        </Form.Group>
                     </div>
                     <VictoryChart height={200}
-                                  domainPadding={{x: 15, y: [0, 5]}}
-                                  padding={{top: 10, bottom: 50, right: 10, left: 20}}
+                                  domainPadding={{x: 10, y: [0, 5]}}
+                                  padding={{top: 10, bottom: 50, right: 10, left: 18}}
                                   alignment="start"
                                   scale={{x: "time"}}>
                         {!this.state.loading ?
@@ -72,17 +71,17 @@ class SmTestDayChart extends React.Component {
                                 alignment="start"
                                 height={100}
                                 barWidth={4}
-                                labelComponent={<VictoryLabel dy={-2} dx={2} style={{fontSize: '8px'}}/>}
+                                labelComponent={<VictoryLabel dy={-2} dx={2} style={{fontSize: '7px'}}/>}
                                 labels={({datum}) => datum.y > 7 ? datum.y : ''}
                                 animate={{
-                                    duration: 2000,
+                                    duration: 1000,
                                     onLoad: {duration: 1000}
                                 }}
                             />
                             : null}
                         <VictoryAxis dependentAxis
                                      tickCount={10}
-                                     tickLabelComponent={<VictoryLabel style={{fontSize: '8px'}} x={17}/>}
+                                     tickLabelComponent={<VictoryLabel style={{fontSize: '8px'}} x={15}/>}
                                      style={{
                                          axis: {
                                              stroke: '#636363'
@@ -115,6 +114,10 @@ const StyleWrapper = styled("div")`
   .chart-header > h3 {
         color: ${props => props.theme.text};
     }
+  select.form-control {
+    background-color: ${props => props.theme.background};
+    color: ${props => props.theme.text};
+  }
 `;
 
 

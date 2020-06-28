@@ -20,6 +20,7 @@
 }
 
 .sm-test-chart {
+  margin-bottom: 50px;
   .chart-header {
     padding: 10px;
     display: flex;
@@ -32,4 +33,14 @@
       margin-bottom: 0;
     }
   }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .chart-header {
+    h3 {
+      font-size: 20px;
+    }
+  }
+
 }

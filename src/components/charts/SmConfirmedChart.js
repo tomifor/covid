@@ -9,15 +9,21 @@ export default class SmConfirmedChart extends React.Component {
     constructor(props) {
         super(props);
         const last = DATA[0];
+        const parsedDate = [
+            {x: "Recuperados", y: last.cases.cured, color: "#3DB085"},
+            {x: "Sin necesidad \n de internación", y: last.cases.goodStatus, color: "#30A0DB"},
+            {x: "Internadas \n en el \n municipio", y: last.cases.insideHospitalized, color: "#FBCF4A"},
+            {x: "Internadas \n fuera del \n municipio", y: last.cases.outsideHospitalized, color: "#844F9B"},
+            {x: "Fallecidas", y: last.cases.dead, color: "#E95B54"},
+        ];
+
+        if(last.cases.pendingInformation) {
+            parsedDate.push({x: 'Información \n pendiente', y: last.cases.pendingInformation, color: '#ff0ef2'});
+        }
+
         this.state = {
             total: last.cases.total,
-            data: [
-                {x: "Recuperados", y: last.cases.cured, color: "#3DB085"},
-                {x: "Sin necesidad \n de internación", y: last.cases.goodStatus, color: "#30A0DB"},
-                {x: "Internadas en \n el municipio", y: last.cases.insideHospitalized, color: "#FBCF4A"},
-                {x: "Internadas fuera \n del municipio", y: last.cases.outsideHospitalized, color: "#844F9B"},
-                {x: "Fallecidas", y: last.cases.dead, color: "#E95B54"},
-            ]
+            data: parsedDate,
         }
     }
 
@@ -27,7 +33,7 @@ export default class SmConfirmedChart extends React.Component {
                 <VictoryChart
                     height={300}
                     domainPadding={{x: 18, y: [0, 5]}}
-                    padding={{top: 25, bottom: 40, right: 15, left: 35}}>
+                    padding={{top: 25, bottom: 50, right: 15, left: 35}}>
                     <VictoryBar
                         style={{data: {fill: ({ datum }) => datum.color}}}
                         data={this.state.data}
