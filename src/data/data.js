@@ -1,5 +1,21 @@
 export const DATA = [
     {
+        date: '2020-06-28T23:13:12',
+        cases: {
+            total: 596,
+            newCases: 33,
+            cured: 132,
+            goodStatus: 182,
+            insideHospitalized: 68,
+            outsideHospitalized: 31,
+            dead: 14,
+            pendingInformation: 169,
+        },
+        inStudy: 616,
+        invalidated: 8,
+        dismiss: 2664
+    },
+    {
         date: '2020-06-27T23:33:12',
         cases: {
             total: 563,
