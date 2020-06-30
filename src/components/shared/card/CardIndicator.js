@@ -17,6 +17,8 @@ export default class CardIndicator extends React.Component {
                         <Card.Body>
                             <Card.Title>
                                 <p className={'value'}>{this.props.value !== null ? this.props.value : '-'}</p>
+                                {this.props.extraValue ?
+                                    <p className={'extra'}>{`(${this.props.extraValue})`}</p> : null}
                             </Card.Title>
                         </Card.Body>
                     </Card>
