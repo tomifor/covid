@@ -3,8 +3,9 @@ import {DATA} from "../../data/data";
 import SmCharts from "../charts/SmCharts";
 import SmTestCards from "../cards/SmTestCards";
 import SmCasesCards from "../cards/SmCasesCards";
-import {Alert, Container} from "react-bootstrap";
 import TabHeader from "./TabHeader/TabHeader";
+import {Alert, Col, Container, Row} from "react-bootstrap";
+import SmTestDayChart from "../charts/SmTestDayChart";
 
 export default class SmTab extends React.Component {
 
@@ -33,7 +34,15 @@ export default class SmTab extends React.Component {
         return (
             <div>
                 <div className={'last-update'}>
-                    <TabHeader lastUpdate={lastUpdate}/>
+                    <Container>
+                        <h3>Última actualización: {lastUpdate}</h3>
+                        {/*<Alert variant={'warning'}>*/}
+                        {/*    Por problemas técnicos a nivel nacional con el sistema de información no se pudo publicar el*/}
+                        {/*    informe completo de San Miguel. Solo se actualizaron los datos de casos confirmados y nuevos*/}
+                        {/*    hoy.*/}
+                        {/*</Alert>*/}
+                    </Container>
+                    {/*<TabHeader lastUpdate={lastUpdate}/>*/}
                 </div>
                 <div>
                     <SmCasesCards/>
@@ -43,6 +52,15 @@ export default class SmTab extends React.Component {
                 </div>
                 <div>
                     <SmTestCards/>
+                </div>
+                <div>
+                    <Container>
+                        <Row>
+                            <Col md={12}>
+                                <SmTestDayChart/>
+                            </Col>
+                        </Row>
+                    </Container>
                 </div>
                 <div>
                     <p className={'source'}><strong>Fuente: </strong><a

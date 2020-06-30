@@ -12,7 +12,7 @@ export default class SmLethalityChart extends React.Component {
         const last = DATA[0];
         this.state = {
             data: [
-                {x: 0, y: 5},
+                {x: 0, y: MAX},
             ],
             lethality: [
                 {name: 'San Miguel', value: ((last.cases.dead / last.cases.total) * 100)},
@@ -51,13 +51,13 @@ export default class SmLethalityChart extends React.Component {
                               padding={{top: 10, bottom: 170, right: 40, left: 40}}>
                     <VictoryBar
                         horizontal
-                        domain={{x: [0, 5], y: [0, 5]}}
+                        domain={{x: [0, 5], y: [MIN, MAX]}}
                         height={300}
                         style={{data: {fill: "url(#barGradient)", width: 25}}}
                         alignment="start"
                         data={this.state.data}
                         maxDomain={{x: 5, y: 10}}
-                        minDomain={{x: 0}}
+                        minDomain={{x: 0, y: 2}}
                         labels={({datum}) => `${datum.y}%`}
                         labelComponent={<VictoryLabel dy={-12} dx={8}/>}
                     />
@@ -74,7 +74,7 @@ export default class SmLethalityChart extends React.Component {
                     />
                     <VictoryAxis
                         tickValues={[0]}
-                        tickFormat={(t) => t + '%'}
+                        tickFormat={(t) => `${MIN}%`}
                         offsetX={45}
                         tickLabelComponent={<VictoryLabel dy={-12}/>}
                         style={{
@@ -87,3 +87,6 @@ export default class SmLethalityChart extends React.Component {
         )
     }
 }
+
+const MAX = 2.8;
+const MIN = 1.8;

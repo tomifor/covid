@@ -1,5 +1,165 @@
 export const DATA = [
     {
+        date: '2020-06-28T23:13:12',
+        cases: {
+            total: 596,
+            newCases: 33,
+            cured: 132,
+            goodStatus: 182,
+            insideHospitalized: 68,
+            outsideHospitalized: 31,
+            dead: 14,
+            pendingInformation: 169,
+        },
+        inStudy: 616,
+        invalidated: 8,
+        dismiss: 2664
+    },
+    {
+        date: '2020-06-27T23:33:12',
+        cases: {
+            total: 563,
+            newCases: 9,
+            cured: 97,
+            goodStatus: 195,
+            insideHospitalized: 80,
+            outsideHospitalized: 46,
+            dead: 14,
+            pendingInformation: 131,
+        },
+        inStudy: 650,
+        invalidated: 8,
+        dismiss: 2584
+    },
+    {
+        date: '2020-06-26T23:33:12',
+        cases: {
+            total: 554,
+            newCases: 68,
+            cured: 93,
+            goodStatus: 175,
+            insideHospitalized: 95,
+            outsideHospitalized: 46,
+            dead: 14,
+            pendingInformation: 131,
+        },
+        inStudy: 566,
+        invalidated: 8,
+        dismiss: 2555
+    },
+    {
+        date: '2020-06-25T23:58:12',
+        cases: {
+            total: 486,
+            newCases: 49,
+            cured: 93,
+            goodStatus: 167,
+            insideHospitalized: 86,
+            outsideHospitalized: 48,
+            dead: 12,
+            pendingInformation: 80,
+        },
+        inStudy: 608,
+        invalidated: 8,
+        dismiss: 2393
+    },
+    {
+        date: '2020-06-24T22:20:12',
+        cases: {
+            total: 437,
+            newCases: 16,
+            cured: 93,
+            goodStatus: 156,
+            insideHospitalized: 85,
+            outsideHospitalized: 44,
+            dead: 11,
+            pendingInformation: 48,
+        },
+        inStudy: 565,
+        invalidated: 8,
+        dismiss: 2280
+    },
+    {
+        date: '2020-06-23T22:57:12',
+        cases: {
+            total: 421,
+            newCases: 29,
+            cured: 93,
+            goodStatus: 150,
+            insideHospitalized: 80,
+            outsideHospitalized: 44,
+            dead: 10,
+            pendingInformation: 44,
+        },
+        inStudy: 441,
+        invalidated: 8,
+        dismiss: 2253
+    },
+    {
+        date: '2020-06-22T21:40:12',
+        cases: {
+            total: 392,
+            newCases: 24,
+            cured: 88,
+            goodStatus: 139,
+            insideHospitalized: 55,
+            outsideHospitalized: 44,
+            dead: 10,
+            pendingInformation: 36,
+        },
+        inStudy: 430,
+        invalidated: 8,
+        dismiss: 2136
+    },
+    {
+        date: '2020-06-21T22:16:12',
+        cases: {
+            total: 368,
+            newCases: 26,
+            cured: 88,
+            goodStatus: 139,
+            insideHospitalized: 53,
+            outsideHospitalized: 44,
+            dead: 10,
+            pendingInformation: 34,
+        },
+        inStudy: 294,
+        invalidated: 8,
+        dismiss: 2098
+    },
+    {
+        date: '2020-06-20T23:23:12',
+        cases: {
+            total: 342,
+            newCases: 27,
+            cured: 86,
+            goodStatus: 128,
+            insideHospitalized: 48,
+            outsideHospitalized: 41,
+            dead: 10,
+            pendingInformation: 29,
+        },
+        inStudy: 314,
+        invalidated: 9,
+        dismiss: 2053
+    },
+    {
+        date: '2020-06-19T22:23:12',
+        cases: {
+            total: 315,
+            newCases: 38,
+            cured: 86,
+            goodStatus: 121,
+            insideHospitalized: 32,
+            outsideHospitalized: 38,
+            dead: 10,
+            pendingInformation: 28,
+        },
+        inStudy: 297,
+        invalidated: 9,
+        dismiss: 1971
+    },
+    {
         date: '2020-06-18T23:23:42',
         cases: {
             total: 277,
@@ -12,7 +172,7 @@ export const DATA = [
         },
         inStudy: 307,
         invalidated: 8,
-        dismiss: 1826
+        dismiss: 1903
     },
     {
         date: '2020-06-17T23:23:42',

@@ -23,7 +23,7 @@ export default class SmTestCards extends React.Component {
         return (
             <div className={'test-container'}>
                 <Container>
-                    <h1 className={'section-title'}>Test</h1>
+                    <h1 className={'section-title'}>Casos testeados</h1>
                     <Row>
                         <Col md={3} xs={6}>
                             <CardIndicator title={'Totales'} value={this.state.total}/>
