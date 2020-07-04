@@ -10,6 +10,7 @@
     margin-bottom: 0;
     font-weight: 700;
     color: #454545;
+    margin-right: 5px;
   }
 
   p {
@@ -22,6 +23,14 @@
   .card-body {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
+    div.card-title {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      .extra {
+        color: rgb(54, 186, 92);
+      }
+    }
   }
 }
 
