@@ -1,8 +1,8 @@
 import React from "react";
-import '../test-section/TestSection.scss';
+import './SmTestCards.scss';
 import {Col, Container, Row} from "react-bootstrap";
-import {DATA} from "../../data/data";
-import CardIndicator from "../shared/card/CardIndicator";
+import {DATA} from "../../../data/data";
+import CardIndicator from "../../shared/card/CardIndicator";
 
 export default class SmTestCards extends React.Component {
 

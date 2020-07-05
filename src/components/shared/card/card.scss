@@ -26,9 +26,15 @@
     div.card-title {
       display: flex;
       justify-content: center;
-      align-items: baseline;
+      align-items: center;
       .extra {
+        margin-top: 9px;
+      }
+      .extra.positive {
         color: rgb(54, 186, 92);
+      }
+      .extra.negative {
+        color: rgb(255, 44, 44);
       }
     }
   }

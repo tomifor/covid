@@ -7,18 +7,19 @@ import styled from "@emotion/styled";
 export default class CardIndicator extends React.Component {
 
     render() {
+        const {positive, title, customClass, value, extraValue} = this.props;
         return (
             <StyleWrapper>
-                <div className={'card-container ' + this.props.customClass}>
+                <div className={'card-container ' + customClass}>
                     <Card className="text-center">
                         <Card.Header>
-                            <h2 className={'title'}>{this.props.title}</h2>
+                            <h2 className={'title'}>{title}</h2>
                         </Card.Header>
                         <Card.Body>
                             <Card.Title>
-                                <p className={'value'}>{this.props.value !== null ? this.props.value : '-'}</p>
-                                {this.props.extraValue ?
-                                    <p className={'extra'}>{`(${this.props.extraValue})`}</p> : null}
+                                <p className={'value'}>{value !== null ? value : '-'}</p>
+                                {extraValue ?
+                                    <p className={positive ? 'extra positive' : ' extra negative'}>{`(${extraValue > 0 ? '+' : ''}${extraValue})`}</p> : null}
                             </Card.Title>
                         </Card.Body>
                     </Card>
