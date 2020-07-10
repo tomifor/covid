@@ -1,11 +1,11 @@
 // Actualizado 06/07/20
 export const Lethality = {
-    argentina: 1.97,
-    caba: 1.92,
-    buenosaires: 1.80,
+    argentina: 1.89,
+    caba: 1.88,
+    buenosaires: 1.73,
 }
 
 export const ArgentinaData = {
     avgAgeDeceased: 75,
-    intensiveCarePatients: 676
+    intensiveCarePatients: 686
 }
