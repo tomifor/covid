@@ -49,6 +49,22 @@ export default class ArTab extends React.Component {
                     Recovered: 13816
                 }
             }
+            if (elem.Date === '2020-07-08T00:00:00Z') {
+                return {
+                    Active: 48834,
+                    City: "",
+                    CityCode: "",
+                    Confirmed: 87030,
+                    Country: "Argentina",
+                    CountryCode: "AR",
+                    Date: "2020-07-08T00:00:00Z",
+                    Deaths: 1694,
+                    Lat: "-38.42",
+                    Lon: "-63.62",
+                    Province: "",
+                    Recovered: 36502
+                }
+            }
             return elem;
         });
     }

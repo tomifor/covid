@@ -38,7 +38,6 @@ export default class ArChart extends React.Component {
 
     processData() {
         if (this.props.data) {
-            console.log(this.props.data);
             const total = this.props.data.map(item => ({
                 x: new Date(Date.parse(item.Date)),
                 y: item.Confirmed
