@@ -10,7 +10,6 @@
     margin-bottom: 0;
     font-weight: 700;
     color: #454545;
-    margin-right: 5px;
   }
 
   p {
@@ -23,13 +22,11 @@
   .card-body {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
+    min-height: 86px;
     div.card-title {
       display: flex;
       justify-content: center;
       align-items: center;
-      .extra {
-        margin-top: 9px;
-      }
       .extra.positive {
         color: rgb(54, 186, 92);
       }
@@ -54,6 +51,10 @@
     .value {
       font-size: 2.4rem;
     }
+    div.card-title {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -64,14 +65,13 @@
     }
     p.value {
       font-size: 2.5rem;
+      margin-right: 5px;
     }
   }
-
-  .card-container.avg-deceased, .card-container.intensive-care {
-    .title {
-      font-size: 17px;
-      font-weight: 500;
-      margin-top: 5px;
+  div.card-title {
+    flex-direction: row;
+    .extra {
+      margin-top: 9px;
     }
   }
 }

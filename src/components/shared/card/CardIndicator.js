@@ -10,7 +10,7 @@ export default class CardIndicator extends React.Component {
         const {positive, title, customClass, value, extraValue} = this.props;
         return (
             <StyleWrapper>
-                <div className={'card-container ' + customClass}>
+                <div className={customClass ? 'card-container ' + customClass : 'card-container'}>
                     <Card className="text-center">
                         <Card.Header>
                             <h2 className={'title'}>{title}</h2>

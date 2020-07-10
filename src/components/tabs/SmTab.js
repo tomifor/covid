@@ -2,7 +2,7 @@ import React from "react";
 import {DATA} from "../../data/data";
 import SmCharts from "../charts/SmCharts";
 import SmTestCards from "../cards/SmTestCards/SmTestCards";
-import SmCasesCards from "../cards/SmCasesCards";
+import SmCasesCards from "../cards/SmCasesCards/SmCasesCards";
 import {Alert, Col, Container, Row} from "react-bootstrap";
 import SmTestDayChart from "../charts/SmTestDayChart";
 
@@ -61,12 +61,18 @@ export default class SmTab extends React.Component {
                     </Container>
                 </div>
                 <div>
-                    <p className={'source'}><strong>Fuente: </strong><a
-                        rel={'noopener noreferrer'}
-                        target={'_blank'}
-                        href={sourceUrl}>{sourceLabel}</a></p>
+                    <Source sourceUrl={sourceUrl} sourceLabel={sourceLabel}/>
                 </div>
             </div>
         )
     }
+}
+
+
+const Source = ({sourceUrl, sourceLabel}) => {
+    return (
+        <p className={'source'}>
+            <strong>Fuente: </strong>
+            <a rel={'noopener noreferrer'} target={'_blank'} href={sourceUrl}>{sourceLabel}</a>
+        </p>)
 }
