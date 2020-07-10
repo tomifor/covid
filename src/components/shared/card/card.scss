@@ -18,6 +18,10 @@
 
   .card-header {
     min-height: 53px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
   .card-body {
     border-bottom-left-radius: 3px;

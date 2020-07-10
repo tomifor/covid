@@ -1,5 +1,5 @@
 import React from "react";
-import {VictoryAxis, VictoryBar, VictoryChart} from 'victory';
+import {VictoryAxis, VictoryBar, VictoryChart, VictoryLabel} from 'victory';
 import {DATA} from "../../data/data";
 import ChartContainer from "./ChartContainer";
 
@@ -24,7 +24,7 @@ export default class SmDayCases extends React.Component {
                 <VictoryChart height={300}
                               domainPadding={{x: 5, y: [0, 5]}}
                               domain={{y: [0, this.state.max]}}
-                              padding={{top: 20, bottom: 40, right: 10, left: 35}}
+                              padding={{top: 20, bottom: 40, right: 10, left: 20}}
                               alignment="start"
                               scale={{x: "time"}}>
                     <VictoryBar
@@ -40,12 +40,16 @@ export default class SmDayCases extends React.Component {
                             onLoad: {duration: 1000}
                         }}
                     />
-                    <VictoryAxis dependentAxis tickCount={6} style={{
+                    <VictoryAxis dependentAxis
+                                 tickLabelComponent={<VictoryLabel style={{fontSize: '12px'}} x={15}/>}
+                                 tickCount={6} style={{
                         axis: {
                             stroke: '#636363'
                         }
                     }}/>
-                    <VictoryAxis tickCount={3} tickFormat={v => month[new Date(v).getMonth()]} style={{
+                    <VictoryAxis tickCount={3}
+                                 tickLabelComponent={<VictoryLabel style={{fontSize: '12px'}} y={264}/>}
+                                 tickFormat={v => month[new Date(v).getMonth()]} style={{
                         axis: {
                             stroke: '#636363'
                         }

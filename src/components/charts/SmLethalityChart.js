@@ -47,12 +47,12 @@ export default class SmLethalityChart extends React.Component {
                         </linearGradient>
                     </defs>
                 </svg>
-                <VictoryChart height={300}
+                <VictoryChart height={290}
                               padding={{top: 10, bottom: 170, right: 40, left: 40}}>
                     <VictoryBar
                         horizontal
                         domain={{x: [0, 5], y: [MIN, MAX]}}
-                        height={300}
+                        height={290}
                         style={{data: {fill: "url(#barGradient)", width: 25}}}
                         alignment="start"
                         data={this.state.data}

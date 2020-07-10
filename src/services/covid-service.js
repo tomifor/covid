@@ -55,3 +55,20 @@ const calculateDuplication = (data) => {
     });
     return result;
 }
+
+export const getSmTestData = () => {
+    const last = DATA[0];
+    const yesterday = DATA[1];
+    const beforeYesterday = DATA[2];
+    const total = last.dismiss + last.cases.total;
+    const todayCases = (last.dismiss + last.cases.total) - (yesterday.dismiss + yesterday.cases.total);
+    const yesterdayCases = (yesterday.dismiss + yesterday.cases.total) - (beforeYesterday.dismiss + beforeYesterday.cases.total);
+    return {
+        total: total,
+        study: last.inStudy,
+        studyYesterday: last.inStudy - yesterday.inStudy,
+        today: todayCases,
+        yesterdayDifference: todayCases - yesterdayCases,
+        rate: (100 * last.cases.total / total).toFixed(1),
+    }
+}

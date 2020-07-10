@@ -1,5 +1,5 @@
 import React from "react";
-import {VictoryLine, VictoryChart, VictoryAxis, VictoryLegend} from 'victory';
+import {VictoryLine, VictoryChart, VictoryAxis, VictoryLegend, VictoryLabel} from 'victory';
 import {DATA} from "../../data/data";
 import ChartContainer from "./ChartContainer";
 
@@ -39,7 +39,7 @@ export default class SmTotalCasesChart extends React.Component {
             <ChartContainer customClass={'total-cases'} title={'Casos'}>
                 <VictoryChart height={300}
                               domain={{y: [0, this.state.max]}}
-                              padding={{top: 20, bottom: 40, right: 20, left: 35}}>
+                              padding={{top: 20, bottom: 40, right: 10, left: 35}}>
                     <VictoryLine
                         name={'total-cases'}
                         interpolation="natural"
@@ -104,13 +104,17 @@ export default class SmTotalCasesChart extends React.Component {
                         minDomain={{y: 0}}
                         scale={{x: 'time', y: 'linear'}}
                     />
-                    <VictoryAxis dependentAxis tickCount={7} style={{
-                        axis: {
-                            stroke: '#636363'
-                        }
-                    }}/>
+                    <VictoryAxis dependentAxis
+                                 tickCount={7}
+                                 tickLabelComponent={<VictoryLabel style={{fontSize: '12px'}} x={30}/>}
+                                 style={{
+                                     axis: {
+                                         stroke: '#636363'
+                                     }
+                                 }}/>
                     <VictoryAxis tickCount={8}
                                  tickFormat={(x) => (new Date(x).getDate()) + '/' + (new Date(x).getMonth() + 1)}
+                                 tickLabelComponent={<VictoryLabel style={{fontSize: '12px'}} y={264}/>}
                                  style={{
                                      axis: {
                                          stroke: '#636363'
@@ -122,7 +126,7 @@ export default class SmTotalCasesChart extends React.Component {
                                    className={'confirmed-legend'}
                                    orientation="horizontal"
                                    style={{
-                                       labels: {fontWeight: 400, fontSize: 10},
+                                       labels: {fontWeight: 400, fontSize: 12},
                                    }}
                                    colorScale={this.state.legend.map(elem => elem.color)}
                                    data={this.state.legend.map(elem => ({name: elem.name}))}

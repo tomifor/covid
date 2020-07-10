@@ -14,7 +14,7 @@ export default class SmCasesCards extends React.Component {
     render() {
         return (
             <div id={'sm-cases-cards'} className={'cards-container'}>
-                <Container>
+                <Container fluid={true}>
                     <div className={'section-header'}>
                         <h1 className={'section-title'}>Casos</h1>
                     </div>
