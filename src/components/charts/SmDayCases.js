@@ -41,6 +41,34 @@ export default class SmDayCases extends React.Component {
                             duration: 2000,
                             onLoad: {duration: 1000}
                         }}
+                        events={[{
+                            target: "data",
+                            eventHandlers: {
+                                onMouseOver: () => {
+                                    return [
+                                        {
+                                            target: "data",
+                                            mutation: () => ({style: {fill: "#d07924"}})
+                                        }, {
+                                            target: "labels",
+                                            mutation: () => ({active: true})
+                                        }
+                                    ];
+                                },
+                                onMouseOut: () => {
+                                    return [
+                                        {
+                                            target: "data",
+                                            mutation: () => {
+                                            }
+                                        }, {
+                                            target: "labels",
+                                            mutation: () => ({active: false})
+                                        }
+                                    ];
+                                }
+                            }
+                        }]}
                     />
                     <VictoryAxis dependentAxis
                                  tickLabelComponent={<VictoryLabel style={{fontSize: '12px'}} x={15}/>}
@@ -51,7 +79,7 @@ export default class SmDayCases extends React.Component {
                     }}/>
                     <VictoryAxis tickCount={3}
                                  tickLabelComponent={<VictoryLabel style={{fontSize: '12px'}} y={264}/>}
-                                 // tickFormat={v => month[new Date(v).getMonth()]}
+                        // tickFormat={v => month[new Date(v).getMonth()]}
                                  style={{
                                      axis: {
                                          stroke: '#636363'
