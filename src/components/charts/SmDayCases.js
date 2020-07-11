@@ -8,7 +8,8 @@ export default class SmDayCases extends React.Component {
 
     constructor(props) {
         super(props);
-        const values = DATA.map(item => ({
+        const filteredData = DATA.slice(0, 30);
+        const values = filteredData.map(item => ({
             x: new Date(Date.parse(item.date)).getTime(),
             y: item.cases.newCases
         })).reverse();
@@ -34,7 +35,8 @@ export default class SmDayCases extends React.Component {
                         minDomain={{y: 0}}
                         alignment="start"
                         barWidth={4}
-                        labels={({datum}) => datum.y > 30 ? datum.y : ''}
+                        labelComponent={<VictoryLabel dy={-2} dx={2} style={{fontSize: '12px'}}/>}
+                        labels={({datum}) => datum.y > 1 ? datum.y : ''}
                         animate={{
                             duration: 2000,
                             onLoad: {duration: 1000}
@@ -49,11 +51,12 @@ export default class SmDayCases extends React.Component {
                     }}/>
                     <VictoryAxis tickCount={3}
                                  tickLabelComponent={<VictoryLabel style={{fontSize: '12px'}} y={264}/>}
-                                 tickFormat={v => month[new Date(v).getMonth()]} style={{
-                        axis: {
-                            stroke: '#636363'
-                        }
-                    }}/>
+                                 // tickFormat={v => month[new Date(v).getMonth()]}
+                                 style={{
+                                     axis: {
+                                         stroke: '#636363'
+                                     }
+                                 }}/>
                 </VictoryChart>
             </ChartContainer>
         )

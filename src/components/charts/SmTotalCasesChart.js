@@ -40,9 +40,9 @@ export default class SmTotalCasesChart extends React.Component {
             <ChartContainer customClass={'total-cases'} title={'Casos'}>
                 <VictoryChart height={300}
                               domain={{y: [0, max]}}
-                              containerComponent={
-                                  <VictoryZoomContainer/>
-                              }
+                              // containerComponent={
+                              //     <VictoryZoomContainer/>
+                              // }
                               padding={{top: 20, bottom: 40, right: 10, left: 35}}>
                     <VictoryLine
                         name={'total-cases'}
