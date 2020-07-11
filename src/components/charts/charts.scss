@@ -4,31 +4,48 @@
   margin-bottom: 20px;
   overflow: hidden;
 
-  .chart-title {
-    text-align: center;
+
+  .chart-header-container {
+    display: flex;
     margin-top: 10px;
-    font-family: 'Oxygen', 'Helvetica', sans-serif;
-    margin-bottom: 0;
+
+    .chart-subtitle {
+      margin-bottom: 0;
+    }
+
+    .chart-title {
+      font-family: 'Oxygen', 'Helvetica', sans-serif;
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+
+    .chart-subtitle {
+      font-size: 18px;
+    }
   }
 }
 
 .chart-container.ar-chart {
   max-height: 600px;
 }
+
 .chart-container.sm-test-chart {
   max-height: 530px;
 }
 
 .sm-test-chart {
   margin-bottom: 50px;
+
   .chart-header {
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     h3 {
       margin-bottom: 0;
     }
+
     .form-group {
       margin-bottom: 0;
     }
@@ -46,12 +63,23 @@
     }
   }
 
+  .chart-header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
 
 
 @media only screen and (min-width: 769px) {
   .chart-container {
     max-height: 400px;
+  }
+
+  .chart-header-container {
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 10px;
   }
 }
 

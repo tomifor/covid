@@ -8,7 +8,10 @@ export default class ChartContainer extends React.Component {
         return (
             <StyleWrapper>
                 <div className={'chart-container ' + this.props.customClass}>
-                    <h3 className={'chart-title'}>{this.props.title}</h3>
+                    <div className={'chart-header-container'}>
+                        <h3 className={'chart-title'}>{this.props.title}</h3>
+                        {this.props.subtitle && <h4 className={'chart-subtitle'}>{this.props.subtitle}</h4>}
+                    </div>
                     {this.props.children}
                 </div>
             </StyleWrapper>

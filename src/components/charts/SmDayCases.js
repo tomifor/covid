@@ -21,7 +21,7 @@ export default class SmDayCases extends React.Component {
 
     render() {
         return (
-            <ChartContainer customClass={'day-cases'} title={'Casos por día'}>
+            <ChartContainer customClass={'day-cases'} title={'Casos por día'} subtitle={'(Últimos 30 días)'}>
                 <VictoryChart height={300}
                               domainPadding={{x: 5, y: [0, 5]}}
                               domain={{y: [0, this.state.max]}}
