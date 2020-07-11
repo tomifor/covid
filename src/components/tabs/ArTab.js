@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import {getDataByCountry} from "../../services/covid-service";
-import ArCasesCards from "../cards/ArCasesCards";
+import ArCasesCards from "../cards/ArCasesCards/ArCasesCards";
 import ArChart from "../charts/ArChart";
 import {Container, Row, Spinner} from "react-bootstrap";
 import TabHeader from "./TabHeader/TabHeader";
@@ -88,11 +88,11 @@ export default class ArTab extends React.Component {
                             :
                             (
                                 <div>
-                                    <Container>
+                                    <Container fluid={true}>
                                         <div className={'last-update'}>
                                             <h3>Última
                                                 actualización: {this.state.current ? this.state.lastUpdate : ''}</h3>
-                                            <TabHeader lastUpdate={this.state.lastUpdate}/>
+                                            {/*<TabHeader lastUpdate={this.state.lastUpdate}/>*/}
                                         </div>
                                     </Container>
                                     <ArCasesCards current={this.state.current} previous={this.state.previous}/>

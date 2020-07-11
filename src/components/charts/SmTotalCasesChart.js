@@ -1,5 +1,5 @@
 import React from "react";
-import {VictoryLine, VictoryChart, VictoryAxis, VictoryLegend, VictoryLabel} from 'victory';
+import {VictoryLine, VictoryChart, VictoryAxis, VictoryLegend, VictoryLabel, VictoryZoomContainer} from 'victory';
 import {DATA} from "../../data/data";
 import ChartContainer from "./ChartContainer";
 
@@ -35,10 +35,14 @@ export default class SmTotalCasesChart extends React.Component {
 
 
     render() {
+        const {total, active, death, healthy, max} = this.state;
         return (
             <ChartContainer customClass={'total-cases'} title={'Casos'}>
                 <VictoryChart height={300}
-                              domain={{y: [0, this.state.max]}}
+                              domain={{y: [0, max]}}
+                              containerComponent={
+                                  <VictoryZoomContainer/>
+                              }
                               padding={{top: 20, bottom: 40, right: 10, left: 35}}>
                     <VictoryLine
                         name={'total-cases'}
@@ -51,10 +55,12 @@ export default class SmTotalCasesChart extends React.Component {
                             data: {stroke: "#a23dd5", strokeWidth: 3, strokeLinecap: "round"},
                             parent: {border: "1px solid #ccc"}
                         }}
-                        data={this.state.total}
+                        data={total}
                         height={300}
                         minDomain={{y: 0}}
                         scale={{x: 'time', y: 'linear'}}
+                        labels={({datum}) => total && total[total.length - 1].y === datum.y ? datum.y : ''}
+                        labelComponent={<VictoryLabel renderInPortal dy={-5} dx={-10} style={{fontSize: 12}}/>}
                     />
                     <VictoryLine
                         name={'total-cases'}
@@ -71,6 +77,8 @@ export default class SmTotalCasesChart extends React.Component {
                         height={300}
                         minDomain={{y: 0}}
                         scale={{x: 'time', y: 'linear'}}
+                        labels={({datum}) => active && active[active.length - 1].y === datum.y ? datum.y : ''}
+                        labelComponent={<VictoryLabel renderInPortal dy={-5} dx={-10} style={{fontSize: 12}}/>}
                     />
                     <VictoryLine
                         name={'total-cases'}
@@ -87,6 +95,8 @@ export default class SmTotalCasesChart extends React.Component {
                         height={300}
                         minDomain={{y: 0}}
                         scale={{x: 'time', y: 'linear'}}
+                        labels={({datum}) => healthy && healthy[healthy.length - 1].y === datum.y ? datum.y : ''}
+                        labelComponent={<VictoryLabel renderInPortal dy={-5} dx={-7} style={{fontSize: 12}}/>}
                     />
                     <VictoryLine
                         name={'total-cases'}
@@ -103,6 +113,8 @@ export default class SmTotalCasesChart extends React.Component {
                         height={300}
                         minDomain={{y: 0}}
                         scale={{x: 'time', y: 'linear'}}
+                        labels={({datum}) => death && death[death.length - 1].y === datum.y ? datum.y : ''}
+                        labelComponent={<VictoryLabel renderInPortal dy={-5} dx={-5} style={{fontSize: 12}}/>}
                     />
                     <VictoryAxis dependentAxis
                                  tickCount={7}

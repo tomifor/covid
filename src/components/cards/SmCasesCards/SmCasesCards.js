@@ -3,6 +3,7 @@ import './SmCasesCards.scss'
 import {Col, Container, Row} from "react-bootstrap";
 import CardIndicator from "../../shared/card/CardIndicator";
 import {getSmCasesData} from "../../../services/covid-service";
+import {HelpTooltip} from "../../shared/help/HelpTooltip";
 
 export default class SmCasesCards extends React.Component {
 
@@ -12,11 +13,13 @@ export default class SmCasesCards extends React.Component {
     }
 
     render() {
+        const tooltipText = 'Los números entre parentesis muestran la diferencia respecto el día anterior.';
         return (
             <div id={'sm-cases-cards'} className={'cards-container'}>
                 <Container fluid={true}>
                     <div className={'section-header'}>
                         <h1 className={'section-title'}>Casos</h1>
+                        <HelpTooltip text={tooltipText}/>
                     </div>
                     <Row>
                         <Col md={3} xs={6}>

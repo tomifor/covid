@@ -4,6 +4,7 @@ import {Col, Container, Row} from "react-bootstrap";
 import {DATA} from "../../../data/data";
 import CardIndicator from "../../shared/card/CardIndicator";
 import {getSmTestData} from "../../../services/covid-service";
+import {HelpTooltip} from "../../shared/help/HelpTooltip";
 
 export default class SmTestCards extends React.Component {
 
@@ -13,10 +14,14 @@ export default class SmTestCards extends React.Component {
     }
 
     render() {
+        const tooltipText = 'Los números entre parentesis muestran la diferencia respecto el día anterior.';
         return (
             <div className={'test-container'}>
                 <Container fluid={true}>
-                    <h1 className={'section-title'}>Casos testeados</h1>
+                    <div className={'section-header'}>
+                        <h1 className={'section-title'}>Casos testeados</h1>
+                        <HelpTooltip text={tooltipText}/>
+                    </div>
                     <Row>
                         <Col md={3} xs={6}>
                             <CardIndicator title={'Totales'} value={this.state.total}/>

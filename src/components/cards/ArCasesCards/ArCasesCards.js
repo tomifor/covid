@@ -1,7 +1,8 @@
 import React from "react";
+import './ArCasesCards.scss';
 import {Col, Container, Row} from "react-bootstrap";
-import CardIndicator from "../shared/card/CardIndicator";
-import {ArgentinaData} from "../../data/extra-data";
+import CardIndicator from "../../shared/card/CardIndicator";
+import {ArgentinaData} from "../../../data/extra-data";
 
 export default class ArCasesCards extends React.Component {
 
@@ -40,8 +41,8 @@ export default class ArCasesCards extends React.Component {
 
     render() {
         return (
-            <div className={'cards-container'}>
-                <Container>
+            <div id={'ar-cases-cards'} className={'cards-container'}>
+                <Container fluid={true}>
                     <h1 className={'section-title'}>Casos</h1>
                     <Row>
                         <Col lg={3} md={4} sm={6} xs={6}>

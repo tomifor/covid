@@ -20,6 +20,14 @@
   p {
     margin: 0;
   }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    .section-title {
+      margin-right: 10px;
+    }
+  }
 }
 
 
