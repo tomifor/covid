@@ -1,0 +1,32 @@
+.section-header {
+  display: flex;
+  align-items: center;
+  .section-title {
+    margin-right: 10px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  #sm-cases-cards {
+    .duplication {
+      .card-body {
+        .value {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  #sm-cases-cards {
+    .card-container.avg-deceased, .card-container.intensive-care {
+      .title {
+        font-size: 17px;
+        font-weight: 500;
+        margin-top: 5px;
+      }
+    }
+  }
+}

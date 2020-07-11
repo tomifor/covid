@@ -91,11 +91,11 @@ export default class ArChart extends React.Component {
         return (
             <div>
                 {/*<DateFilter onChange={(value) => this.getDateFormatted(value)}/>*/}
-                <Container>
+                <Container fluid={true}>
                     <Row>
                         <Col lg={12}>
                             <ChartContainer customClass={'ar-chart'} title={'Argentina'}>
-                                <VictoryChart height={220}
+                                <VictoryChart height={210}
                                               domain={{y: [0, this.state.max]}}
                                               scale={{x: 'time', y: 'linear'}}
                                     // containerComponent={
@@ -103,7 +103,7 @@ export default class ArChart extends React.Component {
                                     //         labels={({datum}) => `Fecha: ${this.getDateFormatted(datum.x)}, \n ${datum.y}`}
                                     //     />
                                     // }
-                                              padding={{top: 20, bottom: 25, right: 20, left: 20}}>
+                                              padding={{top: 20, bottom: 25, right: 6, left: 20}}>
                                     <VictoryLine
                                         name={'total-cases'}
                                         interpolation="natural"
@@ -122,6 +122,7 @@ export default class ArChart extends React.Component {
                                         data={total}
                                         minDomain={{y: 0}}
                                         labels={({datum}) => total && total[total.length - 1].y === datum.y ? datum.y : ''}
+                                        labelComponent={<VictoryLabel renderInPortal dy={-2} dx={-10} style={{fontSize: 8}}/>}
                                     />
                                     <VictoryLine
                                         name={'active-cases'}
@@ -141,6 +142,7 @@ export default class ArChart extends React.Component {
                                         data={active}
                                         minDomain={{y: 0}}
                                         labels={({datum}) => active && active[active.length - 1].y === datum.y ? datum.y : ''}
+                                        labelComponent={<VictoryLabel renderInPortal dy={-3} dx={-10} style={{fontSize: 8}}/>}
                                     />
                                     <VictoryLine
                                         name={'recovered-cases'}
@@ -160,6 +162,8 @@ export default class ArChart extends React.Component {
                                         data={recovered}
                                         minDomain={{y: 0}}
                                         labels={({datum}) => recovered && recovered[recovered.length - 1].y === datum.y ? datum.y : ''}
+                                        labelComponent={<VictoryLabel renderInPortal dy={-2} dx={-10} style={{fontSize: 8}}/>}
+
                                     />
                                     <VictoryLine
                                         name={'death-cases'}
@@ -179,6 +183,8 @@ export default class ArChart extends React.Component {
                                         data={death}
                                         minDomain={{y: 0}}
                                         labels={({datum}) => death && death[death.length - 1].y === datum.y ? datum.y : ''}
+                                        labelComponent={<VictoryLabel renderInPortal dy={-2} dx={-8} style={{fontSize: 8}}/>}
+
                                     />
                                     <VictoryAxis dependentAxis
                                                  tickCount={8}
@@ -194,19 +200,19 @@ export default class ArChart extends React.Component {
                                                  scale={{x: 'time'}}
                                                  tickFormat={(x) => (new Date(x).getDate()) + ' ' + (month[new Date(x).getMonth()])}
                                                  tickLabelComponent={<VictoryLabel angle={50} style={{fontSize: '6px'}}
-                                                                                   y={205}/>}
+                                                                                   y={195}/>}
                                                  style={{
                                                      axis: {
                                                          stroke: '#636363'
                                                      }
                                                  }}/>
-                                    <VictoryLegend x={40} y={20}
+                                    <VictoryLegend x={25} y={20}
                                                    gutter={10}
                                                    symbolSpacer={5}
                                                    className={'confirmed-legend'}
                                                    orientation="horizontal"
                                                    style={{
-                                                       labels: {fontWeight: 400, fontSize: 10},
+                                                       labels: {fontWeight: 400, fontSize: 8},
                                                    }}
                                                    colorScale={this.state.legend.map(elem => elem.color)}
                                                    data={this.state.legend.map(elem => ({name: elem.name}))}

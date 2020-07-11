@@ -1,0 +1,22 @@
+.tab-header-container {
+  margin: 20px 0;
+  .tab-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 8px 10px;
+    .last-update {
+      h3 {
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+    }
+    .filter-button {
+      width: 25px;
+      cursor: pointer;
+    }
+  }
+}

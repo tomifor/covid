@@ -13,6 +13,7 @@
     h3 {
       font-weight: 600;
       margin-bottom: 10px;
+      font-size: 18px;
       color: #454545;
     }
   }
@@ -91,27 +92,18 @@
 
 
 @media only screen and (max-width: 768px) {
-  .last-update {
-    margin-top: 20px;
-    h3 {
-      font-size: 14px;
-    }
-  }
   .btn-information {
     position: fixed;
     bottom: 20px;
     right: 20px;
   }
+
+  .nav.nav-pills {
+    margin-bottom: 10px;
+  }
 }
 
 @media only screen and (min-width: 769px) {
-  .last-update {
-    margin-top: 20px;
-    h3 {
-      font-size: 18px;
-    }
-  }
-
   .mobile-alert {
     display: none;
   }

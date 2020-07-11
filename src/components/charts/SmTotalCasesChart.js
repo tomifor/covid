@@ -1,5 +1,5 @@
 import React from "react";
-import {VictoryLine, VictoryChart, VictoryAxis, VictoryLegend} from 'victory';
+import {VictoryLine, VictoryChart, VictoryAxis, VictoryLegend, VictoryLabel, VictoryZoomContainer} from 'victory';
 import {DATA} from "../../data/data";
 import ChartContainer from "./ChartContainer";
 
@@ -35,11 +35,15 @@ export default class SmTotalCasesChart extends React.Component {
 
 
     render() {
+        const {total, active, death, healthy, max} = this.state;
         return (
             <ChartContainer customClass={'total-cases'} title={'Casos'}>
                 <VictoryChart height={300}
-                              domain={{y: [0, this.state.max]}}
-                              padding={{top: 20, bottom: 40, right: 20, left: 35}}>
+                              domain={{y: [0, max]}}
+                              // containerComponent={
+                              //     <VictoryZoomContainer/>
+                              // }
+                              padding={{top: 20, bottom: 40, right: 10, left: 35}}>
                     <VictoryLine
                         name={'total-cases'}
                         interpolation="natural"
@@ -51,10 +55,12 @@ export default class SmTotalCasesChart extends React.Component {
                             data: {stroke: "#a23dd5", strokeWidth: 3, strokeLinecap: "round"},
                             parent: {border: "1px solid #ccc"}
                         }}
-                        data={this.state.total}
+                        data={total}
                         height={300}
                         minDomain={{y: 0}}
                         scale={{x: 'time', y: 'linear'}}
+                        labels={({datum}) => total && total[total.length - 1].y === datum.y ? datum.y : ''}
+                        labelComponent={<VictoryLabel renderInPortal dy={-5} dx={-10} style={{fontSize: 12}}/>}
                     />
                     <VictoryLine
                         name={'total-cases'}
@@ -71,6 +77,8 @@ export default class SmTotalCasesChart extends React.Component {
                         height={300}
                         minDomain={{y: 0}}
                         scale={{x: 'time', y: 'linear'}}
+                        labels={({datum}) => active && active[active.length - 1].y === datum.y ? datum.y : ''}
+                        labelComponent={<VictoryLabel renderInPortal dy={-5} dx={-10} style={{fontSize: 12}}/>}
                     />
                     <VictoryLine
                         name={'total-cases'}
@@ -87,6 +95,8 @@ export default class SmTotalCasesChart extends React.Component {
                         height={300}
                         minDomain={{y: 0}}
                         scale={{x: 'time', y: 'linear'}}
+                        labels={({datum}) => healthy && healthy[healthy.length - 1].y === datum.y ? datum.y : ''}
+                        labelComponent={<VictoryLabel renderInPortal dy={-5} dx={-7} style={{fontSize: 12}}/>}
                     />
                     <VictoryLine
                         name={'total-cases'}
@@ -103,14 +113,20 @@ export default class SmTotalCasesChart extends React.Component {
                         height={300}
                         minDomain={{y: 0}}
                         scale={{x: 'time', y: 'linear'}}
+                        labels={({datum}) => death && death[death.length - 1].y === datum.y ? datum.y : ''}
+                        labelComponent={<VictoryLabel renderInPortal dy={-5} dx={-5} style={{fontSize: 12}}/>}
                     />
-                    <VictoryAxis dependentAxis tickCount={7} style={{
-                        axis: {
-                            stroke: '#636363'
-                        }
-                    }}/>
+                    <VictoryAxis dependentAxis
+                                 tickCount={7}
+                                 tickLabelComponent={<VictoryLabel style={{fontSize: '12px'}} x={30}/>}
+                                 style={{
+                                     axis: {
+                                         stroke: '#636363'
+                                     }
+                                 }}/>
                     <VictoryAxis tickCount={8}
                                  tickFormat={(x) => (new Date(x).getDate()) + '/' + (new Date(x).getMonth() + 1)}
+                                 tickLabelComponent={<VictoryLabel style={{fontSize: '12px'}} y={264}/>}
                                  style={{
                                      axis: {
                                          stroke: '#636363'
@@ -122,7 +138,7 @@ export default class SmTotalCasesChart extends React.Component {
                                    className={'confirmed-legend'}
                                    orientation="horizontal"
                                    style={{
-                                       labels: {fontWeight: 400, fontSize: 10},
+                                       labels: {fontWeight: 400, fontSize: 12},
                                    }}
                                    colorScale={this.state.legend.map(elem => elem.color)}
                                    data={this.state.legend.map(elem => ({name: elem.name}))}

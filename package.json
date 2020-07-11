@@ -1,7 +1,7 @@
 {
   "homepage": "http://tomifor.github.io/covid",
   "name": "covid",
-  "version": "0.5.8",
+  "version": "0.6.0",
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.28",
@@ -15,6 +15,7 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
+    "react-i18next": "^11.6.0",
     "react-scripts": "3.4.1",
     "victory": "^34.3.8"
   },

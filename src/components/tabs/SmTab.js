@@ -1,8 +1,8 @@
 import React from "react";
 import {DATA} from "../../data/data";
 import SmCharts from "../charts/SmCharts";
-import SmTestCards from "../cards/SmTestCards";
-import SmCasesCards from "../cards/SmCasesCards";
+import SmTestCards from "../cards/SmTestCards/SmTestCards";
+import SmCasesCards from "../cards/SmCasesCards/SmCasesCards";
 import {Alert, Col, Container, Row} from "react-bootstrap";
 import SmTestDayChart from "../charts/SmTestDayChart";
 
@@ -33,14 +33,7 @@ export default class SmTab extends React.Component {
         return (
             <div>
                 <div className={'last-update'}>
-                    <Container>
-                        <h3>Última actualización: {lastUpdate}</h3>
-                        {/*<Alert variant={'warning'}>*/}
-                        {/*    Por problemas técnicos a nivel nacional con el sistema de información no se pudo publicar el*/}
-                        {/*    informe completo de San Miguel. Solo se actualizaron los datos de casos confirmados y nuevos*/}
-                        {/*    hoy.*/}
-                        {/*</Alert>*/}
-                    </Container>
+                    <Update date={lastUpdate}/>
                 </div>
                 <div>
                     <SmCasesCards/>
@@ -52,7 +45,7 @@ export default class SmTab extends React.Component {
                     <SmTestCards/>
                 </div>
                 <div>
-                    <Container>
+                    <Container fluid={true}>
                         <Row>
                             <Col md={12}>
                                 <SmTestDayChart/>
@@ -61,12 +54,29 @@ export default class SmTab extends React.Component {
                     </Container>
                 </div>
                 <div>
-                    <p className={'source'}><strong>Fuente: </strong><a
-                        rel={'noopener noreferrer'}
-                        target={'_blank'}
-                        href={sourceUrl}>{sourceLabel}</a></p>
+                    <Source sourceUrl={sourceUrl} sourceLabel={sourceLabel}/>
                 </div>
             </div>
         )
     }
+}
+
+
+const Source = ({sourceUrl, sourceLabel}) => {
+    return (
+        <p className={'source'}>
+            <strong>Fuente: </strong>
+            <a rel={'noopener noreferrer'} target={'_blank'} href={sourceUrl}>{sourceLabel}</a>
+        </p>)
+}
+
+const Update = ({date}) => {
+    return (
+        <Container fluid={true}>
+            <Row>
+                <Col>
+                    <h3 className={'last-update'}>Última actualización: {date}</h3>
+                </Col>
+            </Row>
+        </Container>)
 }

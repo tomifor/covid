@@ -1,0 +1,13 @@
+
+
+@media only screen and (min-width: 769px) {
+  #ar-cases-cards {
+    .card-container.avg-deceased, .card-container.intensive-care {
+      .title {
+        font-size: 17px;
+        font-weight: 500;
+        margin-top: 5px;
+      }
+    }
+  }
+}

@@ -16,16 +16,6 @@ const App = () => {
     const [showInfoModal, setShowInfoModal] = useState(false);
     const themeState = useTheme();
 
-
-    // useEffect(() => {
-    //     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    //         themeState.toggle();
-    //     }
-    // });
-
-
-
-
     return (
         <StyleWrapper>
             <div className="app-container">

@@ -9,7 +9,7 @@ import SmLethalityChart from "./SmLethalityChart";
 export default class SmCharts extends React.Component {
     render() {
         return (
-            <Container>
+            <Container fluid={true}>
                 <Row>
                     <Col lg={6} md={6} sm={12} xs={12}>
                         <SmTotalCasesChart/>
