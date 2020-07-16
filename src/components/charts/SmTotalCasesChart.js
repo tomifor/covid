@@ -114,6 +114,7 @@ export default class SmTotalCasesChart extends React.Component {
                         minDomain={{y: 0}}
                         scale={{x: 'time', y: 'linear'}}
                         labels={({datum}) => death && death[death.length - 1].y === datum.y ? datum.y : ''}
+                        // labels={({datum}) => console.log(datum.x)}
                         labelComponent={<VictoryLabel renderInPortal dy={-5} dx={-5} style={{fontSize: 12}}/>}
                     />
                     <VictoryAxis dependentAxis

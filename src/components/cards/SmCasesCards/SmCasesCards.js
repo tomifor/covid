@@ -39,7 +39,8 @@ export default class SmCasesCards extends React.Component {
                                            extraValue={this.state.differenceDismiss} positive/>
                         </Col>
                         <Col md={3} xs={6}>
-                            <CardIndicator title={'Recuperados'} value={this.state.cured} positive
+                            <CardIndicator title={'Recuperados'} value={this.state.cured}
+                                           positive={this.state.differenceCured > 0}
                                            extraValue={this.state.differenceCured}/>
                         </Col>
 

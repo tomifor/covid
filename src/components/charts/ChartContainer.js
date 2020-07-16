@@ -25,5 +25,8 @@ const StyleWrapper = styled("div")`
     .chart-title {
         color: ${props => props.theme.text};
     }
+    .chart-subtitle {
+        color: ${props => props.theme.text};
+    }
   }
 `;
