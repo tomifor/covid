@@ -14,6 +14,7 @@ export default class SmCasesCards extends React.Component {
 
     render() {
         const tooltipText = 'Los números entre parentesis muestran la diferencia respecto el día anterior.';
+        const {duplication} = this.state;
         return (
             <div id={'sm-cases-cards'} className={'cards-container'}>
                 <Container fluid={true}>
@@ -58,7 +59,7 @@ export default class SmCasesCards extends React.Component {
                         </Col>
                         <Col md={3} xs={6}>
                             <CardIndicator customClass={'duplication'} title={'Duplicación'}
-                                           value={this.state.duplication + ' días'}/>
+                                           value={duplication ?  duplication + ' días' : 'Error'}/>
                         </Col>
                         <Col md={3} xs={6}>
                             <CardIndicator title={'Letalidad'} value={this.state.deadRate + '%'}/>
