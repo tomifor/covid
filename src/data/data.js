@@ -9,7 +9,7 @@ export const DATA = [
             insideHospitalized: 67,
             outsideHospitalized: 37,
             dead: 48,
-            pendingInformation: 527,
+            pendingInformation: 501,
         },
         inStudy: 1649,
         invalidated: 8,
