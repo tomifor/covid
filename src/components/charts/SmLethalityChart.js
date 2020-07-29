@@ -88,5 +88,5 @@ export default class SmLethalityChart extends React.Component {
     }
 }
 
-const MAX = 2.5;
+const MAX = 3;
 const MIN = 1.5;
