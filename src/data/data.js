@@ -3,7 +3,7 @@ export const DATA = [
         date: '2020-08-03T23:21:12',
         cases: {
             total: 2619,
-            newCases: 225,
+            newCases: 125,
             cured: 1197,
             goodStatus: 463,
             insideHospitalized: 56,
