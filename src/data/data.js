@@ -1,5 +1,85 @@
 export const DATA = [
     {
+        date: '2020-08-24T2:07:12',
+        cases: {
+            total: 4511,
+            newCases: 88,
+            cured: 2478,
+            goodStatus: 533,
+            insideHospitalized: 105,
+            outsideHospitalized: 131,
+            dead: 112,
+            pendingInformation: 1152,
+        },
+        inStudy: 2220,
+        invalidated: 8,
+        dismiss: 8169
+    },
+    {
+        date: '2020-08-23T2:07:12',
+        cases: {
+            total: 4423,
+            newCases: 52,
+            cured: 2372,
+            goodStatus: 530,
+            insideHospitalized: 107,
+            outsideHospitalized: 135,
+            dead: 109,
+            pendingInformation: 1170,
+        },
+        inStudy: 2150,
+        invalidated: 8,
+        dismiss: 8058
+    },
+    {
+        date: '2020-08-22T2:07:12',
+        cases: {
+            total: 4371,
+            newCases: 109,
+            cured: 2321,
+            goodStatus: 538,
+            insideHospitalized: 104,
+            outsideHospitalized: 138,
+            dead: 107,
+            pendingInformation: 1163,
+        },
+        inStudy: 2112,
+        invalidated: 8,
+        dismiss: 7901
+    },
+    {
+        date: '2020-08-21T23:07:12',
+        cases: {
+            total: 4262,
+            newCases: 113,
+            cured: 2288,
+            goodStatus: 528,
+            insideHospitalized: 104,
+            outsideHospitalized: 144,
+            dead: 107,
+            pendingInformation: 1091,
+        },
+        inStudy: 2097,
+        invalidated: 8,
+        dismiss: 7796
+    },
+    {
+        date: '2020-08-20T23:07:12',
+        cases: {
+            total: 4149,
+            newCases: 118,
+            cured: 2205,
+            goodStatus: 534,
+            insideHospitalized: 90,
+            outsideHospitalized: 151,
+            dead: 106,
+            pendingInformation: 1063,
+        },
+        inStudy: 1997,
+        invalidated: 8,
+        dismiss: 7692
+    },
+    {
         date: '2020-08-19T23:07:12',
         cases: {
             total: 4031,
