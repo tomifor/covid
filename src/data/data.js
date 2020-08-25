@@ -1,6 +1,6 @@
 export const DATA = [
     {
-        date: '2020-08-24T2:07:12',
+        date: '2020-08-24T12:07:12',
         cases: {
             total: 4511,
             newCases: 88,
@@ -16,7 +16,7 @@ export const DATA = [
         dismiss: 8169
     },
     {
-        date: '2020-08-23T2:07:12',
+        date: '2020-08-23T12:07:12',
         cases: {
             total: 4423,
             newCases: 52,
@@ -32,7 +32,7 @@ export const DATA = [
         dismiss: 8058
     },
     {
-        date: '2020-08-22T2:07:12',
+        date: '2020-08-22T12:07:12',
         cases: {
             total: 4371,
             newCases: 109,
