@@ -1,5 +1,95 @@
 export const DATA = [
     {
+        date: '2020-08-30T12:07:12',
+        cases: {
+            total: 5354,
+            newCases: 48,
+            cured: 2767,
+            goodStatus: 624,
+            insideHospitalized: 111,
+            outsideHospitalized: 140,
+            dead: 138,
+            pendingInformation: 1574,
+        },
+        inStudy: 2378,
+        dismiss: 8906
+    },
+    {
+        date: '2020-08-29T12:07:12',
+        cases: {
+            total: 5306,
+            newCases: 164,
+            cured: 2750,
+            goodStatus: 604,
+            insideHospitalized: 111,
+            outsideHospitalized: 137,
+            dead: 133,
+            pendingInformation: 1571,
+        },
+        inStudy: 2296,
+        dismiss: 8870
+    },
+    {
+        date: '2020-08-28T12:07:12',
+        cases: {
+            total: 5142,
+            newCases: 194,
+            cured: 2703,
+            goodStatus: 580,
+            insideHospitalized: 111,
+            outsideHospitalized: 140,
+            dead: 127,
+            pendingInformation: 1481,
+        },
+        inStudy: 2293,
+        dismiss: 8731
+    },
+    {
+        date: '2020-08-27T12:07:12',
+        cases: {
+            total: 4948,
+            newCases: 145,
+            cured: 2639,
+            goodStatus: 570,
+            insideHospitalized: 111,
+            outsideHospitalized: 138,
+            dead: 123,
+            pendingInformation: 1367,
+        },
+        inStudy: 2352,
+        dismiss: 8551
+    },
+    {
+        date: '2020-08-26T12:07:12',
+        cases: {
+            total: 4803,
+            newCases: 173,
+            cured: 2580,
+            goodStatus: 568,
+            insideHospitalized: 111,
+            outsideHospitalized: 133,
+            dead: 118,
+            pendingInformation: 1293,
+        },
+        inStudy: 2337,
+        dismiss: 8431
+    },
+    {
+        date: '2020-08-25T12:07:12',
+        cases: {
+            total: 4630,
+            newCases: 119,
+            cured: 2529,
+            goodStatus: 559,
+            insideHospitalized: 102,
+            outsideHospitalized: 132,
+            dead: 114,
+            pendingInformation: 1194,
+        },
+        inStudy: 2294,
+        dismiss: 8280
+    },
+    {
         date: '2020-08-24T12:07:12',
         cases: {
             total: 4511,
