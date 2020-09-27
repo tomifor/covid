@@ -1,8 +1,8 @@
 // Actualizado 06/07/20
 export const Lethality = {
-    argentina: 2.07,
-    caba: 2.48,
-    buenosaires: 2,
+    argentina: 2.21,
+    caba: 2.71,
+    buenosaires: 3.15,
 }
 
 export const ArgentinaData = {

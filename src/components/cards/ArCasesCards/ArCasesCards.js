@@ -63,12 +63,12 @@ export default class ArCasesCards extends React.Component {
                         <Col lg={3} md={4} sm={6} xs={6}>
                             <CardIndicator title={'Letalidad'} value={this.state.deathsRate + '%'}/>
                         </Col>
-                        <Col lg={3} md={4} sm={6} xs={6}>
-                            <CardIndicator customClass={'avg-deceased'} title={'Edad prom. fallecidos'} value={ArgentinaData.avgAgeDeceased}/>
-                        </Col>
-                        <Col lg={3} md={4} sm={6} xs={6}>
-                            <CardIndicator customClass={'intensive-care'} title={'En terapia intensiva'} value={ArgentinaData.intensiveCarePatients}/>
-                        </Col>
+                        {/*<Col lg={3} md={4} sm={6} xs={6}>*/}
+                        {/*    <CardIndicator customClass={'avg-deceased'} title={'Edad prom. fallecidos'} value={ArgentinaData.avgAgeDeceased}/>*/}
+                        {/*</Col>*/}
+                        {/*<Col lg={3} md={4} sm={6} xs={6}>*/}
+                        {/*    <CardIndicator customClass={'intensive-care'} title={'En terapia intensiva'} value={ArgentinaData.intensiveCarePatients}/>*/}
+                        {/*</Col>*/}
                     </Row>
                 </Container>
             </div>

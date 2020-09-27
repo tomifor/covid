@@ -1,5 +1,350 @@
 export const DATA = [
     {
+        date: '2020-09-26T12:07:12',
+        cases: {
+            total: 8769,
+            newCases: 163,
+            cured: 5120,
+            goodStatus: 940,
+            insideHospitalized: 87,
+            outsideHospitalized: 131,
+            dead: 239,
+            pendingInformation: 2252,
+        },
+        inStudy: 2251,
+        dismiss: 12692
+    },
+    {
+        date: '2020-09-25T12:07:12',
+        cases: {
+            total: 8606,
+            newCases: 223,
+            cured: 5057,
+            goodStatus: 934,
+            insideHospitalized: 95,
+            outsideHospitalized: 131,
+            dead: 234,
+            pendingInformation: 2155,
+        },
+        inStudy: 2295,
+        dismiss: 12543
+    },
+    {
+        date: '2020-09-24T12:07:12',
+        cases: {
+            total: 8323,
+            newCases: 84,
+            cured: 4915,
+            goodStatus: 896,
+            insideHospitalized: 95,
+            outsideHospitalized: 131,
+            dead: 232,
+            pendingInformation: 2114,
+        },
+        inStudy: 2445,
+        dismiss: 12325
+    },
+    {
+        date: '2020-09-23T12:07:12',
+        cases: {
+            total: 8299,
+            newCases: 149,
+            cured: 4746,
+            goodStatus: 875,
+            insideHospitalized: 100,
+            outsideHospitalized: 131,
+            dead: 228,
+            pendingInformation: 2132,
+        },
+        inStudy: 2401,
+        dismiss: 12203
+    },
+    {
+        date: '2020-09-22T12:07:12',
+        cases: {
+            total: 8150,
+            newCases: 132,
+            cured: 4746,
+            goodStatus: 865,
+            insideHospitalized: 103,
+            outsideHospitalized: 131,
+            dead: 223,
+            pendingInformation: 2082,
+        },
+        inStudy: 2356,
+        dismiss: 12004
+    },
+    {
+        date: '2020-09-21T12:07:12',
+        cases: {
+            total: 8018,
+            newCases: 44,
+            cured: 4634,
+            goodStatus: 860,
+            insideHospitalized: 105,
+            outsideHospitalized: 130,
+            dead: 218,
+            pendingInformation: 2071,
+        },
+        inStudy: 2385,
+        dismiss: 11875
+    },
+    {
+        date: '2020-09-20T12:07:12',
+        cases: {
+            total: 7974,
+            newCases: 28,
+            cured: 4556,
+            goodStatus: 870,
+            insideHospitalized: 103,
+            outsideHospitalized: 132,
+            dead: 214,
+            pendingInformation: 2099,
+        },
+        inStudy: 2305,
+        dismiss: 11810
+    },
+    {
+        date: '2020-09-19T12:07:12',
+        cases: {
+            total: 7946,
+            newCases: 189,
+            cured: 4493,
+            goodStatus: 855,
+            insideHospitalized: 108,
+            outsideHospitalized: 130,
+            dead: 213,
+            pendingInformation: 2147,
+        },
+        inStudy: 2293,
+        dismiss: 11768
+    },
+    {
+        date: '2020-09-18T12:07:12',
+        cases: {
+            total: 7757,
+            newCases: 137,
+            cured: 4420,
+            goodStatus: 817,
+            insideHospitalized: 109,
+            outsideHospitalized: 128,
+            dead: 209,
+            pendingInformation: 2074,
+        },
+        inStudy: 2397,
+        dismiss: 11570
+    },
+    {
+        date: '2020-09-17T12:07:12',
+        cases: {
+            total: 7620,
+            newCases: 195,
+            cured: 4306,
+            goodStatus: 791,
+            insideHospitalized: 110,
+            outsideHospitalized: 128,
+            dead: 204,
+            pendingInformation: 2081,
+        },
+        inStudy: 2421,
+        dismiss: 11436
+    },
+    {
+        date: '2020-09-16T12:07:12',
+        cases: {
+            total: 7425,
+            newCases: 119,
+            cured: 4218,
+            goodStatus: 780,
+            insideHospitalized: 112,
+            outsideHospitalized: 131,
+            dead: 198,
+            pendingInformation: 1986,
+        },
+        inStudy: 2507,
+        dismiss: 11236
+    },
+    {
+        date: '2020-09-15T12:07:12',
+        cases: {
+            total: 7306,
+            newCases: 105,
+            cured: 4111,
+            goodStatus: 770,
+            insideHospitalized: 116,
+            outsideHospitalized: 130,
+            dead: 192,
+            pendingInformation: 1987,
+        },
+        inStudy: 2458,
+        dismiss: 11068
+    },
+    {
+        date: '2020-09-14T12:07:12',
+        cases: {
+            total: 7201,
+            newCases: 131,
+            cured: 3915,
+            goodStatus: 777,
+            insideHospitalized: 115,
+            outsideHospitalized: 127,
+            dead: 187,
+            pendingInformation: 2423,
+        },
+        inStudy: 2471,
+        dismiss: 10949
+    },
+    {
+        date: '2020-09-13T12:07:12',
+        cases: {
+            total: 7070,
+            newCases: 64,
+            cured: 3821,
+            goodStatus: 752,
+            insideHospitalized: 117,
+            outsideHospitalized: 129,
+            dead: 182,
+            pendingInformation: 2069,
+        },
+        inStudy: 2471,
+        dismiss: 10820
+    },
+    {
+        date: '2020-09-12T12:07:12',
+        cases: {
+            total: 7006,
+            newCases: 151,
+            cured: 3794,
+            goodStatus: 741,
+            insideHospitalized: 117,
+            outsideHospitalized: 130,
+            dead: 182,
+            pendingInformation: 2042,
+        },
+        inStudy: 2522,
+        dismiss: 10748
+    },
+    {
+        date: '2020-09-11T12:07:12',
+        cases: {
+            total: 6855,
+            newCases: 153,
+            cured: 3752,
+            goodStatus: 732,
+            insideHospitalized: 115,
+            outsideHospitalized: 131,
+            dead: 180,
+            pendingInformation: 1945,
+        },
+        inStudy: 2551,
+        dismiss: 10582
+    },
+    {
+        date: '2020-09-10T12:07:12',
+        cases: {
+            total: 6702,
+            newCases: 137,
+            cured: 3627,
+            goodStatus: 728,
+            insideHospitalized: 109,
+            outsideHospitalized: 132,
+            dead: 179,
+            pendingInformation: 1927,
+        },
+        inStudy: 2462,
+        dismiss: 10394
+    },
+    {
+        date: '2020-09-09T12:07:12',
+        cases: {
+            total: 6565,
+            newCases: 109,
+            cured: 3405,
+            goodStatus: 702,
+            insideHospitalized: 114,
+            outsideHospitalized: 134,
+            dead: 178,
+            pendingInformation: 1898,
+        },
+        inStudy: 2451,
+        dismiss: 10236
+    },
+    {
+        date: '2020-09-08T12:07:12',
+        cases: {
+            total: 6456,
+            newCases: 101,
+            cured: 3405,
+            goodStatus: 681,
+            insideHospitalized: 108,
+            outsideHospitalized: 138,
+            dead: 177,
+            pendingInformation: 1947,
+        },
+        inStudy: 2412,
+        dismiss: 10097
+    },
+    {
+        date: '2020-09-07T12:07:12',
+        cases: {
+            total: 6355,
+            newCases: 145,
+            cured: 3369,
+            goodStatus: 690,
+            insideHospitalized: 107,
+            outsideHospitalized: 142,
+            dead: 171,
+            pendingInformation: 1876,
+        },
+        inStudy: 2414,
+        dismiss: 9949
+    },
+    {
+        date: '2020-09-06T12:07:12',
+        cases: {
+            total: 6210,
+            newCases: 35,
+            cured: 3271,
+            goodStatus: 694,
+            insideHospitalized: 104,
+            outsideHospitalized: 139,
+            dead: 169,
+            pendingInformation: 1833,
+        },
+        inStudy: 2350,
+        dismiss: 9812
+    },
+    {
+        date: '2020-09-05T12:07:12',
+        cases: {
+            total: 6175,
+            newCases: 87,
+            cured: 3219,
+            goodStatus: 673,
+            insideHospitalized: 108,
+            outsideHospitalized: 140,
+            dead: 166,
+            pendingInformation: 1869,
+        },
+        inStudy: 2271,
+        dismiss: 9768
+    },
+    {
+        date: '2020-09-04T12:07:12',
+        cases: {
+            total: 6088,
+            newCases: 113,
+            cured: 3171,
+            goodStatus: 668,
+            insideHospitalized: 102,
+            outsideHospitalized: 139,
+            dead: 162,
+            pendingInformation: 1846,
+        },
+        inStudy: 2233,
+        dismiss: 9672
+    },
+    {
         date: '2020-09-03T12:07:12',
         cases: {
             total: 5975,
