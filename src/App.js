@@ -5,7 +5,7 @@ import Footer from "./components/footer/footer";
 import SmTab from "./components/tabs/SmTab";
 import {useTheme} from "./theme/ThemeContext";
 import styled from "@emotion/styled";
-import {Tab, Nav} from "react-bootstrap";
+import {Alert, Nav, Tab} from "react-bootstrap";
 import ArTab from "./components/tabs/ArTab";
 import EmergencyAlert from "./components/shared/alert/EmergencyAlert";
 import InfoModal from "./components/modals/InfoModal/InfoModal";
@@ -24,6 +24,13 @@ const App = () => {
                     <div className={'mobile-alert'}>
                         <EmergencyAlert/>
                     </div>
+                    <Alert variant={'warning'}>
+                        Los datos de San Miguel dejarán de actualizarse a partir del 01/10/20 debido a que no
+                        representan la realidad y no sirven para realizar análisis. Podés ver los datos actualizados por
+                        la municipalidad haciendo
+                        <Alert.Link href="https://www.msm.gov.ar/prensa/informe-covid-san-miguel/"> click
+                            aquí.</Alert.Link>
+                    </Alert>
                     <Tab.Container defaultActiveKey="city">
                         <Nav variant="pills" className="flex-row">
                             <Nav.Item>
